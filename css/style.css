@@ -1,0 +1,19 @@
+.logo {
+    display: inline-block;
+    background-color: orange;
+    font-family: "OCR A Std";
+    font-size: 60pt;
+    color: white;
+}
+
+a { color: inherit;}
+
+nav li {
+    display: inline-block;
+    color: white;
+    background-color: purple;
+}
+
+nav ul {
+    list-style-type: none;
+}
