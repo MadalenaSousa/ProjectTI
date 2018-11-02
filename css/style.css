@@ -19,6 +19,7 @@ body, html {
 
 body * {
     box-sizing: border-box;
+    padding: 0;
 }
 
 ul {
@@ -33,6 +34,7 @@ a {
 .row {
     content: ' ';
     clear: both;
+    margin: 0;
 }
 
 [class*='col-'] {
