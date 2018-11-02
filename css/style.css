@@ -162,3 +162,31 @@ nav span:not(.empty):hover {
     margin: 10px;
     background-color: lavender;
 }
+
+/*Sobre*/
+
+[class*='sobre'] {
+    display: inline-block;
+    position: relative;
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+    padding: 20px;
+    text-align: left;
+    left:25%;
+}
+
+/*Portfólio*/
+
+[class*='projeto'] {
+    display: inline-block;
+    position: relative;
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+    padding: 20px;
+    text-align: left;
+    left:25%;
+}
+
+
