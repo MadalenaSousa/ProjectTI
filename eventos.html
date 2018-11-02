@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="grid">
 <header>
 
     <!--Logo com link para a página principal-->
@@ -17,27 +18,27 @@
 
     <!--Links de  Navegação-->
     <nav>
-        <ul class="row">
-            <li class="col-6 empty"> </li>
-            <li class="col-1"><a href="sobre.html">
+        <div class="row">
+            <span class="col-6 empty"></span>
+            <a href="sobre.html"><span class="col-1">
                 Sobre
-            </a></li>
-            <li class="col-1"><a href="portfolio.html">
+            </span></a>
+            <a href="portfolio.html"><span class="col-1">
                 Portfólio
-            </a></li>
-            <li class="col-1"><a href="eventos.html">
+            </span></a>
+            <a href="eventos.html"><span class="col-1">
                 Eventos
-            </a></li>
-            <li class="col-1"><a href="loja.html">
+            </span></a>
+            <a href="loja.html"><span class="col-1">
                 Loja
-            </a></li>
-            <li class="col-1"><a href="contactoselocalizacao.html">
+            </span></a>
+            <a href="contactoselocalizacao.html"><span class="col-1">
                 Contactos
-            </a></li>
-            <li class="col-1"><a href="carrinho.html">
-                <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="18pt">
-            </a></li>
-        </ul>
+            </span></a>
+            <a href="carrinho.html"><span class="col-1" id="carrinho">
+                <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="33px">
+            </span></a>
+        </div>
     </nav>
 
     <!--Imagens do SlideShow-->
@@ -51,24 +52,24 @@
     </div>
 </header>
 
-<main>
+<main class="row">
 
     <!--Calendário com Eventos (Eventos podem ser postos em qualquer lugar)-->
-    <section>
-        <div>
-            <h1>*mês do ano</h1>
+    <section class="col-12">
+        <div class="info">
+            <h1 id="mes">Novembro</h1>
 
             <div>
-                <h3>Nome do Evento Selecionado</h3>
-                <p>*Descrição daquilo em que consiste o evento</p>
-                <em>Local:</em> <a href="*link google maps do Local"></a><br>
-                <em>Hora:</em>*hora do evento<br>
+                <h3>Exposição</h3>
+                <p>Video exposição dos projetos da empresa MMDesign</p>
+                <em>Local: </em><a href="*link google maps do Local">PUniversidade de Coimbra</a><br>
+                <em>Hora: </em>16:00<br>
             </div>
         </div>
 
-        <div>
-            <table>
-                <tr>
+        <div class="calendario">
+            <table class="grid">
+                <tr class="row">
                     <th>Segunda</th>
                     <th>Terça</th>
                     <th>Quarta</th>
@@ -77,15 +78,11 @@
                     <th>Sábado</th>
                     <th>Domingo</th>
                 </tr>
-                <tr>
+                <tr class="row">
                     <td>
                         *dia
                         <div>
-                            <ul>
-                                <li>Exposição</li>
-                                <li>18:00</li>
-                                <li>Coimbra</li>
-                            </ul>
+                            <span>Exposição</span>
                         </div>
                     </td>
                     <td>*dia</td>
@@ -95,25 +92,7 @@
                     <td>*dia</td>
                     <td>*dia</td>
                 </tr>
-                <tr>
-                    <td>
-                        *dia
-                        <div>
-                            <ul>
-                                <li>Evento</li>
-                                <li>Hora</li>
-                                <li>Local</li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td>*dia</td>
-                    <td>*dia</td>
-                    <td>*dia</td>
-                    <td>*dia</td>
-                    <td>*dia</td>
-                    <td>*dia</td>
-                </tr>
-                <tr>
+                <tr class="row">
                     <td>
                         *dia
                         <div>
@@ -131,7 +110,43 @@
                     <td>*dia</td>
                     <td>*dia</td>
                 </tr>
-                <tr>
+                <tr class="row">
+                    <td>
+                        *dia
+                        <div>
+                            <ul>
+                                <li>Evento</li>
+                                <li>Hora</li>
+                                <li>Local</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                </tr>
+                <tr class="row">
+                    <td>
+                        *dia
+                        <div>
+                            <ul>
+                                <li>Evento</li>
+                                <li>Hora</li>
+                                <li>Local</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                    <td>*dia</td>
+                </tr>
+                <tr class="row">
                     <td>
                         *dia
                         <div>
@@ -181,6 +196,6 @@
 
     <span class="col-2">Website Design: MM Design</span>
 </footer>
-
+</div>
 </body>
 </html>
