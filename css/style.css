@@ -17,7 +17,9 @@ body, html {
     z-index: 3;
 }
 
-body * {
+/*Grelha flexível geral*/
+
+.grid * {
     box-sizing: border-box;
     padding: 0;
 }
@@ -49,13 +51,36 @@ a {
     background-color: purple;
 }
 
+#carrinho {
+    padding: 9.5px;
+}
+
 .img-video {
     padding: 0;
+}
+
+footer [class*='col-'] {
+    font-size: 10pt;
+}
+
+footer div:first-child {
+    font-family: "OCR A Std";
+    font-size: 21pt;
+    background-color:  #440146;
+    color: purple;
+}
+
+footer span:last-child {
+    font-family: "OCR A Std";
 }
 
 [class*='col-'].empty::after {
     content:'';
     margin-left: calc(60px + 20px);
+}
+
+nav span:not(.empty):hover {
+    background-color: #440146;
 }
 
 .col-2 {
@@ -90,59 +115,50 @@ a {
 }
 .col-12 {
     width: calc(calc(100% / 12) * 12);
+    background-color: white;
 }
 
-/*a {
-    color: inherit;
-    text-decoration: none;
-}
+/*Calendário*/
 
-nav {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-
-    width: 75%;
-    height:50px;
-
-    background-color: purple;
-
-    z-index: 2;
-}
-
-nav ul li {
+.info {
     display: inline-block;
+    position: relative;
+    bottom: 30px;
+    color: black;
+}
 
-    width: calc(3% - 1%);
-    height: 50px;
-
-    margin-left: 300px;
-    padding: 10px;
-
+#mes {
+    background-color: orange;
     color: white;
+    font-family: "OCR A Std";
+    padding: 20px;
+}
+
+.info>div {
+    text-align: left;
+}
+
+.calendario {
+    display: inline-block;
+    position: relative;
+    left:100px;
+    color: black;
+}
+
+.grid .grid .row {
+    content: ' ';
+    clear: both;
+    margin: 0;
+}
+
+.grid .grid [class*='col-'] {
+    float: left;
+    width: calc(100% / 12);
+    color: black;
+    font-family: "Helvetica";
+    font-size: 10pt;
     text-align: center;
+    padding: 15px;
+    margin: 10px;
+    background-color: lavender;
 }
-
-nav ul li a {
-    display: inline-block;
-
-    line-height: 2em;
-    color: white;
-    font-family: Helvetica;
-    font-size: 18pt;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    min-width: 100%;
-    min-height: 100%;
-
-    z-index: 1;
-}*/

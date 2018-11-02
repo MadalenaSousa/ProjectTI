@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="grid">
     <header>
 
         <!--Logo com link para a página principal-->
@@ -17,27 +18,27 @@
 
         <!--Links de  Navegação-->
         <nav>
-            <ul class="row">
-                <li class="col-6 empty"> </li>
-                <li class="col-1"><a href="sobre.html">
-                    Sobre
-                </a></li>
-                <li class="col-1"><a href="portfolio.html">
-                    Portfólio
-                </a></li>
-                <li class="col-1"><a href="eventos.html">
-                    Eventos
-                </a></li>
-                <li class="col-1"><a href="loja.html">
-                    Loja
-                </a></li>
-                <li class="col-1"><a href="contactoselocalizacao.html">
-                    Contactos
-                </a></li>
-                <li class="col-1"><a href="carrinho.html">
-                    <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="18pt">
-                </a></li>
-            </ul>
+            <div class="row">
+                <span class="col-6 empty"></span>
+                <a href="sobre.html"><span class="col-1">
+                Sobre
+            </span></a>
+                <a href="portfolio.html"><span class="col-1">
+                Portfólio
+            </span></a>
+                <a href="eventos.html"><span class="col-1">
+                Eventos
+            </span></a>
+                <a href="loja.html"><span class="col-1">
+                Loja
+            </span></a>
+                <a href="contactoselocalizacao.html"><span class="col-1">
+                Contactos
+            </span></a>
+                <a href="carrinho.html"><span class="col-1" id="carrinho">
+                <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="33px">
+            </span></a>
+            </div>
         </nav>
 
         <!--Imagens do SlideShow-->
@@ -80,7 +81,8 @@
             </ul>
         </div>
 
-        <span class="col-2">Website Design: MM Design</span>
+        <span class="col-2">Website Design:<br> MM Design</span>
     </footer>
+</div>
 </body>
 </html>
