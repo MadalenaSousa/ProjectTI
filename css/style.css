@@ -59,6 +59,21 @@ a {
     padding: 0;
 }
 
+footer [class*='col-'] {
+    font-size: 10pt;
+}
+
+footer div:first-child {
+    font-family: "OCR A Std";
+    font-size: 21pt;
+    background-color:  #440146;
+    color: purple;
+}
+
+footer span:last-child {
+    font-family: "OCR A Std";
+}
+
 [class*='col-'].empty::after {
     content:'';
     margin-left: calc(60px + 20px);
@@ -108,8 +123,7 @@ nav span:not(.empty):hover {
 .info {
     display: inline-block;
     position: relative;
-    bottom: 300px;
-    right:100px;
+    bottom: 30px;
     color: black;
 }
 
@@ -135,17 +149,16 @@ nav span:not(.empty):hover {
     content: ' ';
     clear: both;
     margin: 0;
-    background-color: #440146;
 }
 
 .grid .grid [class*='col-'] {
     float: left;
     width: calc(100% / 12);
-    color: white;
+    color: black;
     font-family: "Helvetica";
-    font-size: 18pt;
+    font-size: 10pt;
     text-align: center;
     padding: 15px;
-    margin: 0;
-    background-color: purple;
+    margin: 10px;
+    background-color: lavender;
 }
