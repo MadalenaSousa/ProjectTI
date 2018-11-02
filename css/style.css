@@ -44,22 +44,16 @@ a {
     text-align: center;
     padding: 15px;
     margin: 0;
+    background-color: purple;
 }
 
 .img-video {
     padding: 0;
 }
 
-[class*='col-'].empty {
-    content: ' ';
-    background-color: purple;
-}
-
-[class*='col-']:not(.empty) {
-    background: purple;
-}
-.grid .grid [class*='col-']:not(.empty) {
-    background: purple;
+[class*='col-'].empty::after {
+    content:'';
+    margin-left: calc(60px + 20px);
 }
 
 .col-2 {
