@@ -51,7 +51,7 @@ a {
 }
 
 [class*='col-'].empty {
-    content: ' ';
+    content: "";
     background-color: purple;
 }
 
