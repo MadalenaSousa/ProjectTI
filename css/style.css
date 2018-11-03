@@ -42,36 +42,13 @@ a {
 [class*='col-'] {
     float: left;
     width: calc(100% / 12);
-    color: white;
+    color: black;
     font-family: "Helvetica";
     font-size: 18pt;
     text-align: center;
     padding: 15px;
     margin: 0;
-    background-color: purple;
-}
-
-#carrinho {
-    padding: 9.5px;
-}
-
-.img-video {
-    padding: 0;
-}
-
-footer [class*='col-'] {
-    font-size: 10pt;
-}
-
-footer div:first-child {
-    font-family: "OCR A Std";
-    font-size: 21pt;
-    background-color:  #440146;
-    color: purple;
-}
-
-footer span:last-child {
-    font-family: "OCR A Std";
+    background-color: white;
 }
 
 [class*='col-'].empty::after {
@@ -79,9 +56,44 @@ footer span:last-child {
     margin-left: calc(60px + 20px);
 }
 
+.img-video {
+    padding: 0;
+}
+
+    /*Características Específicas Navegação*/
+
+nav [class*='col-'] {
+    height: 60px;
+    background-color: purple;
+    color: white;
+}
+
 nav span:not(.empty):hover {
     background-color: #440146;
 }
+
+#carrinho {
+    padding: 10px;
+}
+
+    /*Características Específicas Rodapé*/
+
+footer [class*='col-'] {
+    font-size: 10pt;
+    height: 80px;
+    background-color: purple;
+    color: white;
+}
+
+footer div:first-child {
+    background-color:  purple;
+}
+
+footer span:last-child {
+    font-family: "OCR A Std";
+}
+
+    /* Largura das Células*/
 
 .col-2 {
     width: calc(calc(100% / 12) * 2);
@@ -118,12 +130,14 @@ nav span:not(.empty):hover {
     background-color: white;
 }
 
-/*Calendário*/
+/*Eventos*/
+
+    /*Informação*/
 
 .info {
     display: inline-block;
     position: relative;
-    bottom: 30px;
+    bottom: 135px;
     color: black;
 }
 
@@ -137,6 +151,8 @@ nav span:not(.empty):hover {
 .info>div {
     text-align: left;
 }
+
+    /*Calendário*/
 
 .calendario {
     display: inline-block;
@@ -153,16 +169,23 @@ nav span:not(.empty):hover {
 
 .grid .grid [class*='col-'] {
     float: left;
-    width: calc(100% / 12);
+    height: 80px;
+    width: calc(100% / 7);
     color: black;
     font-family: "Helvetica";
     font-size: 10pt;
     text-align: center;
     padding: 15px;
-    margin: 10px;
     background-color: lavender;
 }
 
+.grid .grid .row:first-child [class*='col-'], .grid .grid .row:last-child [class*='col-'] {
+    height: 50px;
+    color: white;
+    font-family: "OCR A Std";
+    font-size: 12pt;
+    background-color: #440146;
+  
 /*Titulos*/
 
 .titulo {
