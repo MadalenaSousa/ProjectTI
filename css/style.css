@@ -188,6 +188,11 @@ footer span:last-child {
   
 /*Titulos*/
 
+[class*='col-'] .top {
+    color: orange;
+    font-family: "OCR A Std";
+}
+
 .titulo {
     display: inline-block;
     position: relative;
