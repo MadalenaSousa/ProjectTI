@@ -163,6 +163,19 @@ nav span:not(.empty):hover {
     background-color: lavender;
 }
 
+/*Titulos*/
+
+.titulo {
+    display: inline-block;
+    position: relative;
+    color: white;
+    background-color: orange;
+    font-family: "OCR A Std";
+    padding: 20px;
+    text-align: justify;
+    left: 200px;
+}
+
 /*Sobre*/
 
 [class*='sobre'] {
@@ -171,9 +184,9 @@ nav span:not(.empty):hover {
     color: black;
     background-color: white;
     font-family: "Helvetica";
-    padding: 20px;
-    text-align: left;
-    left:25%;
+    padding: 50px;
+    text-align: justify;
+    left: 200px;
 }
 
 /*Portfólio*/
@@ -185,8 +198,8 @@ nav span:not(.empty):hover {
     background-color: white;
     font-family: "Helvetica";
     padding: 20px;
-    text-align: left;
-    left:25%;
+    text-align: justify;
+    left: 200px;
 }
 
 
