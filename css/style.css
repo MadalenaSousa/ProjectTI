@@ -199,7 +199,6 @@ footer span:last-child {
     font-family: "OCR A Std";
     padding: 20px;
     text-align: justify;
-    left: 200px;
 }
 
 /*Sobre*/
@@ -212,7 +211,6 @@ footer span:last-child {
     font-family: "Helvetica";
     padding: 50px;
     text-align: justify;
-    left: 200px;
 }
 
 /*Portfólio*/
@@ -225,7 +223,23 @@ footer span:last-child {
     font-family: "Helvetica";
     padding: 20px;
     text-align: justify;
-    left: 200px;
+}
+
+/*Botões*/
+
+.botao {
+    position: relative;
+    color: white;
+    background-color:orange
+    font-family: "OCR A Std";
+    padding: 20px;
+    text-align: justify;
+    bottom: 20px;
+    right: 200px;
+}
+
+[required] {
+    border: 1px solid grey;
 }
 
 
