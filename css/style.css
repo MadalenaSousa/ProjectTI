@@ -194,10 +194,8 @@ footer span:last-child {
 }
 
 .titulo {
-    display: inline-block;
     position: relative;
-    color: white;
-    background-color: orange;
+    color: orange;
     font-family: "OCR A Std";
     padding: 20px;
     text-align: justify;
