@@ -1,6 +1,6 @@
 body, html {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 /*Grelha flexível geral*/
@@ -61,10 +61,6 @@ nav span:not(.empty):hover {
     background-color: #440146;
 }
 
-#carrinho {
-    padding: 10px;
-}
-
     /*Características Específicas Rodapé*/
 
 footer [class*='col-'] {
@@ -76,10 +72,6 @@ footer [class*='col-'] {
 
 footer div:first-child {
     background-color:  purple;
-}
-
-footer span:last-child {
-    font-family: "OCR A Std";
 }
 
     /* Largura das Células*/
@@ -150,13 +142,13 @@ footer span:last-child {
     color: black;
 }
 
-.grid .grid .row {
+.grid-main .grid .row {
     content: ' ';
     clear: both;
     margin: 0;
 }
 
-.grid .grid [class*='col-'] {
+.grid-main .grid [class*='col-'] {
     float: left;
     height: 80px;
     width: calc(100% / 7);
@@ -168,7 +160,7 @@ footer span:last-child {
     background-color: lavender;
 }
 
-.grid .grid .row:first-child [class*='col-'], .grid .grid .row:last-child [class*='col-'] {
+.grid-main .grid .row:first-child [class*='col-'], .grid-main .grid .row:last-child [class*='col-'] {
     height: 50px;
     color: white;
     font-family: "OCR A Std";
