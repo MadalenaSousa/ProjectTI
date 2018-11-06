@@ -150,13 +150,13 @@ footer span:last-child {
     color: black;
 }
 
-.grid .grid .row {
+.grid-main .grid .row {
     content: ' ';
     clear: both;
     margin: 0;
 }
 
-.grid .grid [class*='col-'] {
+.grid-main .grid [class*='col-'] {
     float: left;
     height: 80px;
     width: calc(100% / 7);
@@ -168,7 +168,7 @@ footer span:last-child {
     background-color: lavender;
 }
 
-.grid .grid .row:first-child [class*='col-'], .grid .grid .row:last-child [class*='col-'] {
+.grid-main .grid .row:first-child [class*='col-'], .grid .grid .row:last-child [class*='col-'] {
     height: 50px;
     color: white;
     font-family: "OCR A Std";
