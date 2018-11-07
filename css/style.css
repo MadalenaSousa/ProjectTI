@@ -31,7 +31,7 @@ a {
     color: black;
     font-family: "Helvetica";
     font-size: 18pt;
-    text-align: center;
+
     padding: 15px;
 
     background-color: white;
@@ -200,6 +200,13 @@ footer [class*='col-'] {
 
 [required] {
     border: 1px solid grey;
+}
+
+    /*loja*/
+
+.miniaturas {
+    float: left;
+
 }
 
 
