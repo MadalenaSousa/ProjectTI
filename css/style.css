@@ -185,7 +185,7 @@ footer div:last-child {
 
     /*Calendário*/
 
-.grid-main .grid .row {
+.grid-main .grid-calendario .row {
     content: ' ';
     clear: both;
     margin: 0;
@@ -203,7 +203,7 @@ footer div:last-child {
     background-color: lavender;
 }
 
-.grid-main .grid .row:first-child [class*='col-'], .grid-main .grid .row:last-child [class*='col-'] {
+.grid-main .grid-calendario .row:first-child [class*='col-'], .grid-main .grid-calendario .row:last-child [class*='col-'] {
     height: 50px;
     color: white;
     font-family: "OCR A Std";
