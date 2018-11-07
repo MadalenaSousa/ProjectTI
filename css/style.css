@@ -3,7 +3,7 @@ body, html {
     padding: 0;
 }
 
-/*Grelha flexível geral*/
+/*Geral*/
 
 [class*='grid'] * {
     box-sizing: border-box;
@@ -31,7 +31,7 @@ a {
     color: black;
     font-family: "Helvetica";
     font-size: 18pt;
-    text-align: center;
+
     padding: 15px;
 
     background-color: white;
@@ -41,7 +41,7 @@ a {
     padding: 0;
 }
 
-    /*Características Específicas Navegação e Logotipo */
+/*Logotipo*/
 
 .logo {
     display: inline-block;
@@ -52,32 +52,45 @@ a {
     font-size: 50pt;
 
     width: calc(100% / 12 * 3);
-    height:;
     text-align: center;
 
     z-index: 3;
 }
 
+/*Navegação*/
+
 nav [class*='col-'] {
     height: 60px;
+
     background-color: purple;
     color: white;
+
+    text-align: center;
 }
 
 nav [class*='col-']:not(.empty):hover {
     background-color: #440146;
 }
 
-    /*Características Específicas Rodapé*/
+/*Rodapé*/
 
 footer [class*='col-'] {
-    font-size: 10pt;
     height: 80px;
+
+    font-size: 10pt;
     background-color: purple;
     color: white;
+
+    line-height: 1em;
+    text-align: center;
 }
 
-    /* Largura das Células*/
+footer div:last-child {
+    line-height: 2em;
+    font-family: "OCR A Std";
+}
+
+/* Largura das Células*/
 
 .col-2 {
     width: calc(calc(100% / 12) * 2);
@@ -111,6 +124,53 @@ footer [class*='col-'] {
 }
 .col-12 {
     width: calc(calc(100% / 12) * 12);
+}
+
+/*Titulos*/
+
+.titulo {
+    color: orange;
+    font-family: "OCR A Std";
+    font-size: 40pt;
+
+    padding: 20px;
+}
+
+
+/*Botões*/
+
+.botao {
+    color: white;
+    background-color:orange;
+    font-family: "OCR A Std";
+
+    padding: 20px;
+    text-align: center;
+}
+
+/*Sobre*/
+
+[class*='sobre'] {
+    display: inline-block;
+
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+    padding: 50px;
+    text-align: justify;
+}
+
+/*Portfólio*/
+
+[class*='projeto'] {
+    display: inline-block;
+
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+
+    padding: 20px;
+    text-align: justify;
 }
 
 /*Eventos*/
@@ -151,55 +211,26 @@ footer [class*='col-'] {
     background-color: #440146;
 }
 
-  
-/*Titulos*/
+/*Loja*/
 
-.titulo {
-    color: orange;
-    font-family: "OCR A Std";
+.miniaturas {
+    float: left;
 
-    padding: 20px;
-    text-align: left;
-}
-
-/*Sobre*/
-
-[class*='sobre'] {
-    display: inline-block;
-
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    padding: 50px;
-    text-align: justify;
-}
-
-/*Portfólio*/
-
-[class*='projeto'] {
-    display: inline-block;
-
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-
-    padding: 20px;
-    text-align: justify;
-}
-
-/*Botões*/
-
-.botao {
-    color: white;
-    background-color:orange;
-    font-family: "OCR A Std";
-
-    padding: 20px;
-    text-align: center;
 }
 
 [required] {
     border: 1px solid grey;
 }
+
+/*Contactos e Localização*/
+
+.contactoselocalizacao h2 {
+    display: inline;
+
+    border: 5px solid black ;
+    font-family: "OCR A Std";
+    padding: 15px;
+}
+
 
 
