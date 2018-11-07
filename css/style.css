@@ -191,7 +191,7 @@ footer div:last-child {
     margin: 0;
 }
 
-.grid-main .grid [class*='col-'] {
+.grid-main .grid-calendario [class*='col-'] {
     float: left;
     height: 80px;
     width: calc(100% / 7);
