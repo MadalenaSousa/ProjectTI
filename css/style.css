@@ -3,7 +3,7 @@ body, html {
     padding: 0;
 }
 
-/*Grelha flexível geral*/
+/*Geral*/
 
 [class*='grid'] * {
     box-sizing: border-box;
@@ -26,11 +26,12 @@ a {
 [class*='col-'] {
     float: left;
     width: calc(100% / 12);
+    min-width: calc(100% / 12);
 
     color: black;
     font-family: "Helvetica";
     font-size: 18pt;
-    text-align: center;
+
     padding: 15px;
 
     background-color: white;
@@ -40,7 +41,7 @@ a {
     padding: 0;
 }
 
-    /*Características Específicas Navegação e Logotipo */
+/*Logotipo*/
 
 .logo {
     display: inline-block;
@@ -48,33 +49,48 @@ a {
     top: 35px;
     left: 50px;
 
+    font-size: 50pt;
+
+    width: calc(100% / 12 * 3);
+    text-align: center;
+
     z-index: 3;
 }
 
+/*Navegação*/
+
 nav [class*='col-'] {
     height: 60px;
+
     background-color: purple;
     color: white;
+
+    text-align: center;
 }
 
-nav span:not(.empty):hover {
+nav [class*='col-']:not(.empty):hover {
     background-color: #440146;
 }
 
-    /*Características Específicas Rodapé*/
+/*Rodapé*/
 
 footer [class*='col-'] {
-    font-size: 10pt;
     height: 80px;
+
+    font-size: 10pt;
     background-color: purple;
     color: white;
+
+    line-height: 1em;
+    text-align: center;
 }
 
-footer div:first-child {
-    background-color:  purple;
+footer div:last-child {
+    line-height: 2em;
+    font-family: "OCR A Std";
 }
 
-    /* Largura das Células*/
+/* Largura das Células*/
 
 .col-2 {
     width: calc(calc(100% / 12) * 2);
@@ -110,36 +126,64 @@ footer div:first-child {
     width: calc(calc(100% / 12) * 12);
 }
 
+/*Titulos*/
+
+.titulo {
+    color: orange;
+    font-family: "OCR A Std";
+    font-size: 30pt;
+
+    padding: 20px;
+}
+
+
+/*Botões*/
+
+.botao {
+    color: white;
+    background-color:orange;
+    font-family: "OCR A Std";
+
+    padding: 20px;
+    text-align: center;
+}
+
+/*Sobre*/
+
+[class*='sobre'] {
+    display: inline-block;
+
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+    padding: 50px;
+    text-align: justify;
+}
+
+/*Portfólio*/
+
+[class*='projeto'] {
+    display: inline-block;
+
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+
+    padding: 20px;
+    text-align: justify;
+}
+
 /*Eventos*/
 
     /*Informação*/
 
 .info {
     display: inline-block;
-    position: relative;
-    bottom: 135px;
     color: black;
-}
-
-#mes {
-    background-color: orange;
-    color: white;
-    font-family: "OCR A Std";
-    padding: 20px;
-}
-
-.info>div {
     text-align: left;
 }
 
     /*Calendário*/
-
-.calendario {
-    display: inline-block;
-    position: relative;
-    left:100px;
-    color: black;
-}
 
 .grid-main .grid .row {
     content: ' ';
@@ -167,52 +211,19 @@ footer div:first-child {
     background-color: #440146;
 }
 
+/*Loja*/
+
+.miniaturas {
+    float: left;
+
+[required] {
+    border: 1px solid grey;
+}
+
+/*Contactos e Localização*/
   
-/*Titulos*/
-
-[class*='col-'] .top {
-    color: orange;
-    font-family: "OCR A Std";
-}
-
-.titulo {
-    color: orange;
-    font-family: "OCR A Std";
-    padding: 20px;
-    text-align: left;
-}
-
-/*Sobre*/
-
-[class*='sobre'] {
-    display: inline-block;
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    padding: 50px;
-    text-align: justify;
-}
-
-/*Portfólio*/
-
-[class*='projeto'] {
-    display: inline-block;
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    padding: 20px;
-    text-align: justify;
-}
-
-/*Botões*/
-
-.botao {
-    color: white;
-    background-color:orange;
-    font-family: "OCR A Std";
-    padding: 20px;
-    text-align: center;
-}
+.contactoselocalizacao h2 {
+    display: inline;
 
 /*Dados pessoais e de pagamento*/
 
@@ -223,11 +234,11 @@ footer div:first-child {
     font-family: "Helvetica";
     padding: 20px;
     text-align: justify;
+    border: 5px solid black ;
+    font-family: "OCR A Std";
+    padding: 15px;
 }
 
-[required] {
-    border: 1px solid grey;
-}
 
 
 
