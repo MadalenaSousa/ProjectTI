@@ -249,9 +249,10 @@ footer div:last-child {
 
 /*Loja*/
 
-.miniaturas {
+.miniaturas div {
     float: left;
-
+    margin-right: 10%;
+    margin-bottom: 10%;
 }
 
 [required] {
