@@ -176,18 +176,16 @@ footer div:first-child {
 }
 
 .titulo {
-    position: relative;
     color: orange;
     font-family: "OCR A Std";
     padding: 20px;
-    text-align: justify;
+    text-align: left;
 }
 
 /*Sobre*/
 
 [class*='sobre'] {
     display: inline-block;
-    position: relative;
     color: black;
     background-color: white;
     font-family: "Helvetica";
@@ -199,7 +197,6 @@ footer div:first-child {
 
 [class*='projeto'] {
     display: inline-block;
-    position: relative;
     color: black;
     background-color: white;
     font-family: "Helvetica";
@@ -210,18 +207,30 @@ footer div:first-child {
 /*Botões*/
 
 .botao {
-    position: relative;
     color: white;
     background-color:orange;
     font-family: "OCR A Std";
     padding: 20px;
+    text-align: center;
+}
+
+/*Dados pessoais e de pagamento*/
+
+[class*='pagamento'] {
+    display: inline-block;
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+    padding: 20px;
     text-align: justify;
-    bottom: 20px;
-    right: 200px;
 }
 
 [required] {
     border: 1px solid grey;
 }
+
+
+
+
 
 
