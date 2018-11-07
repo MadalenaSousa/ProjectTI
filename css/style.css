@@ -26,6 +26,7 @@ a {
 [class*='col-'] {
     float: left;
     width: calc(100% / 12);
+    min-width: calc(100% / 12);
 
     color: black;
     font-family: "Helvetica";
@@ -48,6 +49,12 @@ a {
     top: 35px;
     left: 50px;
 
+    font-size: 50pt;
+
+    width: calc(100% / 12 * 3);
+    height:;
+    text-align: center;
+
     z-index: 3;
 }
 
@@ -57,7 +64,7 @@ nav [class*='col-'] {
     color: white;
 }
 
-nav span:not(.empty):hover {
+nav [class*='col-']:not(.empty):hover {
     background-color: #440146;
 }
 
@@ -68,10 +75,6 @@ footer [class*='col-'] {
     height: 80px;
     background-color: purple;
     color: white;
-}
-
-footer div:first-child {
-    background-color:  purple;
 }
 
     /* Largura das Células*/
@@ -116,30 +119,11 @@ footer div:first-child {
 
 .info {
     display: inline-block;
-    position: relative;
-    bottom: 135px;
     color: black;
-}
-
-#mes {
-    background-color: orange;
-    color: white;
-    font-family: "OCR A Std";
-    padding: 20px;
-}
-
-.info>div {
     text-align: left;
 }
 
     /*Calendário*/
-
-.calendario {
-    display: inline-block;
-    position: relative;
-    left:100px;
-    color: black;
-}
 
 .grid-main .grid .row {
     content: ' ';
@@ -170,24 +154,19 @@ footer div:first-child {
   
 /*Titulos*/
 
-[class*='col-'] .top {
-    color: orange;
-    font-family: "OCR A Std";
-}
-
 .titulo {
-    position: relative;
     color: orange;
     font-family: "OCR A Std";
+
     padding: 20px;
-    text-align: justify;
+    text-align: left;
 }
 
 /*Sobre*/
 
 [class*='sobre'] {
     display: inline-block;
-    position: relative;
+
     color: black;
     background-color: white;
     font-family: "Helvetica";
@@ -199,10 +178,11 @@ footer div:first-child {
 
 [class*='projeto'] {
     display: inline-block;
-    position: relative;
+
     color: black;
     background-color: white;
     font-family: "Helvetica";
+
     padding: 20px;
     text-align: justify;
 }
@@ -210,14 +190,12 @@ footer div:first-child {
 /*Botões*/
 
 .botao {
-    position: relative;
     color: white;
     background-color:orange;
     font-family: "OCR A Std";
+
     padding: 20px;
-    text-align: justify;
-    bottom: 20px;
-    right: 200px;
+    text-align: center;
 }
 
 [required] {
