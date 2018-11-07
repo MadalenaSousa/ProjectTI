@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-.row {
+.row, tr {
     content: ' ';
     clear: both;
 }
@@ -31,10 +31,9 @@ a {
     color: black;
     font-family: "Helvetica";
     font-size: 18pt;
+    background-color: white;
 
     padding: 15px;
-
-    background-color: white;
 }
 
 .img-video {
@@ -185,30 +184,67 @@ footer div:last-child {
 
     /*Calendário*/
 
-.grid-main .grid-calendario .row {
-    content: ' ';
-    clear: both;
-    margin: 0;
-}
-
-.grid-main .grid-calendario [class*='col-'] {
+.grid-calendario td {
+    position: relative;
     float: left;
+
     height: 80px;
     width: calc(100% / 7);
-    color: black;
+
     font-family: "Helvetica";
     font-size: 10pt;
-    text-align: center;
-    padding: 15px;
     background-color: lavender;
+
+    text-align: right;
 }
 
-.grid-main .grid-calendario .row:first-child [class*='col-'], .grid-main .grid-calendario .row:last-child [class*='col-'] {
+.grid-calendario .col-2 {
+    width: calc(calc(100% / 7) * 2);
+}
+.grid-calendario .col-3 {
+    width: calc(calc(100% / 7) * 3);
+}
+.grid-calendario .col-4 {
+    width: calc(calc(100% / 7) * 4);
+}
+.grid-calendario .col-5 {
+    width: calc(calc(100% / 7) * 5);
+}
+.grid-calendario .col-6 {
+    width: calc(calc(100% / 7) * 6);
+}
+.grid-calendario .col-7 {
+    width: calc(calc(100% / 7) * 7);
+}
+
+.grid-calendario th {
+    width: calc(100% / 7);
+    font-size: 10pt;
     height: 50px;
+    text-align: center;
+
     color: white;
     font-family: "OCR A Std";
-    font-size: 12pt;
     background-color: #440146;
+}
+
+.grid-calendario tr:last-child td {
+    background-color: #440146;
+    height: 50px;
+}
+
+.other-month {
+    color: gray;
+}
+
+.grid-calendario img:first-child {
+    position: absolute;
+    left: 30px;
+}
+
+.grid-calendario img:last-child {
+    position: absolute;
+    right: 30px;
 }
 
 /*Loja*/
