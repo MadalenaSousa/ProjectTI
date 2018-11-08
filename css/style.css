@@ -272,14 +272,27 @@ footer div:last-child {
 }
 
 /*Contactos e Localização*/
-
+  
 .contactoselocalizacao h2 {
     display: inline;
 
+/*Dados pessoais e de pagamento*/
+
+[class*='pagamento'] {
+    display: inline-block;
+    color: black;
+    background-color: white;
+    font-family: "Helvetica";
+    padding: 20px;
+    text-align: justify;
     border: 5px solid black ;
     font-family: "OCR A Std";
     padding: 15px;
 }
+
+
+
+
 
 
 
