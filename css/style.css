@@ -156,7 +156,7 @@ footer div:last-child {
     color: black;
     background-color: white;
     font-family: "Helvetica";
-    padding: 50px;
+    padding: 20px;
     text-align: justify;
 }
 
@@ -171,6 +171,11 @@ footer div:last-child {
 
     padding: 20px;
     text-align: justify;
+}
+
+/*Seta de indicação de movimento*/
+.seta {
+    position: absolute;
 }
 
 /*Eventos*/
@@ -215,6 +220,7 @@ footer div:last-child {
 
 .miniaturas {
     float: left;
+}
 
 [required] {
     border: 1px solid grey;
@@ -224,6 +230,7 @@ footer div:last-child {
   
 .contactoselocalizacao h2 {
     display: inline;
+}
 
 /*Dados pessoais e de pagamento*/
 
@@ -234,10 +241,8 @@ footer div:last-child {
     font-family: "Helvetica";
     padding: 20px;
     text-align: justify;
-    border: 5px solid black ;
-    font-family: "OCR A Std";
-    padding: 15px;
 }
+
 
 
 
