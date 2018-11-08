@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-.row {
+.row, tr {
     content: ' ';
     clear: both;
 }
@@ -31,10 +31,9 @@ a {
     color: black;
     font-family: "Helvetica";
     font-size: 18pt;
+    background-color: white;
 
     padding: 15px;
-
-    background-color: white;
 }
 
 .img-video {
@@ -46,7 +45,7 @@ a {
 .logo {
     display: inline-block;
     position: absolute;
-    top: 35px;
+    top: 10px;
     left: 50px;
 
     font-size: 50pt;
@@ -146,6 +145,8 @@ footer div:last-child {
 
     padding: 20px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*Sobre*/
@@ -190,36 +191,86 @@ footer div:last-child {
 
     /*Calendário*/
 
-.grid-main .grid .row {
-    content: ' ';
-    clear: both;
-    margin: 0;
-}
-
-.grid-main .grid [class*='col-'] {
+.grid-calendario td {
+    position: relative;
     float: left;
+
     height: 80px;
     width: calc(100% / 7);
-    color: black;
+
     font-family: "Helvetica";
     font-size: 10pt;
-    text-align: center;
-    padding: 15px;
     background-color: lavender;
+
+    text-align: right;
 }
 
-.grid-main .grid .row:first-child [class*='col-'], .grid-main .grid .row:last-child [class*='col-'] {
+.grid-calendario .col-2 {
+    width: calc(calc(100% / 7) * 2);
+}
+.grid-calendario .col-3 {
+    width: calc(calc(100% / 7) * 3);
+}
+.grid-calendario .col-4 {
+    width: calc(calc(100% / 7) * 4);
+}
+.grid-calendario .col-5 {
+    width: calc(calc(100% / 7) * 5);
+}
+.grid-calendario .col-6 {
+    width: calc(calc(100% / 7) * 6);
+}
+.grid-calendario .col-7 {
+    width: calc(calc(100% / 7) * 7);
+}
+
+.grid-calendario th {
+    width: calc(100% / 7);
+    font-size: 10pt;
     height: 50px;
+    text-align: center;
+
     color: white;
     font-family: "OCR A Std";
-    font-size: 12pt;
     background-color: #440146;
+}
+
+.grid-calendario tr:last-child td {
+    background-color: #440146;
+    height: 50px;
+}
+
+.other-month {
+    color: gray;
+}
+
+.grid-calendario img:first-child {
+    position: absolute;
+    left: 30px;
+}
+
+.grid-calendario img:last-child {
+    position: absolute;
+    right: 30px;
 }
 
 /*Loja*/
 
-.miniaturas {
-    float: left;
+
+.loja h1 {
+    border: 5px solid black;
+    font-family: "OCR A Std";
+    display: inline;
+    padding: 10px;
+}
+
+.loja h3 {
+    font-family: "OCR A Std";
+}
+
+.grid-loja [class*="col-"] img, .artigo [class*="col-"] img{
+    border: 5px solid black;
+    padding: 20px;
 }
 
 [required] {
