@@ -45,7 +45,7 @@ a {
 .logo {
     display: inline-block;
     position: absolute;
-    top: 35px;
+    top: 10px;
     left: 50px;
 
     font-size: 50pt;
