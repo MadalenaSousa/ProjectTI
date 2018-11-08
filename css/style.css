@@ -260,7 +260,7 @@ footer div:last-child {
     font-family: "OCR A Std";
 }
 
-.grid-loja [class*="col-"] img{
+.grid-loja [class*="col-"] img, .artigo [class*="col-"] img{
     border: 5px solid black;
     padding: 20px;
 }
