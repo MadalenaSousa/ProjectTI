@@ -249,10 +249,20 @@ footer div:last-child {
 
 /*Loja*/
 
-.miniaturas div {
-    float: left;
-    margin-right: 10%;
-    margin-bottom: 10%;
+.loja h1 {
+    border: 5px solid black;
+    font-family: "OCR A Std";
+    display: inline;
+    padding: 10px;
+}
+
+.loja h3 {
+    font-family: "OCR A Std";
+}
+
+.grid-loja [class*="col-"] img{
+    border: 5px solid black;
+    padding: 20px;
 }
 
 [required] {
