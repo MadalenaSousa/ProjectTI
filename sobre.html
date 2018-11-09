@@ -9,7 +9,9 @@
 <body>
     <header class="grid-header">
         <nav class="row">
-            <span class="col-6 empty"></span>
+            <span class="col-6 empty">
+                <img src="imagens/mobile/options.png" alt="">
+            </span>
 
             <a href="index.html">
                 <span class="logo botao">
@@ -17,36 +19,38 @@
                 </span>
             </a>
 
-            <a href="sobre.html">
-                <span class="col-1">
-                    Sobre
-                </span>
-            </a>
-            <a href="portfolio.html">
-                <span class="col-1">
-                    Portfólio
-                </span>
-            </a>
-            <a href="eventos.html">
-                <span class="col-1">
-                    Eventos
-                </span>
-            </a>
-            <a href="loja.html">
-                <span class="col-1">
-                    Loja
-                </span>
-            </a>
-            <a href="contactoselocalizacao.html">
-                <span class="col-1">
-                    Contactos
-                </span>
-            </a>
-            <a href="carrinho.html">
-                <span class="col-1">
-                    <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="33px">
-                </span>
-            </a>
+            <div class="paginas">
+                <a href="sobre.html">
+                    <span class="col-1">
+                        Sobre
+                    </span>
+                </a>
+                <a href="portfolio.html">
+                    <span class="col-1">
+                        Portfólio
+                    </span>
+                </a>
+                <a href="eventos.html">
+                    <span class="col-1">
+                        Eventos
+                    </span>
+                </a>
+                <a href="loja.html">
+                    <span class="col-1">
+                        Loja
+                    </span>
+                </a>
+                <a href="contactoselocalizacao.html">
+                    <span class="col-1">
+                        Contactos
+                    </span>
+                </a>
+                <a href="carrinho.html">
+                    <span class="col-1">
+                        <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="33px">
+                    </span>
+                </a>
+            </div>
         </nav>
 
         <div class="row">
@@ -69,24 +73,42 @@
             <div class="col-2 "></div>
 
             <div class="sobreLena col-4">
-                <img src="imagens/sobre/madalena1.jpg" alt="Foto de Madalena">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagens/mobile/madalena1-mobile.jpg">
+                    <img src="imagens/sobre/madalena1.jpg" alt="">
+                </picture>
+
                 <p>Madalena Sousa</p>
+
                 <p>Acabou a Licenciatura em Design e Multimédia na Universidade de Coimbra em 2018 com 20 anos.
                     É atualmente diretora na Empresa M&M. Para além do seu cargo, Madalena Sousa ajuda nos projetos com os
                     seus dotes de programação.</p>
-                <img src="imagens/sobre/madalena2.jpg" alt="Foto de Madalena">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagens/mobile/madalena2-mobile.jpg">
+                    <img src="imagens/sobre/madalena2.jpg" alt="">
+                </picture>
+
                 <div class="seta">
                     <img src="imagens/seta.png" alt="Seta">
                 </div>
             </div>
 
             <div class="sobreMaria col-4">
-                <img src="imagens/sobre/maria1.jpg" alt="Foto de Maria">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagens/mobile/maria1-mobile.jpg">
+                    <img src="imagens/sobre/maria1.jpg" alt="">
+                </picture>
+
                 <p>Maria Soares</p>
+
                 <p>Terminou a Licenciatura em Design e Multimédia na Universidade de Coimbra em 2018 com apenas 19 anos.
                     É atualmente vice-diretora na Empresa M&M. Para além do seu cargo, Maria Soares ajuda nos projetos ao
                     nível do design.</p>
-                <img src="imagens/sobre/maria2.jpg" alt="Foto de Maria">
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagens/mobile/maria2-mobile.jpg">
+                    <img src="imagens/sobre/maria2.jpg" alt="">
+                </picture>
             </div>
 
             <div class="col-2"></div>
@@ -96,12 +118,21 @@
             <div class="col-2"></div>
 
             <div class="sobre col-8">
-                <img src="imagens/sobre/empresa1.jpg" alt="Foto da Empresa">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagens/mobile/empresa1-mobile.jpg">
+                    <img src="imagens/sobre/empresa1.jpg" alt="">
+                </picture>
+
                 <p>Empresa</p>
+
                 <p>A empresa foi criada em 2018 por Madalena Sousa e Maria Soares com a ajuda de outros membros.
                     Esta está localizada no pólo II da Universidade de Coimbra e conta com mais de 100 trabalhadores.
                     A empresa oferece ao cliente uma vasta variedade de serviços ao nível do Design.</p>
-                <img src="imagens/sobre/empresa2.jpg" alt="Foto da Empresa">
+
+                <picture>
+                    <source media="(max-width: 600px)" srcset="imagens/mobile/empresa2-mobile.jpg">
+                    <img src="imagens/sobre/empresa2.jpg" alt="">
+                </picture>
             </div>
 
             <div class="col-2"></div>
@@ -123,7 +154,7 @@
                 </a>
             </div>
 
-            <div class="col-1"></div>
+            <div class="col-1 empty"></div>
 
             <div class="col-2">
                 <a href="*link to fb">
@@ -155,7 +186,7 @@
                 </a>
             </div>
 
-            <div class="col-1"></div>
+            <div class="col-1 empty"></div>
 
             <div class="col-2"> Website Design:<br> MMDesign</div>
         </div>

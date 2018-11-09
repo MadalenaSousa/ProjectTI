@@ -9,7 +9,9 @@
 <body>
     <header class="grid-header">
         <nav class="row">
-            <span class="col-6 empty"></span>
+            <span class="col-6 empty">
+                <img src="imagens/mobile/options.png" alt="">
+            </span>
 
             <a href="index.html">
                 <span class="logo botao">
@@ -17,36 +19,38 @@
                 </span>
             </a>
 
-            <a href="sobre.html">
-                <span class="col-1">
-                    Sobre
-                </span>
-            </a>
-            <a href="portfolio.html">
-                <span class="col-1">
-                    Portfólio
-                </span>
-            </a>
-            <a href="eventos.html">
-                <span class="col-1">
-                    Eventos
-                </span>
-            </a>
-            <a href="loja.html">
-                <span class="col-1">
-                    Loja
-                </span>
-            </a>
-            <a href="contactoselocalizacao.html">
-                <span class="col-1">
-                    Contactos
-                </span>
-            </a>
-            <a href="carrinho.html">
-                <span class="col-1">
-                    <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="33px">
-                </span>
-            </a>
+            <div class="paginas">
+                <a href="sobre.html">
+                    <span class="col-1">
+                        Sobre
+                    </span>
+                </a>
+                <a href="portfolio.html">
+                    <span class="col-1">
+                        Portfólio
+                    </span>
+                </a>
+                <a href="eventos.html">
+                    <span class="col-1">
+                        Eventos
+                    </span>
+                </a>
+                <a href="loja.html">
+                    <span class="col-1">
+                        Loja
+                    </span>
+                </a>
+                <a href="contactoselocalizacao.html">
+                    <span class="col-1">
+                        Contactos
+                    </span>
+                </a>
+                <a href="carrinho.html">
+                    <span class="col-1">
+                        <img src="imagens/carrinho.png" alt="Carrinho de Compras" height="33px">
+                    </span>
+                </a>
+            </div>
         </nav>
 
         <div class="row">
@@ -69,51 +73,49 @@
             <div class="col-1"></div>
 
             <div class="col-3">
+                <h1>Filtros</h1>
 
-                <div>
-                    <h1>Filtros</h1>
-                </div>
+                <div class="filtros">
+                    <div>
+                        <h3>Categoria</h3>
 
-                <div>
-                <h3>Categoria</h3>
-                    <ul>
-                        <li>
-                            <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
-                            Canecas
-                        </li>
-                        <li>
-                            <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
-                            T-Shirts e Sweats
-                        </li>
-                        <li>
-                            <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
-                            Canetas
-                        </li>
-                        <li>
-                            <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
-                            Isqueiros
-                        </li>
-                        <li>
-                            <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
-                            Almofadas
-                        </li>
-                        <li>
-                            <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
-                            Porta-Chaves
-                        </li>
-                    </ul>
-                </div>
+                        <ul>
+                            <li>
+                                <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
+                                Canecas
+                            </li>
+                            <li>
+                                <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
+                                T-Shirts e Sweats
+                            </li>
+                            <li>
+                                <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
+                                Canetas
+                            </li>
+                            <li>
+                                <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
+                                Isqueiros
+                            </li>
+                            <li>
+                                <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
+                                Almofadas
+                            </li>
+                            <li>
+                                <img src="imagens/loja/caixaselecao.svg" alt="" width="20px">
+                                Porta-Chaves
+                            </li>
+                        </ul>
+                    </div>
 
-                <div>
-                    <h3>Preço</h3>
-                    0€
-                    <img src="imagens/loja/pricerange.svg" alt="" width="150px">
-                    50€
-                </div>
+                    <div>
+                        <h3>Preço</h3>
+                        0€
+                        <img src="imagens/loja/pricerange.svg" alt="" width="150px">
+                        50€
 
-                <div>
-                    <h3>Cores</h3>
-                    <img src="imagens/loja/cores.svg" alt="" width="150px">
+                        <h3>Cores</h3>
+                        <img src="imagens/loja/cores.svg" alt="" width="150px">
+                    </div>
                 </div>
             </div>
 
@@ -123,14 +125,20 @@
                 <div class="row">
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/tshirt-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/tshirt-mini-mobile.jpg">
+                                <img src="imagens/loja/tshirt-mini.jpg" alt="">
+                            </picture><br>
                             T-Shirt com Logo 5€
                         </a>
                     </div>
 
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/caneca-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/caneca-mini-mobile.jpg">
+                                <img src="imagens/loja/caneca-mini.jpg" alt="">
+                            </picture><br>
                             Caneca com Logo 4€
                         </a>
                     </div>
@@ -139,7 +147,10 @@
                 <div class="row">
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/sweatshirt-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/sweatshirt-mini-mobile.jpg">
+                                <img src="imagens/loja/sweatshirt-mini.jpg" alt="">
+                            </picture><br>
                             Sweatshirt com Logo 10€
                         </a>
                     </div>
@@ -147,7 +158,10 @@
 
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/isqueiro-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/isqueiro-mini-mobile.jpg">
+                                <img src="imagens/loja/isqueiro-mini.jpg" alt="">
+                            </picture><br>
                             Isqueiro com Logo 3€
                         </a>
                     </div>
@@ -156,14 +170,20 @@
                 <div class="row">
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/caneta-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/caneta-mini-mobile.jpg">
+                                <img src="imagens/loja/caneta-mini.jpg" alt="">
+                            </picture><br>
                             Caneta com Logo 2€
                         </a>
                     </div>
 
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/almofada-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/almofada-mini-mobile.jpg">
+                                <img src="imagens/loja/almofada-mini.jpg" alt="">
+                            </picture><br>
                             Almofada com Logo 5€
                         </a>
                     </div>
@@ -172,7 +192,10 @@
                 <div class="row">
                     <div class="col-6">
                         <a href="artigo.html">
-                            <img src="imagens/loja/portachaves-mini.jpg" alt=""><br>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="imagens/mobile/portachaves-mini-mobile.jpg">
+                                <img src="imagens/loja/portachaves-mini.jpg" alt="">
+                            </picture><br>
                             Porta-Chaves com Logo 1.5€
                         </a>
                     </div>
@@ -198,7 +221,7 @@
                 </a>
             </div>
 
-            <div class="col-1"></div>
+            <div class="col-1 empty"></div>
 
             <div class="col-2">
                 <a href="*link to fb">
@@ -230,7 +253,7 @@
                 </a>
             </div>
 
-            <div class="col-1"></div>
+            <div class="col-1 empty"></div>
 
             <div class="col-2"> Website Design:<br> MMDesign</div>
         </div>

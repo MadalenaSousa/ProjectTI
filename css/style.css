@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 /*Geral*/
@@ -69,6 +70,10 @@ nav [class*='col-'] {
 
 nav [class*='col-']:not(.empty):hover {
     background-color: #440146;
+}
+
+nav [class*='col-'].empty img {
+    display: none;
 }
 
 /*Rodapé*/
@@ -149,6 +154,12 @@ footer div:last-child {
     margin-bottom: 1.5%;
 }
 
+/*homepage*/
+
+.homepage img {
+    display: none;
+}
+
 /*Sobre*/
 
 [class*='sobre'] {
@@ -194,7 +205,7 @@ footer div:last-child {
     position: relative;
     float: left;
 
-    height: 5em;
+    height: 7em;
     width: calc(100% / 7);
 
     font-family: "Helvetica";
@@ -225,18 +236,22 @@ footer div:last-child {
 
 .grid-calendario th {
     width: calc(100% / 7);
-    font-size: 10pt;
-    height: 50px;
+    height: 4em;
+
     text-align: center;
+    line-height: 2em;
 
     color: white;
     font-family: "OCR A Std";
+    font-size: 10pt;
     background-color: #440146;
 }
 
 .grid-calendario tr:last-child td {
     background-color: #440146;
-    height: 50px;
+
+    height: 4em;
+    line-height: 2em;
 }
 
 .other-month {
@@ -284,15 +299,110 @@ footer div:last-child {
 
 /*Dados pessoais e de pagamento*/
 
-[class*='pagamento'] {
-    display: inline-block;
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
+.pagamento [class*="col-"] div {
     padding: 20px;
-    text-align: justify;
 }
 
+@media only screen and (max-width: 600px) {
+
+    /*geral*/
+    [class*="col-"] {
+        float: left;
+        width: 100%;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: 20pt;
+    }
+
+    /*logotipo e slideshow*/
+    .logo {
+        font-size: 20pt;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        width: calc(100% / 3 * 2);
+    }
+
+    .img-video {
+        padding: 0;
+        margin: 0;
+    }
+
+    /*navegação*/
+    nav .paginas {
+        position: absolute;
+        top: 70px;
+
+        width: 100%;
+    }
+
+    nav [class*="col-"]:not(.empty) {
+        background-color: rgba(128, 0, 128, 0.8);
+    }
+
+    nav [class*="col-"].empty {
+        height: 70px;
+    }
+
+    nav [class*='col-'].empty img {
+        display: inline;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+
+    /*footer*/
+    footer [class*="col-"].empty {
+        display: none;
+    }
+
+    footer [class*="col-"] {
+        width: calc(100% / 5);
+        font-size: 0.1em;
+        margin: 0;
+    }
+
+    footer svg {
+        width: 70px;
+    }
+
+    footer img {
+        width: 20px;
+    }
+
+    /*homepage*/
+    .homepage video {
+        display: none;
+    }
+
+    /*eventos*/
+    .grid-calendario td {
+        height: 4em;
+        font-size: 7pt;
+    }
+
+    .grid-calendario th, .grid-calendario tr:last-child td {
+        height: 2em;
+        font-size: 7pt;
+    }
+
+    /*loja*/
+
+    .grid-loja [class*="col-"] {
+        width: calc(100% / 2);
+    }
+
+    .loja .filtros div {
+        font-size: 8pt;
+        text-align: left;
+        width: calc(100% / 3);
+        margin: 15px;
+        display: inline-block;
+    }
+}
 
 
 
