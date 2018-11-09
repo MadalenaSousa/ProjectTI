@@ -67,12 +67,12 @@ nav [class*='col-'] {
     text-align: center;
 }
 
-[class*='col-']:not(.empty) {
-    min-width: 150px;
-}
-
 nav [class*='col-']:not(.empty):hover {
     background-color: #440146;
+}
+
+nav [class*='col-'].empty img {
+    display: none;
 }
 
 /*Rodapé*/
@@ -151,6 +151,12 @@ footer div:last-child {
     text-align: center;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
+}
+
+/*homepage*/
+
+.homepage img {
+    display: none;
 }
 
 /*Sobre*/
@@ -302,31 +308,91 @@ footer div:last-child {
 }
 
 @media only screen and (max-width: 600px) {
+
+    /*geral*/
+
     [class*="col-"] {
         float: left;
         width: 100%;
+        font-size: 1em;
     }
 
-    [class*="col-"] .empty {
-        width: 100px;
-    }
+    /*logotipo e slideshow*/
 
     .logo {
-        font-size: 20pt ;
+        font-size: 20pt;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        width: calc(100% / 3 * 2);
     }
-}
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    nav, footer {
+    .img-video {
+        padding: 0;
+        margin: 0;
+    }
+
+    /*navegação*/
+
+    nav .paginas {
+        position: absolute;
+        top: 70px;
+
         width: 100%;
     }
 
-    [class*="col-"] .empty {
-        width: 200px;
+    nav [class*="col-"]:not(.empty) {
+        background-color: rgba(128, 0, 128, 0.8);
     }
 
-    .logo {
-        font-size: 8pt ;
+    nav [class*="col-"].empty {
+        height: 70px;
+    }
+
+    nav [class*='col-'].empty img {
+        display: inline;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+
+    /*homepage*/
+
+    .homepage video {
+        display: none;
+    }
+
+
+    /*footer*/
+
+    footer [class*="col-"].empty {
+        display: none;
+    }
+
+    footer [class*="col-"] {
+        width: calc(100% / 5);
+        font-size: 0.1em;
+        margin: 0;
+    }
+
+    footer svg {
+        width: 70px;
+    }
+
+    footer img {
+        width: 20px;
+    }
+
+    /*eventos*/
+    
+     .grid-calendario td{
+       height: 4em;
+       font-size: 7pt;
+    }
+
+    .grid-calendario th, .grid-calendario tr:last-child td {
+        height: 2em;
+        font-size: 7pt;
     }
 }
 
