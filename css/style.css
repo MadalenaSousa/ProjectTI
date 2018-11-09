@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 /*Geral*/
@@ -310,15 +311,14 @@ footer div:last-child {
 @media only screen and (max-width: 600px) {
 
     /*geral*/
-
     [class*="col-"] {
         float: left;
         width: 100%;
         font-size: 1em;
+        text-align: center;
     }
 
     /*logotipo e slideshow*/
-
     .logo {
         font-size: 20pt;
         position: absolute;
@@ -333,7 +333,6 @@ footer div:last-child {
     }
 
     /*navegação*/
-
     nav .paginas {
         position: absolute;
         top: 70px;
@@ -356,15 +355,7 @@ footer div:last-child {
         top: 20px;
     }
 
-    /*homepage*/
-
-    .homepage video {
-        display: none;
-    }
-
-
     /*footer*/
-
     footer [class*="col-"].empty {
         display: none;
     }
@@ -383,16 +374,34 @@ footer div:last-child {
         width: 20px;
     }
 
+    /*homepage*/
+    .homepage video {
+        display: none;
+    }
+
     /*eventos*/
-    
-     .grid-calendario td{
-       height: 4em;
-       font-size: 7pt;
+    .grid-calendario td {
+        height: 4em;
+        font-size: 7pt;
     }
 
     .grid-calendario th, .grid-calendario tr:last-child td {
         height: 2em;
         font-size: 7pt;
+    }
+
+    /*loja*/
+
+    .grid-loja [class*="col-"] {
+        width: calc(100% / 2);
+    }
+
+    .loja .filtros div {
+        font-size: 8pt;
+        text-align: left;
+        width: calc(100% / 3);
+        margin: 15px;
+        display: inline-block;
     }
 }
 
