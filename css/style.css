@@ -30,10 +30,10 @@ a {
 
     color: black;
     font-family: "Helvetica";
-    font-size: 18pt;
+    font-size: 1.5em;
     background-color: white;
 
-    padding: 15px;
+    padding: 1%;
 }
 
 .img-video {
@@ -59,7 +59,7 @@ a {
 /*Navegação*/
 
 nav [class*='col-'] {
-    height: 60px;
+    height: 2.8em;
 
     background-color: purple;
     color: white;
@@ -74,7 +74,7 @@ nav [class*='col-']:not(.empty):hover {
 /*Rodapé*/
 
 footer [class*='col-'] {
-    height: 80px;
+    height: 6.5em;
 
     font-size: 10pt;
     background-color: purple;
@@ -132,7 +132,7 @@ footer div:last-child {
     font-family: "OCR A Std";
     font-size: 30pt;
 
-    padding: 20px;
+    padding: 1.5%;
 }
 
 
@@ -143,10 +143,10 @@ footer div:last-child {
     background-color:orange;
     font-family: "OCR A Std";
 
-    padding: 20px;
+    padding: 2%;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
 }
 
 /*Sobre*/
@@ -157,7 +157,7 @@ footer div:last-child {
     color: black;
     background-color: white;
     font-family: "Helvetica";
-    padding: 20px;
+    padding: 1.5%;
     text-align: justify;
 }
 
@@ -170,11 +170,10 @@ footer div:last-child {
     background-color: white;
     font-family: "Helvetica";
 
-    padding: 20px;
+    padding: 1.5%;
     text-align: justify;
 }
 
-/*Seta de indicação de movimento*/
 .seta {
     position: absolute;
 }
@@ -195,7 +194,7 @@ footer div:last-child {
     position: relative;
     float: left;
 
-    height: 80px;
+    height: 5em;
     width: calc(100% / 7);
 
     font-family: "Helvetica";
