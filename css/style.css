@@ -299,13 +299,8 @@ footer div:last-child {
 
 /*Dados pessoais e de pagamento*/
 
-[class*='pagamento'] {
-    display: inline-block;
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
+.pagamento [class*="col-"] div {
     padding: 20px;
-    text-align: justify;
 }
 
 @media only screen and (max-width: 600px) {
@@ -316,6 +311,10 @@ footer div:last-child {
         width: 100%;
         font-size: 1em;
         text-align: center;
+    }
+
+    .titulo {
+        font-size: 20pt;
     }
 
     /*logotipo e slideshow*/
