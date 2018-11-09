@@ -194,7 +194,7 @@ footer div:last-child {
     position: relative;
     float: left;
 
-    height: 5em;
+    height: 7em;
     width: calc(100% / 7);
 
     font-family: "Helvetica";
@@ -225,18 +225,22 @@ footer div:last-child {
 
 .grid-calendario th {
     width: calc(100% / 7);
-    font-size: 10pt;
-    height: 50px;
+    height: 4em;
+
     text-align: center;
+    line-height: 2em;
 
     color: white;
     font-family: "OCR A Std";
+    font-size: 10pt;
     background-color: #440146;
 }
 
 .grid-calendario tr:last-child td {
     background-color: #440146;
-    height: 50px;
+
+    height: 4em;
+    line-height: 2em;
 }
 
 .other-month {
