@@ -67,6 +67,10 @@ nav [class*='col-'] {
     text-align: center;
 }
 
+[class*='col-']:not(.empty) {
+    min-width: 150px;
+}
+
 nav [class*='col-']:not(.empty):hover {
     background-color: #440146;
 }
@@ -297,6 +301,34 @@ footer div:last-child {
     text-align: justify;
 }
 
+@media only screen and (max-width: 600px) {
+    [class*="col-"] {
+        float: left;
+        width: 100%;
+    }
+
+    [class*="col-"] .empty {
+        width: 100px;
+    }
+
+    .logo {
+        font-size: 20pt ;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    nav, footer {
+        width: 100%;
+    }
+
+    [class*="col-"] .empty {
+        width: 200px;
+    }
+
+    .logo {
+        font-size: 8pt ;
+    }
+}
 
 
 
