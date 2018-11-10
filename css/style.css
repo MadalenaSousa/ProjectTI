@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+.contentor {
+    height: 100%;
+}
+
 .row, tr {
     content: ' ';
     clear: both;
@@ -39,6 +43,10 @@ a {
 
 .img-video {
     padding: 0;
+}
+
+img:not(.icon) {
+    width: 100%;
 }
 
 /*Logotipo*/
@@ -79,7 +87,7 @@ nav [class*='col-'].empty img {
 /*Rodapé*/
 
 footer [class*='col-'] {
-    height: 6.5em;
+    height: 80px;
 
     font-size: 10pt;
     background-color: purple;
@@ -160,38 +168,21 @@ footer div:last-child {
     display: none;
 }
 
-/*Sobre*/
+/*Sobre e Portfólio*/
 
-[class*='sobre'] {
-    display: inline-block;
-
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    font-size:16pt;
-
+.sobre [class*="col-"]:not(.titulo), .projeto [class*="col-"]:not(.titulo) {
+    font-size: 16pt;
     padding: 1.5%;
-    text-align: justify;
 }
 
-/*Portfólio*/
-
-[class*='projeto'] {
-    display: inline-block;
-
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    font-size:16pt;
-
-    padding: 1.5%;
-    text-align: justify;
+.sobre [class*="col-"] div:last-child, .projeto [class*="col-"] div:last-child {
+    position: relative;
 }
 
 .seta {
-    position: relative;
-    bottom: 40px;
+    position: absolute;
     left: 45%;
+    bottom: 10px;
 }
 
 /*Eventos*/
@@ -277,7 +268,6 @@ footer div:last-child {
 
 
 .loja h1 {
-    border: 5px solid black;
     font-family: "OCR A Std";
     display: inline;
     padding: 10px;
@@ -369,6 +359,7 @@ footer div:last-child {
         width: calc(100% / 5);
         font-size: 0.1em;
         margin: 0;
+        height: 40px;
     }
 
     footer svg {
