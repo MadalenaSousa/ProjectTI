@@ -270,7 +270,7 @@ footer div:last-child {
     height: 4em;
 
     text-align: center;
-    line-height: 2.5em;
+    line-height: 2em;
 
     color: white;
     font-family:"OCR A Std", Helvetica, serif;
@@ -412,6 +412,10 @@ footer div:last-child {
     .grid-calendario th, .grid-calendario tr:last-child td {
         height: 2em;
         font-size: 7pt;
+    }
+
+    .grid-calendario tr:last-child td .icon {
+        height: 10px;
     }
 
     /*loja*/
