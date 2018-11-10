@@ -51,7 +51,7 @@ a {
 
     font-size: 50pt;
 
-    width: calc(100% / 12 * 3);
+    width: 450px;
     text-align: center;
 
     z-index: 3;
