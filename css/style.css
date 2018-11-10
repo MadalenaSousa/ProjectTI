@@ -189,7 +189,9 @@ footer div:last-child {
 }
 
 .seta {
-    position: absolute;
+    position: relative;
+    bottom: 40px;
+    left: 45%;
 }
 
 /*Eventos*/
