@@ -384,12 +384,6 @@ footer div:last-child {
         display: none;
     }
 
-    .seta {
-        position: relative;
-        bottom: 40px;
-        left: 0%;
-    }
-
     /*eventos*/
     .grid-calendario td {
         height: 4em;
