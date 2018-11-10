@@ -189,7 +189,9 @@ footer div:last-child {
 }
 
 .seta {
-    position: absolute;
+    position: relative;
+    bottom: 40px;
+    left: 45%;
 }
 
 /*Eventos*/
@@ -380,6 +382,12 @@ footer div:last-child {
     /*homepage*/
     .homepage video {
         display: none;
+    }
+
+    .seta {
+        position: relative;
+        bottom: 40px;
+        left: 0%;
     }
 
     /*eventos*/
