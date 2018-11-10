@@ -33,7 +33,7 @@ a {
     width: calc(100% / 12);
 
     color: black;
-    font-family: "Helvetica";
+    font-family: "Futura", Helvetica, sans-serif ;
     font-size: 16pt;
     background-color: white;
 
@@ -47,6 +47,16 @@ a {
 
 img:not(.icon) {
     width: 100%;
+}
+
+@font-face {
+    font-family: "OCR A Std";
+    src: url(OCRAStd/OCRAStd.otf) format('.otf');
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url(FuturaStd/FuturaStd-Book.otf) format('.otf');
 }
 
 /*Logotipo*/
@@ -99,7 +109,7 @@ footer [class*='col-'] {
 
 footer div:last-child {
     line-height: 2em;
-    font-family: "OCR A Std";
+    font-family: "OCR A Std", Helvetica, serif;
 }
 
 /* Largura das Células*/
@@ -142,7 +152,7 @@ footer div:last-child {
 
 .titulo {
     color: orange;
-    font-family: "OCR A Std";
+    font-family: "OCR A Std", Helvetica, serif;
     font-size: 30pt;
 
     padding: 1.5%;
@@ -154,7 +164,7 @@ footer div:last-child {
 .botao {
     color: white;
     background-color:orange;
-    font-family: "OCR A Std";
+    font-family: "OCR A Std", Helvetica, serif;
 
     padding: 2%;
     text-align: center;
@@ -165,26 +175,31 @@ footer div:last-child {
 /*homepage*/
 .fullscreen-contentor-video {
     position: relative;
+
     height: 100vh;
     width: 100vw;
+
     overflow: hidden;
 }
 
 .fullscreen-contentor-video video {
     z-index: -1;
+
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     width: auto;
     height: auto;
     min-width: 100%;
     min-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .fullscreen-conteudo footer {
     position: absolute;
     bottom: 0;
+
     width: 100%;
 }
 
@@ -224,7 +239,7 @@ footer div:last-child {
     height: 7em;
     width: calc(100% / 7);
 
-    font-family: "Helvetica";
+    font-family: "Futura", Helvetica, serif;
     font-size: 10pt;
     background-color: lavender;
 
@@ -255,19 +270,17 @@ footer div:last-child {
     height: 4em;
 
     text-align: center;
-    line-height: 2em;
+    line-height: 2.5em;
 
     color: white;
-    font-family: "OCR A Std";
-    font-size: 10pt;
+    font-family:"OCR A Std", Helvetica, serif;
+    font-size: 12pt;
     background-color: #440146;
 }
 
 .grid-calendario tr:last-child td {
     background-color: #440146;
-
     height: 4em;
-    line-height: 2em;
 }
 
 .other-month {
@@ -288,13 +301,13 @@ footer div:last-child {
 
 
 .loja h1 {
-    font-family: "OCR A Std";
+    font-family: "OCR A Std", Helvetica, serif;
     display: inline;
     padding: 10px;
 }
 
 .loja h3 {
-    font-family: "OCR A Std";
+    font-family: "OCR A Std", Helvetica, serif;
 }
 
 .grid-loja [class*="col-"] img, .artigo [class*="col-"] img{
@@ -310,7 +323,7 @@ footer div:last-child {
   
 .contactoselocalizacao h2 {
     display: inline;
-    font-family: "OCR A Std";
+    font-family: "OCR A Std", Helvetica, serif;
 }
 
 /*Dados pessoais e de pagamento*/
