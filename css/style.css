@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+.contentor {
+    height: 100%;
+}
+
 .row, tr {
     content: ' ';
     clear: both;
@@ -79,7 +83,7 @@ nav [class*='col-'].empty img {
 /*Rodapé*/
 
 footer [class*='col-'] {
-    height: 6.5em;
+    height: 80px;
 
     font-size: 10pt;
     background-color: purple;
@@ -160,7 +164,7 @@ footer div:last-child {
     display: none;
 }
 
-/*Sobre*/
+/*Sobre
 
 [class*='sobre'] {
     display: inline-block;
@@ -172,9 +176,13 @@ footer div:last-child {
 
     padding: 1.5%;
     text-align: justify;
-}
+}*/
 
 /*Portfólio*/
+
+img:not(.icon) {
+    width: 100%;
+}
 
 [class*='projeto'] {
     display: inline-block;
@@ -188,8 +196,14 @@ footer div:last-child {
     text-align: justify;
 }
 
+.sobreLena div:last-child {
+    position: relative;
+}
+
 .seta {
     position: absolute;
+    left: 45%;
+    bottom: 10px;
 }
 
 /*Eventos*/
