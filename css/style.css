@@ -175,7 +175,7 @@ footer div:last-child {
     padding: 1.5%;
 }
 
-.sobre div:last-child, .projeto div:last-child {
+.sobre [class*="col-"] div:last-child, .projeto [class*="col-"] div:last-child {
     position: relative;
 }
 
@@ -268,7 +268,6 @@ footer div:last-child {
 
 
 .loja h1 {
-    border: 5px solid black;
     font-family: "OCR A Std";
     display: inline;
     padding: 10px;
@@ -360,6 +359,7 @@ footer div:last-child {
         width: calc(100% / 5);
         font-size: 0.1em;
         margin: 0;
+        height: 40px;
     }
 
     footer svg {
