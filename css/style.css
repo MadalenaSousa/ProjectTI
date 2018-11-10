@@ -414,7 +414,7 @@ footer div:last-child {
     /*Geral*/
 
     [class*='col-'] {
-        font-size: 10pt;
+        font-size: 12pt;
     }
 
     /*Logotipo*/
@@ -473,36 +473,24 @@ footer div:last-child {
         font-size:15pt;
     }
 
-    /*Sobre*/
+    /*Eventos*/
 
-    [class*='sobre'] {
-        font-size: 14pt;
+    .eventos>[class*="col-"] {
+        width: 80%;
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-left: 80px;
     }
-
-    /*Portfólio*/
-
-    [class*='projeto'] {
-        font-size: 14pt;
-    }
-
-    /*Calendário*/
 
     .grid-calendario td {
+        height: 7em;
         font-size: 7pt;
     }
 
-
-    .grid-calendario th {
+    .grid-calendario th, .grid-calendario tr:last-child td {
+        height: 3em;
         font-size: 7pt;
     }
-
-
-    /*Dados pessoais e de pagamento*/
-
-    [class*='pagamento'] {
-        font-size:10pt;
-    }
-
 }
 
 
