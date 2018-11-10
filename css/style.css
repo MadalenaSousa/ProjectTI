@@ -168,14 +168,14 @@ footer div:last-child {
     display: none;
 }
 
-/*Sobre*/
+/*Sobre e Portfólio*/
 
-[class*='sobre'] {
+.sobre [class*="col-"]:not(.titulo), .projeto [class*="col-"]:not(.titulo) {
     font-size: 16pt;
     padding: 1.5%;
 }
 
-[class*="sobre"] div:last-child {
+.sobre div:last-child, .projeto div:last-child {
     position: relative;
 }
 
@@ -183,20 +183,6 @@ footer div:last-child {
     position: absolute;
     left: 45%;
     bottom: 10px;
-}
-
-/*Portfólio*/
-
-[class*='projeto'] {
-    display: inline-block;
-
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    font-size:16pt;
-
-    padding: 1.5%;
-    text-align: justify;
 }
 
 /*Eventos*/
