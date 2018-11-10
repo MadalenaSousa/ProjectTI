@@ -45,6 +45,10 @@ a {
     padding: 0;
 }
 
+img:not(.icon) {
+    width: 100%;
+}
+
 /*Logotipo*/
 
 .logo {
@@ -164,25 +168,24 @@ footer div:last-child {
     display: none;
 }
 
-/*Sobre
+/*Sobre*/
 
 [class*='sobre'] {
-    display: inline-block;
-
-    color: black;
-    background-color: white;
-    font-family: "Helvetica";
-    font-size:16pt;
-
+    font-size: 16pt;
     padding: 1.5%;
-    text-align: justify;
-}*/
+}
+
+[class*="sobre"] div:last-child {
+    position: relative;
+}
+
+.seta {
+    position: absolute;
+    left: 45%;
+    bottom: 10px;
+}
 
 /*Portfólio*/
-
-img:not(.icon) {
-    width: 100%;
-}
 
 [class*='projeto'] {
     display: inline-block;
@@ -194,16 +197,6 @@ img:not(.icon) {
 
     padding: 1.5%;
     text-align: justify;
-}
-
-.sobreLena div:last-child {
-    position: relative;
-}
-
-.seta {
-    position: absolute;
-    left: 45%;
-    bottom: 10px;
 }
 
 /*Eventos*/
