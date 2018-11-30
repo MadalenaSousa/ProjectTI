@@ -78,6 +78,7 @@ img:not(.icon) {
 /*Navegação*/
 
 nav [class*='col-'] {
+    position: relative;
     height: 2.8em;
 
     background-color: purple;
@@ -92,6 +93,28 @@ nav [class*='col-']:not(.empty):hover {
 
 nav [class*='col-'].empty img {
     display: none;
+}
+
+nav .list {
+    display: none;
+
+    position: absolute;
+    top: 2.8em;
+    left: 0;
+
+    background-color: purple;
+    margin: 0;
+}
+
+nav .show {
+    display: block;
+}
+
+nav .list div {
+    height: 2em;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /*Rodapé*/
@@ -383,6 +406,10 @@ footer div:last-child {
         top: 20px;
     }
 
+    nav .list {
+        width: 100%;
+    }
+
     /*footer*/
     footer [class*="col-"].empty {
         display: none;
@@ -461,6 +488,11 @@ footer div:last-child {
         height: 40px;
         font-size: 12pt;
         line-height: 1.5em;
+    }
+
+    nav .list {
+        top: 40px;
+        width: 100%;
     }
 
     nav .col-1 {
