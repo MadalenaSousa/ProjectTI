@@ -359,7 +359,6 @@ footer div:last-child {
 
     /*geral*/
     [class*="col-"] {
-        float: left;
         width: 100%;
         font-size: 1em;
         text-align: center;
@@ -393,6 +392,10 @@ footer div:last-child {
 
     .paginas {
         display: none;
+    }
+
+    .show {
+        display: block;
     }
 
     nav [class*="col-"]:not(.empty) {

@@ -5,8 +5,8 @@ let opcoesPortfolio = document.querySelector("nav .list");
 botaoPortfolio.addEventListener("click", dropdown(opcoesPortfolio));
 
 //Dropmenu hamburguer
-let hamburguer = document.querySelector("nav img");
-let opcoes = document.getElementsByClassName("paginas");
+let hamburguer = document.querySelector("nav .burguer");
+let opcoes = document.querySelector(".paginas");
 
 console.log(hamburguer);
 console.log(opcoes);
