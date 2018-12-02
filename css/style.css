@@ -59,6 +59,16 @@ img:not(.icon) {
     src: url(FuturaStd/FuturaStd-Book.otf) format('.otf');
 }
 
+.pAbsolute {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.pRelative {
+    position: relative;
+}
+
 /*Logotipo*/
 
 .logo {
