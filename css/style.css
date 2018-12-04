@@ -106,10 +106,6 @@ nav [class*='col-'].empty img {
     margin: 0;
 }
 
-.show {
-    display: block;
-}
-
 .list div {
     height: 2em;
     width: 100%;
@@ -235,12 +231,17 @@ footer div:last-child {
 
 .sobre [class*="col-"] div:last-child, .projeto [class*="col-"] div:last-child {
     position: relative;
+    bottom:6px;
 }
 
 .seta {
     position: absolute;
     left: 45%;
-    bottom: 10px;
+    bottom: 15px;
+}
+
+.texto {
+    display: none;
 }
 
 /*Eventos*/
@@ -355,6 +356,10 @@ footer div:last-child {
     padding: 20px;
 }
 
+.show {
+    display: inline-block;
+}
+
 @media only screen and (max-width: 600px) {
 
     /*geral*/
@@ -388,6 +393,7 @@ footer div:last-child {
         top: 70px;
 
         width: 100%;
+        z-index: 10;
     }
 
     .paginas {
