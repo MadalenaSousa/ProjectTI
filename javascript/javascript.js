@@ -50,3 +50,27 @@ setInterval(function () {
 
     document.querySelector(".carousel img").setAttribute("src", imageSources[currentIndex]);
 }, 3000);
+
+//Dropdow das imagens
+let seta = document.querySelectorAll(".seta");
+let texto = document.querySelectorAll(".texto");
+let i;
+
+for(let i=0; i<texto.length; i++ ){
+    seta[i].addEventListener("click", dropdown(texto[i]));
+}
+
+//Função dropdown das imagens
+function dropdown(menu) {
+    var conteudo = menu;
+
+    return function() {
+        conteudo.classList.toggle("show");
+    };
+}
+
+function mudarImagem(setaImagem){
+    image=document.querySelectorAll(".seta");
+    image.src=setaImagem;
+}
+

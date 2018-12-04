@@ -241,12 +241,17 @@ footer div:last-child {
 
 .sobre [class*="col-"] div:last-child, .projeto [class*="col-"] div:last-child {
     position: relative;
+    bottom:6px;
 }
 
 .seta {
     position: absolute;
     left: 45%;
-    bottom: 10px;
+    bottom: 15px;
+}
+
+.texto {
+    display: none;
 }
 
 /*Eventos*/
@@ -406,6 +411,7 @@ footer div:last-child {
         top: 70px;
 
         width: 100%;
+        z-index: 10;
     }
 
     .paginas {
