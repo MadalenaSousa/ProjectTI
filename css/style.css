@@ -116,10 +116,6 @@ nav [class*='col-'].empty img {
     margin: 0;
 }
 
-.show {
-    display: block;
-}
-
 .list div {
     height: 2em;
     width: 100%;
@@ -352,6 +348,14 @@ footer div:last-child {
     border: 1px solid grey;
 }
 
+.check {
+    display: none;
+}
+
+.border {
+    border: 3px solid black;
+}
+
 /*Contactos e Localização*/
   
 .contactoselocalizacao h2 {
@@ -363,6 +367,10 @@ footer div:last-child {
 
 .pagamento [class*="col-"] div {
     padding: 20px;
+}
+
+.show {
+    display: block;
 }
 
 @media only screen and (max-width: 600px) {
