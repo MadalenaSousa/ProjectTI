@@ -54,23 +54,21 @@ setInterval(function () {
 //Dropdow das imagens
 let seta = document.querySelectorAll(".seta");
 let texto = document.querySelectorAll(".texto");
-let i;
 
 for(let i=0; i<texto.length; i++ ){
     seta[i].addEventListener("click", dropdown(texto[i]));
-}
-
-//Função dropdown das imagens
-function dropdown(menu) {
-    var conteudo = menu;
-
-    return function() {
-        conteudo.classList.toggle("show");
-    };
 }
 
 function mudarImagem(setaImagem){
     image=document.querySelectorAll(".seta");
     image.src=setaImagem;
 }
+
+//Eventos
+var info = new Date();
+let mesAtual = info.getMonth();
+var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+document.getElementById("mes").innerText = meses[mesAtual-1];
+
 
