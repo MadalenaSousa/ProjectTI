@@ -1,6 +1,6 @@
 //Dropmenu da navegação
-let botaoPortfolio = document.querySelector(".paginas .col-1:nth-child(2)");
-let opcoesPortfolio = document.querySelector("nav .list");
+let botaoPortfolio = document.querySelector(".paginas div .col-1");
+let opcoesPortfolio = document.querySelector(".list");
 
 botaoPortfolio.addEventListener("click", dropdown(opcoesPortfolio));
 
@@ -61,7 +61,7 @@ for(let i=0; i<texto.length; i++ ){
 
 function mudarImagem(setaImagem){
     image=document.querySelectorAll(".seta");
-    image.src=setaImagem;
+    image.src = setaImagem;
 }
 
 //Eventos
@@ -70,5 +70,7 @@ let mesAtual = info.getMonth();
 var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
 document.getElementById("mes").innerText = meses[mesAtual-1];
+
+var setaRightCal = document.
 
 

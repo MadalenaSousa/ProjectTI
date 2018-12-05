@@ -31,6 +31,7 @@ a {
 [class*='col-'] {
     float: left;
     width: calc(100% / 12);
+    position: relative;
 
     color: black;
     font-family: "Futura", Helvetica, sans-serif ;
@@ -106,14 +107,15 @@ nav [class*='col-'].empty img {
 }
 
 .list {
-    display: none;
-
     position: absolute;
-    top: 2.8em;
-    left: 0;
+    top: 60px;
+    left: calc((100% / 12) * 7);
+    display: none;
 
     background-color: purple;
     margin: 0;
+
+    width: calc(100% / 12);
 }
 
 .list div {
@@ -121,6 +123,10 @@ nav [class*='col-'].empty img {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.paginas {
+    cursor: pointer;
 }
 
 /*Rodapé*/
@@ -357,6 +363,10 @@ footer div:last-child {
     display: none;
 }
 
+.box {
+    cursor: pointer;
+}
+
 .border {
     border: 3px solid black;
 }
@@ -437,8 +447,11 @@ footer div:last-child {
         top: 20px;
     }
 
-    nav .list {
+    .list {
         position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
     /*footer*/
@@ -523,7 +536,8 @@ footer div:last-child {
 
     .list {
         top: 40px;
-        width: 100%;
+        left: calc((100% / 8) * 3);
+        width: calc(100% / 8);
     }
 
     .col-1 {
