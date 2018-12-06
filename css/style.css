@@ -116,6 +116,7 @@ nav [class*='col-'].empty img {
     margin: 0;
 
     width: calc(100% / 12);
+    z-index: 5;
 }
 
 .list div {

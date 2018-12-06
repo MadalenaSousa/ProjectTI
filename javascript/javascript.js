@@ -125,14 +125,14 @@ function calendarioMesMostrado(ano, mes) {
             let tCell = document.createElement("td");
 
             if ((i === 0 && j < primeiroDiaSemana)) {
-                tCell.innerText = "";
+                tCell.innerText = "-";
                 tCell.classList.add("other-month")
             } else {
                 if (dia < numeroDiasMes) {
                     dia++;
                     tCell.innerText = dia;
                 } else {
-                    tCell.innerText = "";
+                    tCell.innerText = "-";
                     tCell.classList.add("other-month")
                 }
             }
