@@ -27,15 +27,6 @@ for(let i=0; i<cor.length; i++) {
     });
 }
 
-//Função dropmenu
-function dropdown(menu) {
-    var conteudo = menu;
-
-    return function() {
-        conteudo.classList.toggle("show");
-    };
-}
-
 //SlideShow
 var imageSources = ["imagens/slideshow1.jpg", "imagens/slideshow2.jpg", "imagens/slideshow3.jpg"];
 
@@ -51,26 +42,32 @@ setInterval(function () {
     document.querySelector(".carousel img").setAttribute("src", imageSources[currentIndex]);
 }, 3000);
 
-//Dropdow das imagens
+//Dropdown das imagens
 let seta = document.querySelectorAll(".seta");
 let texto = document.querySelectorAll(".texto");
-let i;
 
-for(let i=0; i<texto.length; i++ ){
+
+for(let i=0; i<texto.length; i++){
     seta[i].addEventListener("click", dropdown(texto[i]));
+
+    seta[i].addEventListener("click",function () {
+        if (seta[i].alt == "Seta") {
+            seta[i].src = "imagens/setaInvertida.png";
+            seta[i].alt= "SetaInv";
+        }
+    else {
+            seta[i].src = "imagens/seta.png";
+            seta[i].alt= "Seta";
+        }
+    });
 }
 
-//Função dropdown das imagens
+//Função dropmenu e dropdown do texto das imagens da pagina Sobre e Portfolio
 function dropdown(menu) {
     var conteudo = menu;
 
     return function() {
         conteudo.classList.toggle("show");
     };
-}
-
-function mudarImagem(setaImagem){
-    image=document.querySelectorAll(".seta");
-    image.src=setaImagem;
 }
 
