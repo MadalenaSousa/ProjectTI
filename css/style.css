@@ -323,14 +323,14 @@ footer div:last-child {
     background-color: #440146;
 }
 
-.grid-calendario tfoot tr td {
+.grid-calendario tfoot tr th {
     background-color: #440146;
     height: 50px;
     position: relative;
 }
 
 .other-month {
-    color: darkgray;
+    color: gray;
 }
 
 #setaLeft {
@@ -486,7 +486,7 @@ footer div:last-child {
         font-size: 7pt;
     }
 
-    .grid-calendario thead tr th, .grid-calendario tfoot tr td {
+    .grid-calendario thead tr th, .grid-calendario tfoot tr th {
         height: 25px;
         font-size: 7pt;
     }
@@ -603,7 +603,7 @@ footer div:last-child {
         font-size: 7pt;
     }
 
-    .grid-calendario th, .grid-calendario tr:last-child td {
+    .grid-calendario th, .grid-calendario tr:last-child th {
         height: 3em;
         font-size: 7pt;
     }
