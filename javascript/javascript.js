@@ -19,7 +19,6 @@ for(let i=0; i<check.length; i++) {
 }
 
 let cor = document.querySelectorAll(".cores img");
-console.log(cor);
 
 for(let i=0; i<cor.length; i++) {
     cor[i].addEventListener("click", function () {
@@ -65,12 +64,82 @@ function mudarImagem(setaImagem){
 }
 
 //Eventos
-var info = new Date();
-let mesAtual = info.getMonth();
-var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+let infoData = new Date();
+let mesAtual = infoData.getMonth();
+let anoAtual = infoData.getFullYear();
+let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-document.getElementById("mes").innerText = meses[mesAtual-1];
+let setaRightCal = document.getElementById("setaRight");
+let setaLeftCal = document.getElementById("setaLeft");
 
-var setaRightCal = document.
+let evento = document.getElementsByClassName("evento");
+let infoEvento = document.querySelector(".info");
 
+for(let i=0; i<evento.length; i++){
+    evento[i].addEventListener("click", dropdown(infoEvento));
+}
 
+calendarioMesMostrado(anoAtual, mesAtual);
+
+document.getElementById("mes").innerText = meses[mesAtual];
+
+setaRightCal.addEventListener("click", function () {
+    mesAtual = mesAtual + 1;
+
+    if (mesAtual > meses.length-1) {
+        mesAtual = 0;
+        anoAtual++;
+    }
+
+    document.getElementById("mes").innerText = meses[mesAtual];
+
+    calendarioMesMostrado(anoAtual, mesAtual);
+});
+
+setaLeftCal.addEventListener("click", function () {
+    mesAtual = mesAtual - 1;
+
+    if (mesAtual < 0) {
+        mesAtual = 11;
+        anoAtual--;
+    }
+
+    document.getElementById("mes").innerText = meses[mesAtual];
+
+    calendarioMesMostrado(anoAtual, mesAtual);
+});
+
+function calendarioMesMostrado(ano, mes) {
+    let primeiroDiaSemana = (new Date(ano, mes)).getDay();
+    let numeroDiasMes = (new Date(ano, mes + 1, 0)).getDate();
+    console.log(numeroDiasMes);
+    let dia = 0;
+    let table = document.querySelector("tbody");
+
+    table.innerHTML = '';
+
+    for (let i = 0; i < 6; i++) {
+        let tRow = document.createElement("tr");
+
+        for (let j = 0; j < 7; j++) {
+            let tCell = document.createElement("td");
+
+            if ((i === 0 && j < primeiroDiaSemana)) {
+                tCell.innerText = "";
+                tCell.classList.add("other-month")
+            } else {
+                if (dia < numeroDiasMes) {
+                    dia++;
+                    tCell.innerText = dia;
+                } else {
+                    tCell.innerText = "";
+                    tCell.classList.add("other-month")
+                }
+            }
+
+            tRow.appendChild(tCell);
+        }
+
+        table.appendChild(tRow);
+    }
+}

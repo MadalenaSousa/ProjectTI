@@ -265,18 +265,22 @@ footer div:last-child {
     /*Informação*/
 
 .info {
-    display: inline-block;
+    display: none;
     color: black;
     text-align: left;
 }
 
+.evento {
+    cursor: pointer;
+}
+
     /*Calendário*/
 
-.grid-calendario td {
+.grid-calendario tbody td {
     position: relative;
     float: left;
 
-    height: 7em;
+    height: 6em;
     width: calc(100% / 7);
 
     font-family: "Futura", Helvetica, serif;
@@ -305,9 +309,9 @@ footer div:last-child {
     width: calc(calc(100% / 7) * 7);
 }
 
-.grid-calendario th {
+.grid-calendario thead tr th {
     width: calc(100% / 7);
-    height: 4em;
+    height: 50px;
 
     text-align: center;
     line-height: 2em;
@@ -318,21 +322,22 @@ footer div:last-child {
     background-color: #440146;
 }
 
-.grid-calendario tr:last-child td {
+.grid-calendario tfoot tr td {
     background-color: #440146;
-    height: 4em;
+    height: 50px;
+    position: relative;
 }
 
 .other-month {
-    color: gray;
+    color: darkgray;
 }
 
-.grid-calendario img:first-child {
+#setaLeft {
     position: absolute;
     left: 30px;
 }
 
-.grid-calendario img:last-child {
+#setaRight {
     position: absolute;
     right: 30px;
 }
@@ -475,17 +480,17 @@ footer div:last-child {
     }
 
     /*eventos*/
-    .grid-calendario td {
+    .grid-calendario tbody td {
         height: 4em;
         font-size: 7pt;
     }
 
-    .grid-calendario th, .grid-calendario tr:last-child td {
-        height: 2em;
+    .grid-calendario thead tr th, .grid-calendario tfoot tr td {
+        height: 25px;
         font-size: 7pt;
     }
 
-    .grid-calendario tr:last-child td .icon {
+    .grid-calendario .icon {
         height: 10px;
     }
 
@@ -501,6 +506,10 @@ footer div:last-child {
         width: calc(100% / 3);
         margin: 15px;
         display: inline-block;
+    }
+
+    .cores img {
+        width: 15px;
     }
 }
 
