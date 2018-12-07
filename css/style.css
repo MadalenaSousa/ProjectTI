@@ -31,6 +31,7 @@ a {
 [class*='col-'] {
     float: left;
     width: calc(100% / 12);
+    position: relative;
 
     color: black;
     font-family: "Futura", Helvetica, sans-serif ;
@@ -106,14 +107,16 @@ nav [class*='col-'].empty img {
 }
 
 .list {
-    display: none;
-
     position: absolute;
-    top: 2.8em;
-    left: 0;
+    top: 60px;
+    left: calc((100% / 12) * 7);
+    display: none;
 
     background-color: purple;
     margin: 0;
+
+    width: calc(100% / 12);
+    z-index: 5;
 }
 
 .list div {
@@ -121,6 +124,10 @@ nav [class*='col-'].empty img {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.paginas {
+    cursor: pointer;
 }
 
 /*Rodapé*/
@@ -259,18 +266,22 @@ footer div:last-child {
     /*Informação*/
 
 .info {
-    display: inline-block;
+    display: none;
     color: black;
     text-align: left;
 }
 
+.evento {
+    cursor: pointer;
+}
+
     /*Calendário*/
 
-.grid-calendario td {
+.grid-calendario tbody td {
     position: relative;
     float: left;
 
-    height: 7em;
+    height: 6em;
     width: calc(100% / 7);
 
     font-family: "Futura", Helvetica, serif;
@@ -299,9 +310,9 @@ footer div:last-child {
     width: calc(calc(100% / 7) * 7);
 }
 
-.grid-calendario th {
+.grid-calendario thead tr th {
     width: calc(100% / 7);
-    height: 4em;
+    height: 50px;
 
     text-align: center;
     line-height: 2em;
@@ -312,21 +323,22 @@ footer div:last-child {
     background-color: #440146;
 }
 
-.grid-calendario tr:last-child td {
+.grid-calendario tfoot tr th {
     background-color: #440146;
-    height: 4em;
+    height: 50px;
+    position: relative;
 }
 
 .other-month {
     color: gray;
 }
 
-.grid-calendario img:first-child {
+#setaLeft {
     position: absolute;
     left: 30px;
 }
 
-.grid-calendario img:last-child {
+#setaRight {
     position: absolute;
     right: 30px;
 }
@@ -355,6 +367,10 @@ footer div:last-child {
 
 .check {
     display: none;
+}
+
+.box {
+    cursor: pointer;
 }
 
 .border {
@@ -437,8 +453,11 @@ footer div:last-child {
         top: 20px;
     }
 
-    nav .list {
+    .list {
         position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
     /*footer*/
@@ -462,17 +481,17 @@ footer div:last-child {
     }
 
     /*eventos*/
-    .grid-calendario td {
+    .grid-calendario tbody td {
         height: 4em;
         font-size: 7pt;
     }
 
-    .grid-calendario th, .grid-calendario tr:last-child td {
-        height: 2em;
+    .grid-calendario thead tr th, .grid-calendario tfoot tr th {
+        height: 25px;
         font-size: 7pt;
     }
 
-    .grid-calendario tr:last-child td .icon {
+    .grid-calendario .icon {
         height: 10px;
     }
 
@@ -488,6 +507,10 @@ footer div:last-child {
         width: calc(100% / 3);
         margin: 15px;
         display: inline-block;
+    }
+
+    .cores img {
+        width: 15px;
     }
 }
 
@@ -523,7 +546,8 @@ footer div:last-child {
 
     .list {
         top: 40px;
-        width: 100%;
+        left: calc((100% / 8) * 3);
+        width: calc(100% / 8);
     }
 
     .col-1 {
@@ -579,7 +603,7 @@ footer div:last-child {
         font-size: 7pt;
     }
 
-    .grid-calendario th, .grid-calendario tr:last-child td {
+    .grid-calendario th, .grid-calendario tr:last-child th {
         height: 3em;
         font-size: 7pt;
     }
