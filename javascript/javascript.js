@@ -249,3 +249,43 @@ eventoCal(objeto1);
 eventoCal(objeto2);
 eventoCal(objeto3);
 
+//Loja
+var headers = new Headers();
+headers.append("user-key", "b69fa5bd25e21cc4f9a1f58a738903ec");
+fetch("http://api.walmartlabs.com/v1/items?ids=12417832,19336123&apiKey={apiKey}&lsPublisherId={Your LinkShare Publisher Id}", {headers: headers})
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(json) {
+        console.log(json);
+    });
+
+function createArticle(json) {
+    let container = document.createElement("div");
+    container.classList.add("col-6");
+
+    let link = document.createElement("a");
+    link.setAttribute("href", "artigo.html");
+
+    let imagem = document.createElement("img");
+    imagem.setAttribute("src", json.thumbnailImage);
+    imagem.setAttribute("alt", json.name);
+
+    let picture = document.createElement("picture");
+    picture.appendChild(imagem);
+
+    let descricao = document.createElement("div");
+    descricao.innerText = json.name;
+
+    let preco = document.createElement("div");
+    preco.innerText = json.salePrice;
+
+    link.appendChild(imagem);
+    link.appendChild(descricao);
+    link.appendChild(preco);
+
+    container.appendChild(link);
+
+    document.querySelector(".grid-loja .row").appendChild(container);
+}
+
