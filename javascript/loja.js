@@ -1,5 +1,21 @@
 //Loja
 
+artigos();
+
+function artigos() {
+    var headers = new Headers();
+    headers.append("user-key", "gcxr7feektczgfpeymqazn2j");
+    fetch("http://api.walmartlabs.com/v1/paginated/items?category=3944&specialOffer=rollback&apiKey={gcxr7feektczgfpeymqazn2j}&format=json", {headers: headers})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log(json);
+
+            document.querySelector(".grid-loja .row").appendChild(createArticle(json));
+        });
+}
+
 function createArticle(json) {
     let container = document.createElement("div");
     container.classList.add("col-6");
@@ -30,19 +46,3 @@ function createArticle(json) {
 
     return container;
 }
-
-function artigos() {
-    var headers = new Headers();
-    headers.append("user-key", "fr2mevjt4hjk9ng9mcew8yq");
-    fetch("http://api.walmartlabs.com/v1/trends?apiKey={fr2mevjt4hjk9ng9mcew8yq}&lsPublisherId=xyz&format=json", {headers: headers})
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(json) {
-            console.log(json);
-
-            document.querySelector(".grid-loja .row").appendChild(createArticle(json));
-        });
-}
-
-artigos();
