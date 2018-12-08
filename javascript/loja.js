@@ -67,3 +67,7 @@ function article(json) {
 
     return container;
 }
+
+//albumId = categoria
+//id = preço
+//?  = cor
