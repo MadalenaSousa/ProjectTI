@@ -1,6 +1,7 @@
 //Loja
 
 let randNum;
+let itens = [];
 
 artigos();
 
@@ -22,6 +23,7 @@ function artigos() {
                 console.log(json);
 
                 document.querySelector(".grid-loja .row").appendChild(articleThumbnail(json));
+                itens.push(json);
             });
     }
 }
