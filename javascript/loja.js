@@ -1,48 +1,69 @@
 //Loja
 
 artigos();
+artigoDetail();
 
 function artigos() {
-    var headers = new Headers();
-    headers.append("user-key", "gcxr7feektczgfpeymqazn2j");
-    fetch("http://api.walmartlabs.com/v1/paginated/items?category=3944&specialOffer=rollback&apiKey={gcxr7feektczgfpeymqazn2j}&format=json", {headers: headers})
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(json) {
-            console.log(json);
+    for(let i=0; i<10; i++) {
+        fetch("https://jsonplaceholder.typicode.com/photos/1")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                console.log(json);
 
-            document.querySelector(".grid-loja .row").appendChild(createArticle(json));
-        });
+                document.querySelector(".grid-loja .row").appendChild(articleThumbnail(json));
+                document.querySelector(".artigo .row").appendChild(article(json));
+            });
+    }
 }
 
-function createArticle(json) {
+function artigoDetail() {
+        fetch("https://jsonplaceholder.typicode.com/photos/1")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                console.log(json);
+
+                document.querySelector(".artigo .row").appendChild(article(json));
+            });
+}
+
+function articleThumbnail(json) {
     let container = document.createElement("div");
     container.classList.add("col-6");
 
-    json.items.forEach(function () {
-        let link = document.createElement("a");
-        link.setAttribute("href", "artigo.html");
+    let link = document.createElement("a");
+    link.setAttribute("href", "artigo.html");
 
-        let imagem = document.createElement("img");
-        imagem.setAttribute("src", json.thumbnailImage);
-        imagem.setAttribute("alt", json.name);
+    let imagem = document.createElement("img");
+    imagem.setAttribute("src", json.thumbnailUrl);
+    imagem.setAttribute("alt", json.title);
 
-        let picture = document.createElement("picture");
-        picture.appendChild(imagem);
+    let descricao = document.createElement("div");
+    descricao.innerText = json.title;
 
-        let descricao = document.createElement("div");
-        descricao.innerText = json.name;
-
-        let preco = document.createElement("div");
-        preco.innerText = json.salePrice;
-
-        link.appendChild(imagem);
-        link.appendChild(descricao);
-        link.appendChild(preco);
-    });
+    link.appendChild(imagem);
+    link.appendChild(descricao);
 
     container.appendChild(link);
+
+    return container;
+}
+
+function article(json) {
+    let container = document.createElement("div");
+    container.classList.add("col-4");
+
+    let imagem = document.createElement("img");
+    imagem.setAttribute("src", json.url);
+    imagem.setAttribute("alt", json.title);
+
+    let descricao = document.createElement("div");
+    descricao.innerText = json.title;
+
+    container.appendChild(imagem);
 
     return container;
 }
