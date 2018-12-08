@@ -9,12 +9,25 @@ let checkCanetas = document.getElementById("canetas");
 let checkIsqueiros = document.getElementById("isqueiros");
 let checkPortachaves = document.getElementById("portachaves");
 
-artigos();
+let colors = ["orange", "purple", "white", "black", "yellow", "green", "cyan", "blue", "red", "pink"];
 
-console.log(itens);
+let orange = document.getElementById("orange");
+let purple = document.getElementById("purple");
+let white = document.getElementById("white");
+let black = document.getElementById("black");
+let yellow = document.getElementById("yellow");
+let green = document.getElementById("green");
+let cyan = document.getElementById("cyan");
+let blue = document.getElementById("blue");
+let red = document.getElementById("red");
+let pink = document.getElementById("pink");
+
+artigos();
 
 function artigos() {
     for(let i=0; i<6; i++) {
+        let randColor = colors[Math.floor(Math.random() * colors.length)];
+
         function random(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
@@ -32,6 +45,8 @@ function artigos() {
 
                 document.querySelector(".grid-loja .row").appendChild(articleThumbnail(json));
                 itens.push(json);
+
+                json.color = randColor;
             });
     }
 }
@@ -62,7 +77,7 @@ filterCategoria();
 
 //Nota: Usamos a propriedade albumId como condição para a categoria
 function filterCategoria() {
-    filteredItens = [];
+    let filteredItens = [];
 
     for(let i=0; i<6; i++) {
         if (checkCanecas.checked === false && checkTshirts.checked === false && checkCanetas.checked === false && checkIsqueiros.checked === false && checkPortachaves.checked === false) {
@@ -114,6 +129,73 @@ checkCanetas.addEventListener("click", filterCategoria);
 checkIsqueiros.addEventListener("click", filterCategoria);
 checkPortachaves.addEventListener("click", filterCategoria);
 
+filterCor();
 
-//id = preço map(x, 0, 5000, 0, 50) if(input = valor) {display x < valor}
-//?  = cor
+function filterCor() {
+    let filteredItens = [];
+
+    for(let i=0; i<6; i++) {
+        if (!orange.classList.contains("border") && !purple.classList.contains("border") && !white.classList.contains("border") && !black.classList.contains("border") && !yellow.classList.contains("border") && !green.classList.contains("border") && !cyan.classList.contains("border") && !blue.classList.contains("border") && !red.classList.contains("border") && !pink.classList.contains("border")) {
+            filteredItens = itens;
+            console.log("TODO O MUNDO");
+        } else if (orange.classList.contains("border") && itens[i].color === "orange") {
+            filteredItens.push(itens[i]);
+        } else if (purple.classList.contains("border") && itens[i].color === "purple") {
+            filteredItens.push(itens[i]);
+        } else if (white.classList.contains("border") && itens[i].color === "white") {
+            filteredItens.push(itens[i]);
+        } else if (black.classList.contains("border") && itens[i].color === "black") {
+            filteredItens.push(itens[i]);
+        } else if (yellow.classList.contains("border") && itens[i].color === "yellow") {
+            filteredItens.push(itens[i]);
+        } else if (green.classList.contains("border") && itens[i].color === "green") {
+            filteredItens.push(itens[i]);
+        } else if (cyan.classList.contains("border") && itens[i].color === "cyan") {
+            filteredItens.push(itens[i]);
+        } else if (blue.classList.contains("border") && itens[i].color === "blue") {
+            filteredItens.push(itens[i]);
+        } else if (red.classList.contains("border") && itens[i].color === "red") {
+            filteredItens.push(itens[i]);
+        } else if (pink.classList.contains("border") && itens[i].color === "pink") {
+            filteredItens.push(itens[i]);
+        }
+    }
+
+    console.log(filteredItens);
+
+    let container = document.querySelector(".grid-loja .row");
+    container.innerHTML = "";
+
+    for(let i=0; i<filteredItens.length; i++) {
+        let contentorArtigo = document.createElement("div");
+        contentorArtigo.classList.add("col-6");
+
+        let link = document.createElement("a");
+        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+
+        let imagem = document.createElement("img");
+        imagem.setAttribute("src", filteredItens[i].thumbnailUrl);
+        imagem.setAttribute("alt", filteredItens[i].title);
+
+        let descricao = document.createElement("div");
+        descricao.innerText = filteredItens[i].title;
+
+        link.appendChild(imagem);
+        link.appendChild(descricao);
+
+        contentorArtigo.appendChild(link);
+
+        container.appendChild(contentorArtigo);
+    }
+}
+
+orange.addEventListener("click", filterCor);
+purple.addEventListener("click", filterCor);
+white.addEventListener("click", filterCor);
+black.addEventListener("click", filterCor);
+yellow.addEventListener("click", filterCor);
+green.addEventListener("click", filterCor);
+cyan.addEventListener("click", filterCor);
+blue.addEventListener("click", filterCor);
+red.addEventListener("click", filterCor);
+pink.addEventListener("click", filterCor);
