@@ -345,7 +345,6 @@ footer div:last-child {
 
 /*Loja*/
 
-
 .loja h1 {
     font-family: "OCR A Std", Helvetica, serif;
     display: inline;
@@ -361,7 +360,7 @@ footer div:last-child {
     padding: 20px;
 }
 
-.grid-loja [class*="col-"], .artigo [class*="col-"]{
+.grid-loja [class*="col-"] {
     height: 500px;
 }
 
@@ -517,7 +516,7 @@ footer div:last-child {
         width: 15px;
     }
 
-    .grid-loja [class*="col-"], .artigo [class*="col-"]{
+    .grid-loja [class*="col-"] {
         height: 300px;
     }
 }
@@ -568,7 +567,7 @@ footer div:last-child {
 
     /*Loja*/
 
-    .grid-loja [class*="col-"], .artigo [class*="col-"]{
+    .grid-loja [class*="col-"]{
         height: 300px;
     }
 
