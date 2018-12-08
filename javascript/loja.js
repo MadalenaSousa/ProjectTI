@@ -58,9 +58,10 @@ function articleThumbnail(json) {
     return container;
 }
 
-filter();
+filterCategoria();
 
-function filter() {
+//Nota: Usamos a propriedade albumId como condição para a categoria
+function filterCategoria() {
     filteredItens = [];
 
     for(let i=0; i<6; i++) {
@@ -83,7 +84,7 @@ function filter() {
 
     let container = document.querySelector(".grid-loja .row");
     container.innerHTML = "";
-    
+
     for(let i=0; i<filteredItens.length; i++) {
         let contentorArtigo = document.createElement("div");
         contentorArtigo.classList.add("col-6");
@@ -107,12 +108,12 @@ function filter() {
     }
 }
 
-checkCanecas.addEventListener("click", filter);
-checkTshirts.addEventListener("click", filter);
-checkCanetas.addEventListener("click", filter);
-checkIsqueiros.addEventListener("click", filter);
-checkPortachaves.addEventListener("click", filter);
+checkCanecas.addEventListener("click", filterCategoria);
+checkTshirts.addEventListener("click", filterCategoria);
+checkCanetas.addEventListener("click", filterCategoria);
+checkIsqueiros.addEventListener("click", filterCategoria);
+checkPortachaves.addEventListener("click", filterCategoria);
 
-//albumId = categoria 100/5 = 20, if(seleciona o check 1) { display albumId <= (100/5)*1} else if ...
+
 //id = preço map(x, 0, 5000, 0, 50) if(input = valor) {display x < valor}
 //?  = cor
