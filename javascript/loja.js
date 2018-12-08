@@ -4,8 +4,8 @@ artigos();
 artigoDetail();
 
 function artigos() {
-    for(let i=0; i<10; i++) {
-        fetch("https://jsonplaceholder.typicode.com/photos/1")
+    for(let i=0; i<6; i++) {
+        fetch("https://jsonplaceholder.typicode.com/photos/" + i)
             .then(function(response) {
                 return response.json();
             })
@@ -13,7 +13,6 @@ function artigos() {
                 console.log(json);
 
                 document.querySelector(".grid-loja .row").appendChild(articleThumbnail(json));
-                document.querySelector(".artigo .row").appendChild(article(json));
             });
     }
 }
