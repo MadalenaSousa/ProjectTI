@@ -1,11 +1,20 @@
 //Loja
 
+let randNum;
+
 artigos();
-artigoDetail();
 
 function artigos() {
     for(let i=0; i<6; i++) {
-        fetch("https://jsonplaceholder.typicode.com/photos/" + i)
+        function random(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        randNum = random(1, 5001);
+
+        fetch("https://jsonplaceholder.typicode.com/photos/" + randNum)
             .then(function(response) {
                 return response.json();
             })
@@ -17,24 +26,13 @@ function artigos() {
     }
 }
 
-function artigoDetail() {
-        fetch("https://jsonplaceholder.typicode.com/photos/1")
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(json) {
-                console.log(json);
-
-                document.querySelector(".artigo .row").appendChild(article(json));
-            });
-}
-
 function articleThumbnail(json) {
     let container = document.createElement("div");
     container.classList.add("col-6");
+    container.classList.add("item");
 
     let link = document.createElement("a");
-    link.setAttribute("href", "artigo.html");
+    link.setAttribute("href", "artigo.html?id=" + json.id);
 
     let imagem = document.createElement("img");
     imagem.setAttribute("src", json.thumbnailUrl);
@@ -47,22 +45,6 @@ function articleThumbnail(json) {
     link.appendChild(descricao);
 
     container.appendChild(link);
-
-    return container;
-}
-
-function article(json) {
-    let container = document.createElement("div");
-    container.classList.add("col-4");
-
-    let imagem = document.createElement("img");
-    imagem.setAttribute("src", json.url);
-    imagem.setAttribute("alt", json.title);
-
-    let descricao = document.createElement("div");
-    descricao.innerText = json.title;
-
-    container.appendChild(imagem);
 
     return container;
 }
