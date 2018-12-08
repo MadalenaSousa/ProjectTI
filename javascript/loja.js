@@ -68,6 +68,6 @@ function article(json) {
     return container;
 }
 
-//albumId = categoria
-//id = preço
+//albumId = categoria 100/5 = 20, if(seleciona o check 1) { display albumId <= (100/5)*1} else if ...
+//id = preço map(x, 0, 5000, 0, 50) if(input = valor) {display x < valor}
 //?  = cor
