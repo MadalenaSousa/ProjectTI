@@ -361,6 +361,10 @@ footer div:last-child {
     padding: 20px;
 }
 
+.grid-loja [class*="col-"], .artigo [class*="col-"]{
+    height: 500px;
+}
+
 [required] {
     border: 1px solid grey;
 }
@@ -512,6 +516,10 @@ footer div:last-child {
     .cores img {
         width: 15px;
     }
+
+    .grid-loja [class*="col-"], .artigo [class*="col-"]{
+        height: 300px;
+    }
 }
 
 
@@ -558,10 +566,10 @@ footer div:last-child {
         font-size:7pt;
     }
 
-    /*Eventos*/
+    /*Loja*/
 
-    .grid-calendario {
-        width: 100%;
+    .grid-loja [class*="col-"], .artigo [class*="col-"]{
+        height: 300px;
     }
 
     /*Rodapé*/
@@ -613,7 +621,12 @@ footer div:last-child {
         height: 3em;
         font-size: 7pt;
     }
+
+    .grid-calendario {
+        width: 100%;
+    }
 }
+
 
 
 
