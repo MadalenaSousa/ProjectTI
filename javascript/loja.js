@@ -29,24 +29,6 @@ function artigoDetail() {
             });
 }
 
-function categoria(json) {
-    if(document.getElementById("canecas").value === true){
-
-    }
-    if(document.getElementById("tshirts").value === true){
-
-    }
-    if(document.getElementById("canetas").value === true){
-
-    }
-    if(document.getElementById("isqueiros").value === true){
-
-    }
-    if(document.getElementById("portachaves").value === true){
-
-    }
-}
-
 function articleThumbnail(json) {
     let container = document.createElement("div");
     container.classList.add("col-6");
