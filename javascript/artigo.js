@@ -12,6 +12,7 @@ function artigoDetail() {
             console.log(json);
 
             document.querySelector(".artigo .row").appendChild(article(json));
+            document.querySelector(".artigo .row .col-3").appendChild(infoArticle(json));
         });
 }
 
@@ -27,6 +28,21 @@ function article(json) {
     descricao.innerText = json.title;
 
     container.appendChild(imagem);
+
+    return container;
+}
+
+function infoArticle(json) {
+    let container = document.createElement("div");
+
+    let idItem = document.createElement("div");
+    idItem.innerText = json.id;
+
+    let descricaoItem = document.createElement("div");
+    descricaoItem.innerText = json.title;
+
+    container.appendChild(idItem);
+    container.appendChild(descricaoItem);
 
     return container;
 }
