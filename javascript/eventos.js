@@ -1,5 +1,14 @@
 //Eventos
 
+//Função dropmenu
+function dropdown(menu) {
+    let conteudo = menu;
+
+    return function() {
+        conteudo.classList.toggle("show");
+    };
+}
+
 //Calendário
 let infoData = new Date();
 let mesAtual = infoData.getMonth();
@@ -24,6 +33,10 @@ setaRightCal.addEventListener("click", function () { //Avança um mês quando cl
     document.getElementById("mes").innerText = meses[mesAtual]; //Update do texto do botão
 
     calendarioMesMostrado(anoAtual, mesAtual); //Update do calendário
+
+    eventoCal(objeto1);
+    eventoCal(objeto2);
+    eventoCal(objeto3);
 });
 
 setaLeftCal.addEventListener("click", function () { //Recua um mês quando clica na seta da esquerda
@@ -37,6 +50,10 @@ setaLeftCal.addEventListener("click", function () { //Recua um mês quando clica
     document.getElementById("mes").innerText = meses[mesAtual]; //Update do texto do botão
 
     calendarioMesMostrado(anoAtual, mesAtual); //Update do calendário
+
+    eventoCal(objeto1);
+    eventoCal(objeto2);
+    eventoCal(objeto3);
 });
 
 function calendarioMesMostrado(ano, mes) {
@@ -151,6 +168,11 @@ function criarInfoEvento(evento) {
 
     document.getElementById("eventoInfoMes").appendChild(container);
 
+    let data = new Date(evento.data);
+    if(mesAtual != data.getMonth()) {
+        document.getElementById("eventoInfoMes").innerHTML = "";
+    }
+
     return container;
 }
 
@@ -162,10 +184,11 @@ function eventoCal(evento){
     nome.addEventListener("click", dropdown(elementInfo));
 
     let data = new Date(evento.data);
+    console.log(data);
     let celula = document.getElementsByTagName("td");
 
     for(let i=0; i<celula.length; i++){
-        if(celula[i].innerText == data.getDate()){
+        if(celula[i].innerText == data.getDate() && mesAtual == data.getMonth() && anoAtual == data.getFullYear()){
             celula[i].appendChild(nome);
         }
     }
