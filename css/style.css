@@ -558,6 +558,12 @@ footer div:last-child {
         font-size:7pt;
     }
 
+    /*Eventos*/
+
+    .grid-calendario {
+        width: 100%;
+    }
+
     /*Rodapé*/
 
     footer [class*="col-"]{
