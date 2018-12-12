@@ -29,9 +29,9 @@ function artigos() {
         let randColor = colors[Math.floor(Math.random() * colors.length)];
 
         function random(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
         }
 
         randNum = random(1, 5001);
