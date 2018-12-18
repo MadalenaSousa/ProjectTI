@@ -208,6 +208,13 @@ footer div:last-child {
     margin-bottom: 1.5%;
 }
 
+.artigo .botao {
+    width: 100%;
+    border: 0;
+    font-size: 24pt;
+    cursor: pointer;
+}
+
 /*homepage*/
 .fullscreen-contentor-video {
     position: relative;

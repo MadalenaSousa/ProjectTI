@@ -52,9 +52,11 @@
                                 Contactos
                             </span>
                     </a>
-                    <span class="col-1">
+                    <a href="carrinho.html">
+                        <span class="col-1">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
                         </span>
+                    </a>
                 </div>
             </nav>
 
@@ -71,15 +73,24 @@
 
                 <div class="col-3">
 
-                    <div class="botao">
-                        Adicionar ao Carrinho
-                    </div>
+                    <a href="carrinho.html">
+                        <button class="botao" name="addCart">
+                            Adicionar ao Carrinho
+                        </button>
+                    </a>
 
                     <a href="dadospagamento.html">
-                        <div class="botao">
+                        <button class="botao">
                             Proceder à Compra Imediata
-                        </div>
+                        </button>
                     </a>
+
+                    <?php
+                        $filename = 'data.txt';
+
+
+                        file_put_contents($filename, ,FILE_APPEND);
+                     ?>
 
                 </div>
 

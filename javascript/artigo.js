@@ -18,7 +18,7 @@ function artigoDetail() {
 
 function article(json) {
     let container = document.createElement("div");
-    container.classList.add("col-4");
+    container.classList.add("col-4 selectedArticle");
 
     let imagem = document.createElement("img");
     imagem.setAttribute("src", json.url);
