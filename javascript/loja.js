@@ -199,8 +199,6 @@ blue.addEventListener("click", filterCor);
 red.addEventListener("click", filterCor);
 pink.addEventListener("click", filterCor);
 
-
-
 let preco = document.getElementById("price");
 
 preco.addEventListener("change", filterPreco);
