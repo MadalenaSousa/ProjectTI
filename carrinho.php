@@ -75,7 +75,21 @@
             </div>
 
             <div class="col-1"></div>
-        </div>
+
+            <?php
+
+            session_start();
+
+            $_SESSION = array();
+
+            array_push($_SESSION, $_GET['id']);
+
+            for ($i = 0; $i < count($_SESSION); $i++) {
+                echo $_SESSION[$i];
+                echo '<br>';
+            }
+
+            ?>
     </main>
 </div>
 

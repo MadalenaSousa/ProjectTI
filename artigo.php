@@ -73,7 +73,7 @@
 
                 <div class="col-3">
 
-                    <a href="carrinho.php">
+                    <a href="carrinho.php?id=<?php echo $_GET['id']; ?>">
                         <button class="botao" name="addCart">
                             Adicionar ao Carrinho
                         </button>
@@ -88,15 +88,7 @@
 
                 <div class="col-1"></div>
 
-                <div class="col-4">
-                    <form method="get" action="artigo.php">
-                        <input type="hidden" name="article">
-                    </form>
-                </div>
-
-                <?php
-
-                ?>
+                <div class="col-4"></div>
             </div>
         </main>
     </div>
