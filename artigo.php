@@ -52,7 +52,7 @@
                                 Contactos
                             </span>
                     </a>
-                    <a href="carrinho.html">
+                    <a href="carrinho.php">
                         <span class="col-1">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
                         </span>
@@ -73,7 +73,7 @@
 
                 <div class="col-3">
 
-                    <a href="carrinho.html">
+                    <a href="carrinho.php">
                         <button class="botao" name="addCart">
                             Adicionar ao Carrinho
                         </button>
@@ -84,18 +84,21 @@
                             Proceder à Compra Imediata
                         </button>
                     </a>
-
-                    <?php
-                        $filename = 'data.txt';
-
-
-                        file_put_contents($filename, ,FILE_APPEND);
-                     ?>
-
                 </div>
 
                 <div class="col-1"></div>
 
+                <div class="col-4">
+                    <form method="get" action="artigo.php">
+                        <input type="hidden" name="article">
+                    </form>
+                </div>
+
+                <?php
+                $filename = 'data.txt';
+
+                file_put_contents($filename, $_GET['article'] ,FILE_APPEND);
+                ?>
             </div>
         </main>
     </div>

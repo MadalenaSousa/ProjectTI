@@ -1,6 +1,8 @@
 let id = window.location.search;
 id = id.substring(id.indexOf("id=")+3);
 
+console.log(document.querySelector(".artigo .row .col-4"));
+
 artigoDetail();
 
 function artigoDetail() {
@@ -11,14 +13,13 @@ function artigoDetail() {
         .then(function(json) {
             console.log(json);
 
-            document.querySelector(".artigo .row").appendChild(article(json));
+            document.querySelector(".artigo .row .col-4 input").appendChild(article(json));
             document.querySelector(".artigo .row .col-3").appendChild(infoArticle(json));
         });
 }
 
 function article(json) {
     let container = document.createElement("div");
-    container.classList.add("col-4 selectedArticle");
 
     let imagem = document.createElement("img");
     imagem.setAttribute("src", json.url);

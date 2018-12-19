@@ -56,7 +56,7 @@ function articleThumbnail(json) {
     container.classList.add("col-6");
 
     let link = document.createElement("a");
-    link.setAttribute("href", "artigo.html?id=" + json.id);
+    link.setAttribute("href", "artigo.php?id=" + json.id);
 
     let imagem = document.createElement("img");
     imagem.setAttribute("src", json.thumbnailUrl);
@@ -105,7 +105,7 @@ function filterCategoria() {
         contentorArtigo.classList.add("col-6");
 
         let link = document.createElement("a");
-        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+        link.setAttribute("href", "artigo.php?id=" + filteredItens[i].id);
 
         let imagem = document.createElement("img");
         imagem.setAttribute("src", filteredItens[i].thumbnailUrl);
@@ -171,7 +171,7 @@ function filterCor() {
         contentorArtigo.classList.add("col-6");
 
         let link = document.createElement("a");
-        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+        link.setAttribute("href", "artigo.php?id=" + filteredItens[i].id);
 
         let imagem = document.createElement("img");
         imagem.setAttribute("src", filteredItens[i].thumbnailUrl);

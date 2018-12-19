@@ -52,7 +52,7 @@
                                 Contactos
                             </span>
                 </a>
-                <a href="carrinho.html">
+                <a href="carrinho.php">
                         <span class="col-1">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
                         </span>
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-1"></div>
 
-            <div class="artigoAdicionado col-10">
+            <div class="col-10">
             </div>
 
             <div class="col-1"></div>
