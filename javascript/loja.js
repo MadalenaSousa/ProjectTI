@@ -137,7 +137,6 @@ function filterCor() {
     for(let i=0; i<6; i++) {
         if (!orange.classList.contains("border") && !purple.classList.contains("border") && !white.classList.contains("border") && !black.classList.contains("border") && !yellow.classList.contains("border") && !green.classList.contains("border") && !cyan.classList.contains("border") && !blue.classList.contains("border") && !red.classList.contains("border") && !pink.classList.contains("border")) {
             filteredItens = itens;
-            console.log("TODO O MUNDO");
         } else if (orange.classList.contains("border") && itens[i].color === "orange") {
             filteredItens.push(itens[i]);
         } else if (purple.classList.contains("border") && itens[i].color === "purple") {
