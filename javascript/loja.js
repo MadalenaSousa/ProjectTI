@@ -199,3 +199,48 @@ cyan.addEventListener("click", filterCor);
 blue.addEventListener("click", filterCor);
 red.addEventListener("click", filterCor);
 pink.addEventListener("click", filterCor);
+
+
+
+let preco = document.getElementById("price");
+
+preco.addEventListener("change", filterPreco);
+
+function filterPreco() {
+    console.log(preco.value);
+
+    let filteredItens = [];
+
+    for(let i=0; i<6; i++) {
+        if (itens[i].id <= preco.value) {
+            filteredItens.push(itens[i]);
+        }
+    }
+
+    console.log(filteredItens);
+
+    let container = document.querySelector(".grid-loja .row");
+    container.innerHTML = "";
+
+    for (let i = 0; i < filteredItens.length; i++) {
+        let contentorArtigo = document.createElement("div");
+        contentorArtigo.classList.add("col-6");
+
+        let link = document.createElement("a");
+        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+
+        let imagem = document.createElement("img");
+        imagem.setAttribute("src", filteredItens[i].thumbnailUrl);
+        imagem.setAttribute("alt", filteredItens[i].title);
+
+        let descricao = document.createElement("div");
+        descricao.innerText = filteredItens[i].title;
+
+        link.appendChild(imagem);
+        link.appendChild(descricao);
+
+        contentorArtigo.appendChild(link);
+
+        container.appendChild(contentorArtigo);
+    }
+}
