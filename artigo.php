@@ -79,7 +79,7 @@
                         </button>
                     </a>
 
-                    <a href="dadospagamento.html">
+                    <a href="dadospagamento.php">
                         <button class="botao">
                             Proceder à Compra Imediata
                         </button>
@@ -95,9 +95,7 @@
                 </div>
 
                 <?php
-                $filename = 'data.txt';
 
-                file_put_contents($filename, $_GET['article'] ,FILE_APPEND);
                 ?>
             </div>
         </main>

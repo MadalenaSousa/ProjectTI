@@ -77,21 +77,21 @@
                             Os seus dados
                         </div>
 
-                        <div>
+                        <form method="post" action="">
                             Nome Completo* <input placeholder="Nome" type="text" name="name" required><br>
-                        </div>
+                        </form>
 
-                        <div>
-                            E-mail* <input placeholder="email@example.com" type="text" name="name" required><br>
-                        </div>
+                        <form method="post" action="">
+                            E-mail* <input placeholder="email@example.com" type="text" name="email" required><br>
+                        </form>
 
-                        <div>
-                            Telemóvel* <input placeholder="9** *** ***" type="text" name="name" required><br>
-                        </div>
+                        <form method="post" action="">
+                            Telemóvel* <input placeholder="9** *** ***" type="text" name="tlmvl" required><br>
+                        </form>
 
-                        <div>
-                            Morada* <input placeholder="Rua *** , Nº**, Exemplo" type="text" name="name" required><br>
-                        </div>
+                        <form method="post" action="">
+                            Morada* <input placeholder="Rua *** , Nº**, Exemplo" type="text" name="adress" required><br>
+                        </form>
                     </div>
 
                     <div class="col-5">
@@ -103,17 +103,17 @@
                             <img class="icon" src="imagens/visamastercard.png" alt="visa e mastercard">
                         </div>
 
-                        <div>
-                            Número de cartão* <input placeholder="Numero" type="text" name="name" required><br>
-                        </div>
+                        <form method="post" action="">
+                            Número de cartão* <input placeholder="Numero" type="text" name="cardNum" required><br>
+                        </form>
 
-                        <div>
-                            Data de validade* <input placeholder="MM/AA" type="text" name="name" required><br>
-                        </div>
+                        <form method="post" action="">
+                            Data de validade* <input placeholder="MM/AA" type="text" name="validade" required><br>
+                        </form>
 
-                        <div>
-                            Código de segurança <input placeholder="***" type="text" name="name" required><br>
-                        </div>
+                        <form method="post" action="">
+                            Código de segurança <input placeholder="***" type="text" name="securityCode" required><br>
+                        </form>
                     </div>
 
                     <div class="col-1"></div>
