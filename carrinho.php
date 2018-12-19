@@ -74,19 +74,23 @@
             <div class="col-10">
             </div>
 
-            <div class="col-1"></div>
+            <div class="col-1">
+                <a href="loja.html">
+                    <button>
+                        Continuar a Comprar
+                    </button>
+                </a>
+            </div>
 
             <?php
 
             session_start();
 
-            $_SESSION = array();
+            $_SESSION['article_1'] = $_GET['id'];
+            $_SESSION['article_2'] = $_GET['id'];
 
-            array_push($_SESSION, $_GET['id']);
-
-            for ($i = 0; $i < count($_SESSION); $i++) {
+            for ($i = 0; $i < 2; $i++) {
                 echo $_SESSION[$i];
-                echo '<br>';
             }
 
             ?>
