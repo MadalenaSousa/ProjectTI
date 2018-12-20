@@ -24,13 +24,25 @@
         <div class="row">
             <div class="col-8">
                 <?php
+                $filename = "data.txt";
+
+                $nome = $_POST["name"];
+                $mail = $_POST["email"];
+                $numero	= $_POST["mobile"];
+                $morada	= $_POST["adress"];
+                $cartao = $_POST["cartao"];
+                $validade = $_POST["validade"];
+                $codigo	= $_POST["codigo"];
+
+                $line_to_write = $nome . ', ' . $mail .', ' . $numero .', ' . $morada .', ' . $cartao .', ' . $validade .', ' . $codigo;
+
+                file_put_contents($filename, $line_to_write, FILE_APPEND);
 
                 $filename = 'data.txt';
 
                 $data = file_get_contents($filename);
 
                 echo $data;
-
                 ?>
             </div>
 
