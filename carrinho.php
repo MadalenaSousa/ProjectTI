@@ -63,6 +63,16 @@
             <div class="col-8"></div>
 
             <div class="col-4">
+                <button class="botao">
+                    Esvaziar Carrinho
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8"></div>
+
+            <div class="col-4">
                 <a href="loja.php">
                     <button class="botao">
                         Continuar a Comprar
