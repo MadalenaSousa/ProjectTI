@@ -31,40 +31,18 @@
                 <div class="col-2"></div>
             </div>
 
-            <div class="row">
-                <div class="col-2"></div>
+            <?php
 
-                <div class="col-8">
-                        Enviamos um mail com o comprovativo e dados da sua compra.<br>
-                        Por questões de verificação e segurança, carregue aqui o comprovativo que lhe foi enviado
-                    </div>
+            $uploaddir =  'files';
+            $uploadfile = $uploaddir . '/' . basename($_FILES['file']['name']);
 
-                <div class="col-2"></div>
-            </div>
+            if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
+                echo "File is valid, and was successfully uploaded.\n";
+            } else {
+                echo "Possible file upload attack!\n";
+            }
 
-            <div class="row">
-                <div class="col-2"></div>
-
-                <div class="col-4">
-                    <form enctype="multipart/form-data" action="processform.php" method="POST">
-                        <label>Ficheiro: <input type="file" name="file"></label>
-                    </form>
-                </div>
-
-                <div class="col-6"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-2"></div>
-
-                <div class="col-2">
-                    <form enctype="multipart/form-data" action="processform.php" method="POST">
-                        <input type="submit" class="botao">
-                    </form>
-                </div>
-
-                <div class="col-8"></div>
-            </div>
+            ?>
 
             <div class="row">
                 <div class="col-8"></div>

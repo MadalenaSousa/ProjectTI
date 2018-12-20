@@ -20,8 +20,11 @@
         </div>
     </header>
 
-    <main class="grid-main">
+    <main class="grid-main dados">
         <div class="row">
+
+            <div class="col-2"></div>
+
             <div class="col-8">
                 <?php
                 $filename = "data.txt";
@@ -40,17 +43,11 @@
 
                 function htmlOutputForm($name, $email, $tlmvl, $morada, $cartao)
                 {
-                    echo '<table>';
-
-                    echo '<tr>';
-                    echo '<th>Nome</th><th>Email</th><th>Número de Telemóvel</th><th>Morada</th><th>Número do Cartão</th>';
-                    echo '</tr>';
-
-                    echo '<tr>';
-                    echo "<td>$name</td><td>$email</td><td>$tlmvl</td><td>$morada</td><td>$cartao</td>";
-                    echo '</tr>';
-
-                    echo '</table>';
+                    echo '<div><h4>Nome:</h4>' . $name . '</div>';
+                    echo '<div><h4>Email:</h4>' . $email . '</div>';
+                    echo '<div><h4>Número de Telemóvel:</h4>' . $tlmvl . '</div>';
+                    echo '<div><h4>Morada:</h4>' . $morada . '</div>';
+                    echo '<div><h4>Número do Cartão:</h4>' . $cartao . '</div>';
                 }
 
 
@@ -66,18 +63,44 @@
 
                     file_put_contents($filename, $line_to_write, FILE_APPEND);
                 }
-                
+
                 ?>
             </div>
 
-            <div class="col-4">
-                <a href="comprafinalizada.php">
-                    <button class="botao" name="continue">
-                        Finalizar Compra
-                    </button>
-                </a>
-            </div>
+            <div class="col-2"></div>
         </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+
+            <div class="col-8">
+                Enviamos um mail com o comprovativo e dados da sua compra.<br>
+                Por questões de verificação e segurança, carregue aqui o comprovativo que lhe foi enviado
+            </div>
+
+            <div class="col-2"></div>
+        </div>
+
+
+            <form enctype="multipart/form-data" action="comprafinalizada.php" method="POST">
+                <div class="row">
+                    <div class="col-2"></div>
+
+                    <div class="col-8">
+                        <label><input type="file" name="file"></label>
+                    </div>
+
+                    <div class="col-2"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-8"></div>
+
+                    <div class="col-4">
+                        <input class="botao" type="submit">
+                    </div>
+                </div>
+            </form>
     </main>
 </div>
 
