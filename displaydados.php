@@ -70,37 +70,15 @@
             <div class="col-2"></div>
         </div>
 
-        <div class="row">
-            <div class="col-2"></div>
+        <form enctype="multipart/form-data" action="carregarcomprovativo.php" method="POST">
+            <div class="row">
+                <div class="col-8"></div>
 
-            <div class="col-8">
-                Enviamos um mail com o comprovativo e dados da sua compra.<br>
-                Por questões de verificação e segurança, carregue aqui o comprovativo que lhe foi enviado
+                <div class="col-4">
+                    <input class="botao" type="submit" value="Confirmar">
+                </div>
             </div>
-
-            <div class="col-2"></div>
-        </div>
-
-
-            <form enctype="multipart/form-data" action="comprafinalizada.php" method="POST">
-                <div class="row">
-                    <div class="col-2"></div>
-
-                    <div class="col-8">
-                        <label><input type="file" name="file"></label>
-                    </div>
-
-                    <div class="col-2"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-8"></div>
-
-                    <div class="col-4">
-                        <input class="botao" type="submit">
-                    </div>
-                </div>
-            </form>
+        </form>
     </main>
 </div>
 
