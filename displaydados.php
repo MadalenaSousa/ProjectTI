@@ -34,11 +34,9 @@
                 $validade = $_POST["validade"];
                 $codigo	= $_POST["codigo"];
 
-                $line_to_write = $nome . ', ' . $mail .', ' . $numero .', ' . $morada .', ' . $cartao .', ' . $validade .', ' . $codigo;
+                $line_to_write = $nome . ', ' . $mail .', ' . $numero .', ' . $morada .', ' . $cartao .', ' . $validade .', ' . $codigo  . "\n";
 
                 file_put_contents($filename, $line_to_write, FILE_APPEND);
-
-                $filename = 'data.txt';
 
                 $data = file_get_contents($filename);
 
