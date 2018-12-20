@@ -126,8 +126,8 @@
                         <h6>*Campos obrigatórios</h6>
                     </div>
 
-                    <a href="compra.html"><div class="botao col-4">
-                        Finalizar Compra
+                    <a href="displaydados.php"><div class="botao col-4">
+                        Continuar
                     </div></a>
 
                     <div class="col-2"></div>

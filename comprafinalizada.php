@@ -81,6 +81,32 @@
             <div class="row">
                 <div class="col-2"></div>
 
+                <div class="col-8">
+                        Enviamos um mail com o comprovativo e dados da sua compra
+                    </div>
+
+                <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-2"></div>
+
+                <div class="col-8">
+                    Carregue aqui o comprovativo que lhe foi enviado
+
+                    <form enctype="multipart/form-data" action="processform.php" method="POST">
+                        <label>File: <input type="file" name="file"></label>
+                        <br>
+                        <input type="submit">
+                    </form>
+                </div>
+
+                <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-2"></div>
+
                 <a href="loja.html"><div class=" botao col-4">
                     Continuar a comprar
                 </div></a>

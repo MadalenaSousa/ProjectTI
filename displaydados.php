@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Carrinho | MMDesign</title>
+    <title>Loja | MMDesign</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="imagens/icon-separador.png">
@@ -67,35 +67,22 @@
         </div>
     </header>
 
-    <main class="grid-main carrinho">
+    <main class="grid-main artigo">
         <div class="row">
-            <div class="col-1"></div>
+            <div class="col-2"></div>
 
-            <div class="col-10">
-            </div>
+            <div class="col-3">
 
-            <div class="col-1">
-                <a href="loja.html">
-                    <button>
-                        Continuar a Comprar
+                <a href="comprafinalizada.php">
+                    <button class="botao" name="continue">
+                        Finalizar Compra
                     </button>
                 </a>
             </div>
-        </div>
 
-        <div class="row">
             <div class="col-1"></div>
 
-            <div class="col-10">
-            </div>
-
-            <div class="col-1">
-                <a href="dadospagamento.php">
-                    <button>
-                        Checkout
-                    </button>
-                </a>
-            </div>
+            <div class="col-4"></div>
         </div>
     </main>
 </div>
@@ -153,6 +140,5 @@
     </div>
 </footer>
 <script src="javascript/javascript.js"></script>
-<script src="javascript/cart.js"></script>
+<script src="javascript/artigo.js"></script>
 </body>
-</html>
