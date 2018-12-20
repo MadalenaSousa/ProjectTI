@@ -13,7 +13,7 @@ function artigoDetail() {
         .then(function(json) {
             console.log(json);
 
-            document.querySelector(".carrinho").appendChild(article(json));
+            document.querySelector(".carrinho .row").appendChild(article(json));
         });
 }
 

@@ -80,7 +80,7 @@
                     </a>
 
                     <a href="dadospagamento.php">
-                        <button class="botao">
+                        <button class="botao" name="compraImediata">
                             Proceder à Compra Imediata
                         </button>
                     </a>

@@ -67,22 +67,17 @@
         </div>
     </header>
 
-    <main class="grid-main artigo">
+    <main class="grid-main">
         <div class="row">
-            <div class="col-2"></div>
+            <div class="col-8"></div>
 
-            <div class="col-3">
-
+            <div class="col-4">
                 <a href="comprafinalizada.php">
                     <button class="botao" name="continue">
                         Finalizar Compra
                     </button>
                 </a>
             </div>
-
-            <div class="col-1"></div>
-
-            <div class="col-4"></div>
         </div>
     </main>
 </div>

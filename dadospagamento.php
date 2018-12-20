@@ -68,7 +68,6 @@
         </header>
 
         <main class="grid-main">
-            <form class="pagamento">
                 <div class="row">
                     <div class="col-1"></div>
 
@@ -126,13 +125,20 @@
                         <h6>*Campos obrigatórios</h6>
                     </div>
 
-                    <a href="displaydados.php"><div class="botao col-4">
-                        Continuar
-                    </div></a>
-
-                    <div class="col-2"></div>
+                    <div class="col-6"></div>
                 </div>
-            </form>
+
+                <div class="row">
+                    <div class="col-8 empty"></div>
+
+                    <div class="col-4">
+                        <a href="displaydados.php">
+                            <button class="botao">
+                                Continuar
+                            </button>
+                        </a>
+                    </div>
+                </div>
         </main>
     </div>
 
