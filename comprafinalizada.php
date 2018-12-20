@@ -25,24 +25,26 @@
                 <div class="col-2"></div>
 
                 <div class="titulo col-8">
-                    <h5>A sua compra foi realizada com sucesso.</h5>
+                    <?php
+
+                    $uploaddir =  'comprovativos';
+                    $uploadfile = $uploaddir . '/' . basename($_FILES['file']['name']);
+
+                    $fileType = strtolower(pathinfo($uploadfile,PATHINFO_EXTENSION));
+                    
+                    if($fileType == "pdf") {
+                        if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
+                            echo "<h5>A sua compra foi realizada com sucesso.</h5>\n";
+                        }
+                    } else {
+                        echo "<h5>Hum... Algo de errado não está certo!</h5>\n";
+                    }
+
+                    ?>
                 </div>
 
                 <div class="col-2"></div>
             </div>
-
-            <?php
-
-            $uploaddir =  'files';
-            $uploadfile = $uploaddir . '/' . basename($_FILES['file']['name']);
-
-            if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
-                echo "File is valid, and was successfully uploaded.\n";
-            } else {
-                echo "Possible file upload attack!\n";
-            }
-
-            ?>
 
             <div class="row">
                 <div class="col-8"></div>
