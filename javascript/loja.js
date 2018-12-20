@@ -22,6 +22,21 @@ let blue = document.getElementById("blue");
 let red = document.getElementById("red");
 let pink = document.getElementById("pink");
 
+let box = document.querySelectorAll(".box");
+let check = document.querySelectorAll(".check");
+
+for(let i=0; i<check.length; i++) {
+    box[i].addEventListener("click", dropdown(check[i]));
+}
+
+let cor = document.querySelectorAll(".cores img");
+
+for(let i=0; i<cor.length; i++) {
+    cor[i].addEventListener("click", function () {
+        cor[i].classList.toggle("border");
+    });
+}
+
 artigos();
 
 function artigos() {
@@ -65,8 +80,12 @@ function articleThumbnail(json) {
     let descricao = document.createElement("div");
     descricao.innerText = json.title;
 
+    let preco = document.createElement("div");
+    preco.innerText = json.id + "€";
+
     link.appendChild(imagem);
     link.appendChild(descricao);
+    link.appendChild(preco);
 
     container.appendChild(link);
 

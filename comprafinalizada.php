@@ -28,10 +28,10 @@
                             </span>
                     </a>
                     <div>
-                        <div class="col-1">
+                        <div class="col-1 portfolio">
                             Portfólio
                         </div>
-                        <div class="list">
+                        <div class="list-pages">
                             <a href="portfolio.html"><div class="col-1">2018</div></a>
                             <a href=""><div class="col-1">2017</div></a>
                             <a href=""><div class="col-1">2016</div></a>
@@ -52,11 +52,19 @@
                                 Contactos
                             </span>
                     </a>
-                    <a href="carrinho.php">
-                        <span class="col-1">
+
+                    <div>
+                        <div class="col-1 cart">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
-                        </span>
-                    </a>
+                        </div>
+                        <div class="list-itens">
+                            <a href=""><div class="col-1">Item 1</div></a>
+                            <a href=""><div class="col-1">Item 2</div></a>
+                            <a href=""><div class="col-1">Item 3</div></a>
+                            <a href="carrinho.php"><div class="col-1">Ver Carrinho</div></a>
+                            <a href="dadospagamento.php"><div class="col-1">Checkout</div></a>
+                        </div>
+                    </div>
                 </div>
             </nav>
 
@@ -180,5 +188,6 @@
         </div>
     </footer>
     <script src="javascript/javascript.js"></script>
+    <script src="javascript/slideshow.js"></script>
 </body>
 </html>

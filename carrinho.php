@@ -28,10 +28,10 @@
                             </span>
                 </a>
                 <div>
-                    <div class="col-1">
+                    <div class="col-1 portfolio">
                         Portfólio
                     </div>
-                    <div class="list">
+                    <div class="list-pages">
                         <a href="portfolio.html"><div class="col-1">2018</div></a>
                         <a href=""><div class="col-1">2017</div></a>
                         <a href=""><div class="col-1">2016</div></a>
@@ -52,11 +52,19 @@
                                 Contactos
                             </span>
                 </a>
-                <a href="carrinho.php">
-                        <span class="col-1">
-                            <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
-                        </span>
-                </a>
+
+                <div>
+                    <div class="col-1 cart">
+                        <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
+                    </div>
+                    <div class="list-itens">
+                        <a href=""><div class="col-1">Item 1</div></a>
+                        <a href=""><div class="col-1">Item 2</div></a>
+                        <a href=""><div class="col-1">Item 3</div></a>
+                        <a href="carrinho.php"><div class="col-1">Ver Carrinho</div></a>
+                        <a href="dadospagamento.php"><div class="col-1">Checkout</div></a>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -68,10 +76,30 @@
     </header>
 
     <main class="grid-main carrinho">
-        <div class="row">
+        <div class="row" id="artigo">
             <div class="col-1"></div>
 
-            <div class="col-10"></div>
+            <div class="col-2"></div>
+
+            <div class="col-5"></div>
+
+            <div class="col-1 opcoesCart" id="preco">
+                Preço
+                <br>
+            </div>
+
+            <div class="col-1 opcoesCart">
+                <label for="quantity">
+                    Quantidade
+                </label>
+                <input type="number" name="quantity" id="quantity" min="1" value="1">
+            </div>
+
+            <div class="col-1 opcoesCart">
+                <button id="remove">
+                    Remover
+                </button>
+            </div>
 
             <div class="col-1"></div>
         </div>
@@ -155,6 +183,7 @@
     </div>
 </footer>
 <script src="javascript/javascript.js"></script>
+<script src="javascript/slideshow.js"></script>
 <script src="javascript/cart.js"></script>
 </body>
 </html>
