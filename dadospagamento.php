@@ -19,7 +19,24 @@
                 </div>
             </div>
         </header>
+        <?php
+        $filename = "data.txt";
 
+        $nome =$_POST["name"];
+        $mail =$_POST["email"];
+        $numero	=$_POST["mobile"];
+        $morada	=$_POST["adress"];
+        $cartao =$_POST["cartao"];
+        $validade	=$_POST["validade"];
+        $codigo	=$_POST["codigo"];
+        
+
+        $line_to_write = $nome . ', ' . $mail .', ' . $numero .', ' . $morada .', ' . $cartao .', ' . $validade .', ' . $codigo . "\n";
+
+        file_put_contents($filename, $line_to_write, FILE_APPEND);
+
+        ?>
+        <form method="post" action="dadospagamento.php">
         <main class="grid-main">
                 <div class="row">
                     <div class="col-1"></div>
@@ -28,22 +45,13 @@
                         <div class="titulo">
                             Os seus dados
                         </div>
+                            <label>Nome Completo* <input placeholder="Nome" type="text" name="name" required></label><br>
 
-                        <form method="post" action="">
-                            Nome Completo* <input placeholder="Nome" type="text" name="name" required><br>
-                        </form>
+                            <label>E-mail* <input placeholder="email@example.com" type="text" name="email" required></label><br>
 
-                        <form method="post" action="">
-                            E-mail* <input placeholder="email@example.com" type="text" name="email" required><br>
-                        </form>
+                            <label>Telemóvel* <input placeholder="9** *** ***" type="text" name="mobile" required></label><br>
 
-                        <form method="post" action="">
-                            Telemóvel* <input placeholder="9** *** ***" type="text" name="tlmvl" required><br>
-                        </form>
-
-                        <form method="post" action="">
-                            Morada* <input placeholder="Rua *** , Nº**, Exemplo" type="text" name="adress" required><br>
-                        </form>
+                            <label> Morada* <input placeholder="Rua *** , Nº**, Exemplo" type="text" name="adress" required></label><br>
                     </div>
 
                     <div class="col-5">
@@ -54,18 +62,12 @@
                         <div>
                             <img class="icon" src="imagens/visamastercard.png" alt="visa e mastercard">
                         </div>
+                        <label>Número de cartão* <input placeholder="Numero" type="text" name="cartao" required></label><br>
 
-                        <form method="post" action="">
-                            Número de cartão* <input placeholder="Numero" type="text" name="cardNum" required><br>
-                        </form>
+                        <label>Data de validade* <input placeholder="MM/AA" type="text" name="validade" required></label><br>
 
-                        <form method="post" action="">
-                            Data de validade* <input placeholder="MM/AA" type="text" name="validade" required><br>
-                        </form>
+                        <label>Código de segurança <input placeholder="***" type="text" name="codigo" required></label><br>
 
-                        <form method="post" action="">
-                            Código de segurança <input placeholder="***" type="text" name="securityCode" required><br>
-                        </form>
                     </div>
 
                     <div class="col-1"></div>
@@ -85,15 +87,16 @@
                     <div class="col-8 empty"></div>
 
                     <div class="col-4">
-                        <a href="displaydados.php">
+                        <a href="displaydados.php"
                             <button class="botao">
                                 Continuar
                             </button>
+                        <input type="submit"
                         </a>
                     </div>
                 </div>
         </main>
-    </div>
+        </form>
 
     <footer class="grid-footer">
 

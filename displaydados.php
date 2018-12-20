@@ -22,7 +22,17 @@
 
     <main class="grid-main">
         <div class="row">
-            <div class="col-8"></div>
+            <div class="col-8">
+                <?php
+
+                $filename = 'data.txt';
+
+                $data = file_get_contents($filename);
+
+                echo $data;
+
+                ?>
+            </div>
 
             <div class="col-4">
                 <a href="comprafinalizada.php">
