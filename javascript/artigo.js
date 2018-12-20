@@ -35,7 +35,7 @@ function infoArticle(json) {
     let container = document.createElement("div");
 
     let idItem = document.createElement("div");
-    idItem.innerText = json.id;
+    idItem.innerText = json.id + "€";
 
     let descricaoItem = document.createElement("div");
     descricaoItem.innerText = json.title;
