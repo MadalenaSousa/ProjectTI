@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Compra realizada | MMDesign</title>
+    <title>Loja | MMDesign</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="imagens/icon-separador.png">
@@ -52,9 +52,11 @@
                                 Contactos
                             </span>
                     </a>
-                    <span class="col-1">
+                    <a href="carrinho.php">
+                        <span class="col-1">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
                         </span>
+                    </a>
                 </div>
             </nav>
 
@@ -65,25 +67,28 @@
             </div>
         </header>
 
-        <main class="grid-main">
+        <main class="grid-main artigo">
             <div class="row">
                 <div class="col-2"></div>
 
-                <div class="titulo col-8">
-                    <h5>A sua compra foi realizada com sucesso.</h5>
+                <div class="col-3">
+
+                    <a href="carrinho.php?id=<?php echo $_GET['id']; ?>">
+                        <button class="botao" name="addCart">
+                            Adicionar ao Carrinho
+                        </button>
+                    </a>
+
+                    <a href="dadospagamento.php">
+                        <button class="botao">
+                            Proceder à Compra Imediata
+                        </button>
+                    </a>
                 </div>
 
-                <div class="col-2"></div>
-            </div>
+                <div class="col-1"></div>
 
-            <div class="row">
-                <div class="col-2"></div>
-
-                <a href="loja.html"><div class=" botao col-4">
-                    Continuar a comprar
-                </div></a>
-
-                <div class="col-6"></div>
+                <div class="col-4"></div>
             </div>
         </main>
     </div>
@@ -141,5 +146,6 @@
         </div>
     </footer>
     <script src="javascript/javascript.js"></script>
+    <script src="javascript/artigo.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dados Pessoais | MMDesign</title>
+    <title>Compra realizada | MMDesign</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="imagens/icon-separador.png">
@@ -52,9 +52,11 @@
                                 Contactos
                             </span>
                     </a>
-                    <span class="col-1">
+                    <a href="carrinho.php">
+                        <span class="col-1">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
                         </span>
+                    </a>
                 </div>
             </nav>
 
@@ -66,71 +68,51 @@
         </header>
 
         <main class="grid-main">
-            <form class="pagamento">
-                <div class="row">
-                    <div class="col-1"></div>
+            <div class="row">
+                <div class="col-2"></div>
 
-                    <div class="col-5">
-                        <div class="titulo">
-                            Os seus dados
-                        </div>
-
-                        <div>
-                            Nome Completo* <input placeholder="Nome" type="text" name="name" required><br>
-                        </div>
-
-                        <div>
-                            E-mail* <input placeholder="email@example.com" type="text" name="name" required><br>
-                        </div>
-
-                        <div>
-                            Telemóvel* <input placeholder="9** *** ***" type="text" name="name" required><br>
-                        </div>
-
-                        <div>
-                            Morada* <input placeholder="Rua *** , Nº**, Exemplo" type="text" name="name" required><br>
-                        </div>
-                    </div>
-
-                    <div class="col-5">
-                        <div class="titulo">
-                            Dados de pagamento
-                        </div>
-
-                        <div>
-                            <img class="icon" src="imagens/visamastercard.png" alt="visa e mastercard">
-                        </div>
-
-                        <div>
-                            Número de cartão* <input placeholder="Numero" type="text" name="name" required><br>
-                        </div>
-
-                        <div>
-                            Data de validade* <input placeholder="MM/AA" type="text" name="name" required><br>
-                        </div>
-
-                        <div>
-                            Código de segurança <input placeholder="***" type="text" name="name" required><br>
-                        </div>
-                    </div>
-
-                    <div class="col-1"></div>
+                <div class="titulo col-8">
+                    <h5>A sua compra foi realizada com sucesso.</h5>
                 </div>
 
-                <div class="row">
-                    <div class="col-1 empty"></div>
+                <div class="col-2"></div>
+            </div>
 
-                    <div class="col-5">
-                        <h6>*Campos obrigatórios</h6>
+            <div class="row">
+                <div class="col-2"></div>
+
+                <div class="col-8">
+                        Enviamos um mail com o comprovativo e dados da sua compra
                     </div>
 
-                    <a href="compra.html"><div class="botao col-4">
-                        Finalizar Compra
-                    </div></a>
+                <div class="col-2"></div>
+            </div>
 
-                    <div class="col-2"></div>
+            <div class="row">
+                <div class="col-2"></div>
+
+                <div class="col-8">
+                    Carregue aqui o comprovativo que lhe foi enviado
+
+                    <form enctype="multipart/form-data" action="processform.php" method="POST">
+                        <label>File: <input type="file" name="file"></label>
+                        <br>
+                        <input type="submit">
+                    </form>
                 </div>
-            </form>
+
+                <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-2"></div>
+
+                <a href="loja.html"><div class=" botao col-4">
+                    Continuar a comprar
+                </div></a>
+
+                <div class="col-6"></div>
+            </div>
         </main>
     </div>
 

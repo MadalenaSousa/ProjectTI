@@ -41,7 +41,7 @@ function artigos() {
                 return response.json();
             })
             .then(function(json) {
-                console.log(json);
+                //console.log(json);
 
                 document.querySelector(".grid-loja .row").appendChild(articleThumbnail(json));
                 itens.push(json);
@@ -56,7 +56,7 @@ function articleThumbnail(json) {
     container.classList.add("col-6");
 
     let link = document.createElement("a");
-    link.setAttribute("href", "artigo.html?id=" + json.id);
+    link.setAttribute("href", "artigo.php?id=" + json.id);
 
     let imagem = document.createElement("img");
     imagem.setAttribute("src", json.thumbnailUrl);
@@ -95,7 +95,7 @@ function filterCategoria() {
         }
     }
 
-    console.log(filteredItens);
+    //console.log(filteredItens);
 
     let container = document.querySelector(".grid-loja .row");
     container.innerHTML = "";
@@ -105,7 +105,7 @@ function filterCategoria() {
         contentorArtigo.classList.add("col-6");
 
         let link = document.createElement("a");
-        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+        link.setAttribute("href", "artigo.php?id=" + filteredItens[i].id);
 
         let imagem = document.createElement("img");
         imagem.setAttribute("src", filteredItens[i].thumbnailUrl);
@@ -160,7 +160,7 @@ function filterCor() {
         }
     }
 
-    console.log(filteredItens);
+    //console.log(filteredItens);
 
     let container = document.querySelector(".grid-loja .row");
     container.innerHTML = "";
@@ -170,7 +170,7 @@ function filterCor() {
         contentorArtigo.classList.add("col-6");
 
         let link = document.createElement("a");
-        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+        link.setAttribute("href", "artigo.php?id=" + filteredItens[i].id);
 
         let imagem = document.createElement("img");
         imagem.setAttribute("src", filteredItens[i].thumbnailUrl);
@@ -219,12 +219,13 @@ function filterPreco() {
     let container = document.querySelector(".grid-loja .row");
     container.innerHTML = "";
 
-    for (let i = 0; i < filteredItens.length; i++) {
+    for(let i=0; i<filteredItens.length; i++) {
         let contentorArtigo = document.createElement("div");
         contentorArtigo.classList.add("col-6");
 
         let link = document.createElement("a");
-        link.setAttribute("href", "artigo.html?id=" + filteredItens[i].id);
+
+        link.setAttribute("href", "artigo.php?id=" + filteredItens[i].id);
 
         let imagem = document.createElement("img");
         imagem.setAttribute("src", filteredItens[i].thumbnailUrl);

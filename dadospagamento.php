@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Loja | MMDesign</title>
+    <title>Dados Pessoais | MMDesign</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="imagens/icon-separador.png">
@@ -52,9 +52,11 @@
                                 Contactos
                             </span>
                     </a>
-                    <span class="col-1">
+                    <a href="carrinho.php">
+                        <span class="col-1">
                             <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
                         </span>
+                    </a>
                 </div>
             </nav>
 
@@ -65,27 +67,72 @@
             </div>
         </header>
 
-        <main class="grid-main artigo">
-            <div class="row">
-                <div class="col-2"></div>
+        <main class="grid-main">
+            <form class="pagamento">
+                <div class="row">
+                    <div class="col-1"></div>
 
-                <div class="col-3">
+                    <div class="col-5">
+                        <div class="titulo">
+                            Os seus dados
+                        </div>
 
-                    <div class="botao">
-                        Adicionar ao Carrinho
+                        <form method="post" action="">
+                            Nome Completo* <input placeholder="Nome" type="text" name="name" required><br>
+                        </form>
+
+                        <form method="post" action="">
+                            E-mail* <input placeholder="email@example.com" type="text" name="email" required><br>
+                        </form>
+
+                        <form method="post" action="">
+                            Telemóvel* <input placeholder="9** *** ***" type="text" name="tlmvl" required><br>
+                        </form>
+
+                        <form method="post" action="">
+                            Morada* <input placeholder="Rua *** , Nº**, Exemplo" type="text" name="adress" required><br>
+                        </form>
                     </div>
 
-                    <a href="dadospagamento.html">
-                        <div class="botao">
-                            Proceder à Compra Imediata
+                    <div class="col-5">
+                        <div class="titulo">
+                            Dados de pagamento
                         </div>
-                    </a>
 
+                        <div>
+                            <img class="icon" src="imagens/visamastercard.png" alt="visa e mastercard">
+                        </div>
+
+                        <form method="post" action="">
+                            Número de cartão* <input placeholder="Numero" type="text" name="cardNum" required><br>
+                        </form>
+
+                        <form method="post" action="">
+                            Data de validade* <input placeholder="MM/AA" type="text" name="validade" required><br>
+                        </form>
+
+                        <form method="post" action="">
+                            Código de segurança <input placeholder="***" type="text" name="securityCode" required><br>
+                        </form>
+                    </div>
+
+                    <div class="col-1"></div>
                 </div>
 
-                <div class="col-1"></div>
+                <div class="row">
+                    <div class="col-1 empty"></div>
 
-            </div>
+                    <div class="col-5">
+                        <h6>*Campos obrigatórios</h6>
+                    </div>
+
+                    <a href="displaydados.php"><div class="botao col-4">
+                        Continuar
+                    </div></a>
+
+                    <div class="col-2"></div>
+                </div>
+            </form>
         </main>
     </div>
 
@@ -142,6 +189,5 @@
         </div>
     </footer>
     <script src="javascript/javascript.js"></script>
-    <script src="javascript/artigo.js"></script>
 </body>
 </html>
