@@ -34,13 +34,39 @@
                 $validade = $_POST["validade"];
                 $codigo	= $_POST["codigo"];
 
-                $line_to_write = $nome . ', ' . $mail .', ' . $numero .', ' . $morada .', ' . $cartao .', ' . $validade .', ' . $codigo  . "\n";
+                htmlOutputForm($nome, $mail, $numero, $morada, $cartao);
 
-                file_put_contents($filename, $line_to_write, FILE_APPEND);
+                fileOutputForm($nome, $mail, $numero, $morada, $cartao, $filename);
 
-                $data = file_get_contents($filename);
+                function htmlOutputForm($name, $email, $tlmvl, $morada, $cartao)
+                {
+                    echo '<table>';
 
-                echo $data;
+                    echo '<tr>';
+                    echo '<th>Nome</th><th>Email</th><th>Número de Telemóvel</th><th>Morada</th><th>Número do Cartão</th>';
+                    echo '</tr>';
+
+                    echo '<tr>';
+                    echo "<td>$name</td><td>$email</td><td>$tlmvl</td><td>$morada</td><td>$cartao</td>";
+                    echo '</tr>';
+
+                    echo '</table>';
+                }
+
+
+                function fileOutputForm($name, $email, $tlmvl, $morada, $cartao, $filename)
+                {
+                    $line_to_write = $name . ', ';
+                    $line_to_write = $line_to_write . $email . ',';
+
+                    $line_to_write = $line_to_write . $tlmvl . ',';
+                    $line_to_write = $line_to_write . $morada;
+                    $line_to_write = $line_to_write . $cartao;
+                    $line_to_write = $line_to_write . "\n";
+
+                    file_put_contents($filename, $line_to_write, FILE_APPEND);
+                }
+                
                 ?>
             </div>
 
