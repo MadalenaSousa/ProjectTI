@@ -204,7 +204,6 @@ let preco = document.getElementById("price");
 preco.addEventListener("change", filterPreco);
 
 function filterPreco() {
-
     console.log(preco.value);
 
     let filteredItens = [];
@@ -225,6 +224,7 @@ function filterPreco() {
         contentorArtigo.classList.add("col-6");
 
         let link = document.createElement("a");
+
         link.setAttribute("href", "artigo.php?id=" + filteredItens[i].id);
 
         let imagem = document.createElement("img");
@@ -241,5 +241,4 @@ function filterPreco() {
 
         container.appendChild(contentorArtigo);
     }
-
 }
