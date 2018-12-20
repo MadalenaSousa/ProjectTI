@@ -71,12 +71,17 @@
         <div class="row">
             <div class="col-1"></div>
 
-            <div class="col-10">
-            </div>
+            <div class="col-10"></div>
 
-            <div class="col-1">
+            <div class="col-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-8"></div>
+
+            <div class="col-4">
                 <a href="loja.html">
-                    <button>
+                    <button class="botao">
                         Continuar a Comprar
                     </button>
                 </a>
@@ -84,14 +89,11 @@
         </div>
 
         <div class="row">
-            <div class="col-1"></div>
+            <div class="col-8"></div>
 
-            <div class="col-10">
-            </div>
-
-            <div class="col-1">
+            <div class="col-4">
                 <a href="dadospagamento.php">
-                    <button>
+                    <button class="botao">
                         Checkout
                     </button>
                 </a>
