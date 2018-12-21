@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Loja | MMDesign</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,11 +44,13 @@
 
                 function htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
-                    echo '<div><h4>Nome:</h4>' . $name . '</div>';
-                    echo '<div><h4>Email:</h4>' . $email . '</div>';
-                    echo '<div><h4>Número de Telemóvel:</h4>' . $tlmvl . '</div>';
+                    echo '<div><h4>Nome:</h4>' . $nome . '</div>';
+                    echo '<div><h4>Email:</h4>' . $mail . '</div>';
+                    echo '<div><h4>Número de Telemóvel:</h4>' . $numero . '</div>';
                     echo '<div><h4>Morada:</h4>' . $morada . '</div>';
                     echo '<div><h4>Número do Cartão:</h4>' . $cartao . '</div>';
+                    echo '<div><h4>Validade:</h4>' . $validade . '</div>';
+                    echo '<div><h4>Código:</h4>' . $codigo . '</div>';
                 }
 
 
@@ -67,8 +70,6 @@
                 }
 
                 mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
-
-                $message = '=?UTF-8?B?'.base64_encode($message).'?=';
 
                 function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
