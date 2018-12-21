@@ -55,6 +55,18 @@
                                     </a>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-8"></div>
+
+                                <div class="col-4">
+                                    <a href="index.php">
+                                        <button class="botao">
+                                            HomePage
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
                     <?php
 
                         }
@@ -91,6 +103,18 @@
                                 <a href="loja.php">
                                     <button class="botao">
                                         Continuar a Comprar
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8"></div>
+
+                            <div class="col-4">
+                                <a href="index.php">
+                                    <button class="botao">
+                                        HomePage
                                     </button>
                                 </a>
                             </div>
