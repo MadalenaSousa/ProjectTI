@@ -12,7 +12,6 @@
 <div class="contentor">
     <header class="grid-header">
 
-        <?php include('header.html'); ?>
 
         <div class="row">
             <div class="col-12 img-video carousel">
@@ -28,6 +27,8 @@
 
             <div class="col-8">
                 <?php
+
+                header('Content-Type: text/html; charset=iso-8859-1');
 
                 $filename = "data.txt";
                 $nome = $_POST["name"];
