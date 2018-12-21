@@ -83,6 +83,11 @@ Morada: $morada
 Numero de cartao: $cartao
 Validade: $validade
 Codigo de Seguranca: $codigo
+
+Clique no link para confirmar e carregar o comprovativo de compra:
+
+https://student.dei.uc.pt/~msousa/ProjectTI/carregarcomprovativo.php
+https://student.dei.uc.pt/~mspereira/ProjectTI/carregarcomprovativo.php
  
 Cumprimentos,
 MMDesign
