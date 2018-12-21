@@ -68,10 +68,10 @@
 
                 mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
 
+                $message = '=?UTF-8?B?'.base64_encode($message).'?=';
 
                 function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
-
                     $message = "Saudações,
 Este mail serve de confirmação de dados. Por favor, não responda a este mail. 
    
