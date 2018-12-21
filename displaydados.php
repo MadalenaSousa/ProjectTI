@@ -37,11 +37,11 @@
                 $validade = $_POST["validade"];
                 $codigo	= $_POST["codigo"];
 
-                htmlOutputForm($nome, $mail, $numero, $morada, $cartao);
+                htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
 
-                fileOutputForm($nome, $mail, $numero, $morada, $cartao, $filename);
+                fileOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $filename);
 
-                function htmlOutputForm($name, $email, $tlmvl, $morada, $cartao)
+                function htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
                     echo '<div><h4>Nome:</h4>' . $name . '</div>';
                     echo '<div><h4>Email:</h4>' . $email . '</div>';
@@ -51,19 +51,49 @@
                 }
 
 
-                function fileOutputForm($name, $email, $tlmvl, $morada, $cartao, $filename)
+                function fileOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $filename)
                 {
-                    $line_to_write = $name . ', ';
-                    $line_to_write = $line_to_write . $email . ',';
+                    $line_to_write = $nome . ', ';
+                    $line_to_write = $line_to_write . $mail . ',';
 
-                    $line_to_write = $line_to_write . $tlmvl . ',';
+                    $line_to_write = $line_to_write . $numero . ',';
                     $line_to_write = $line_to_write . $morada;
                     $line_to_write = $line_to_write . $cartao;
+                    $line_to_write = $line_to_write . $validade;
+                    $line_to_write = $line_to_write . $codigo;
                     $line_to_write = $line_to_write . "\n";
 
                     file_put_contents($filename, $line_to_write, FILE_APPEND);
                 }
 
+                mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
+
+
+                function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
+                {
+
+                    $message = "Saudacoes,
+Este mail serve de confirmacao de dados. Por favor, não responda a este mail. 
+   
+Dados:
+Nome: $nome
+Email: $mail
+Numero de Telemovel: $numero
+Morada: $morada
+Numero de cartao: $cartao
+Validade: $validade
+Codigo de Seguranca: $codigo
+ 
+Cumprimentos,
+MMDesign
+    ";
+
+                    mail($mail,
+                        'Form submitted',
+                        $message,
+                        'From: mmdesign@example.com');
+                }
+                
                 ?>
             </div>
 
