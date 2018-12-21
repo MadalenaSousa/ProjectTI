@@ -29,9 +29,9 @@
             <div class="col-8">
                 <?php
 
-                header("Content-Type: text/html; charset=ISO-8859-1", true>
-                $filename = "data.txt";
+                header("Content-Type: text/html; charset=ISO-8859-1", true);
 
+                $filename = "data.txt";
                 $nome = $_POST["name"];
                 $mail = $_POST["email"];
                 $numero	= $_POST["mobile"];
