@@ -21,6 +21,7 @@
     </header>
 
     <main class="grid-main carrinho">
+
         <?php
 
         session_start();
@@ -93,5 +94,6 @@
 <script src="javascript/javascript.js"></script>
 <script src="javascript/slideshow.js"></script>
 <script src="javascript/cart.js"></script>
+<!--script src="javascript/removeitens.js"></script-->
 </body>
 </html>

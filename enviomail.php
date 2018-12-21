@@ -67,5 +67,4 @@
 </footer>
 <script src="javascript/javascript.js"></script>
 <script src="javascript/slideshow.js"></script>
-<script src="javascript/artigo.js"></script>
 </body>

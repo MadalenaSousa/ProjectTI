@@ -27,9 +27,7 @@
                 <div class="col-3">
 
                     <a href="carrinho.php?id=<?php echo $_GET['id']; ?>">
-                        <button class="botao" name="addCart">
-                            Adicionar ao Carrinho
-                        </button>
+                        <input type="submit" class="botao" value="Adicionar ao Carrinho">
                     </a>
 
                     <a href="dadospagamento.php">
