@@ -53,9 +53,13 @@
 
         session_start();
 
-        $_SESSION['article_1'] = $_GET['id'];
+        $_SESSION['articles'][] = $_GET['id'];
 
-        echo $_SESSION['article_1'];
+        if(isset($_SESSION['articles'])){
+            foreach ($_SESSION['articles'] as $val){
+                echo $val;
+            }
+        }
 
         ?>
 
