@@ -21,55 +21,41 @@
     </header>
 
     <main class="grid-main carrinho">
-        <div class="row" id="artigo">
-            <div class="col-1"></div>
-
-            <div class="col-2"></div>
-
-            <div class="col-5"></div>
-
-            <div class="col-1 opcoesCart" id="preco">
-                Preço
-                <br>
-            </div>
-
-            <div class="col-1 opcoesCart">
-                <label for="quantity">
-                    Quantidade
-                </label>
-                <input type="number" name="quantity" id="quantity" min="1" value="1">
-            </div>
-
-            <div class="col-1 opcoesCart">
-                <button id="remove">
-                    Remover
-                </button>
-            </div>
-
-            <div class="col-1"></div>
-        </div>
-
         <?php
 
         session_start();
 
         $_SESSION['articles'][] = $_GET['id'];
 
-        if(isset($_SESSION['articles'])){
+        if($_SESSION['articles'] != null){
             foreach ($_SESSION['articles'] as $val){
+                echo '<div class="id">';
                 echo $val;
+                echo '</div>';
             }
+        } else {
+            echo '<div class="id">';
+            echo 'Ainda não adicionou artigos ao seu carrinho.';
+            echo '</div>';
         }
 
         ?>
+
+        <div class="col-1"></div>
+
+        <table class="col-10">
+
+        </table>
+
+        <div class="col-1"></div>
 
         <div class="row">
             <div class="col-8"></div>
 
             <div class="col-4">
-                <button class="botao">
-                    Esvaziar Carrinho
-                </button>
+                <form method="post" action="clearcart.php">
+                    <input class="botao" type="submit" value="Esvaziar Carrinho">
+                </form>
             </div>
         </div>
 

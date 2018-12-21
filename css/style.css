@@ -412,6 +412,20 @@ footer div:last-child {
     border: 3px solid black;
 }
 
+.carrinho table td {
+    margin: 5px;
+    background-color: lavender;
+    padding: 10px;
+    text-align: center;
+}
+
+.carrinho table th {
+    text-align: left;
+    background-color: #330033;
+    color: white;
+    padding: 10px;
+}
+
 /*Contactos e Localização*/
   
 .contactoselocalizacao h2 {
