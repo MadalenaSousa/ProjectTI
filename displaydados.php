@@ -12,6 +12,7 @@
 <div class="contentor">
     <header class="grid-header">
 
+        <?php include('header.html'); ?>
 
         <div class="row">
             <div class="col-12 img-video carousel">
@@ -27,8 +28,6 @@
 
             <div class="col-8">
                 <?php
-
-                header('Content-Type: text/html; charset=iso-8859-1');
 
                 $filename = "data.txt";
                 $nome = $_POST["name"];
@@ -70,21 +69,22 @@
                     file_put_contents($filename, $line_to_write, FILE_APPEND);
                 }
 
+
                 mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
 
                 function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
-                    $message = "Saudações,
-Este mail serve de confirmação de dados. Por favor, não responda a este mail. 
+                    $message = "Saudacoes,
+Este mail serve de confirmacao de dados. Por favor, nao responda a este mail. 
    
 Dados
 Nome: $nome
 Email: $mail
-Numero de Telemóvel: $numero
+Numero de Telemovel: $numero
 Morada: $morada
-Número de cartão: $cartao
+Numero de cartao: $cartao
 Validade: $validade
-Codigo de Segurança: $codigo
+Codigo de Seguranca: $codigo
 
 Clique no link para confirmar e carregar o comprovativo de compra:
 
