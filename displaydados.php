@@ -20,8 +20,11 @@
         </div>
     </header>
 
-    <main class="grid-main">
+    <main class="grid-main dados">
         <div class="row">
+
+            <div class="col-2"></div>
+
             <div class="col-8">
                 <?php
                 $filename = "data.txt";
@@ -40,17 +43,11 @@
 
                 function htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
-                    echo '<table>';
-
-                    echo '<tr>';
-                    echo '<th>Nome</th><th>Email</th><th>Telemóvel</th><th>Morada</th><th>Nº de Cartão</th><th>Validade</th><th>Código</th>';
-                    echo '</tr>';
-
-                    echo '<tr>';
-                    echo "<td>$nome</td><td>$mail</td><td>$numero</td><td>$morada</td><td>$cartao</td><td>$validade</td><td>$codigo</td>";
-                    echo '</tr>';
-
-                    echo '</table>';
+                    echo '<div><h4>Nome:</h4>' . $name . '</div>';
+                    echo '<div><h4>Email:</h4>' . $email . '</div>';
+                    echo '<div><h4>Número de Telemóvel:</h4>' . $tlmvl . '</div>';
+                    echo '<div><h4>Morada:</h4>' . $morada . '</div>';
+                    echo '<div><h4>Número do Cartão:</h4>' . $cartao . '</div>';
                 }
 
 
@@ -100,14 +97,18 @@ MMDesign
                 ?>
             </div>
 
-            <div class="col-4">
-                <a href="comprafinalizada.php">
-                    <button class="botao" name="continue">
-                        Finalizar Compra
-                    </button>
-                </a>
-            </div>
+            <div class="col-2"></div>
         </div>
+
+        <form enctype="multipart/form-data" action="enviomail.php" method="POST">
+            <div class="row">
+                <div class="col-8"></div>
+
+                <div class="col-4">
+                    <input class="botao" type="submit" value="Confirmar">
+                </div>
+            </div>
+        </form>
     </main>
 </div>
 

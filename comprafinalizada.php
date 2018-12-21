@@ -21,62 +21,110 @@
         </header>
 
         <main class="grid-main">
-            <div class="row">
-                <div class="col-2"></div>
 
-                <div class="titulo col-8">
-                    <h5>A sua compra foi realizada com sucesso.</h5>
-                </div>
+                    <?php
 
-                <div class="col-2"></div>
-            </div>
+                    $uploaddir =  'comprovativos';
+                    $uploadfile = $uploaddir . '/' . basename($_FILES['file']['name']);
 
-            <div class="row">
-                <div class="col-2"></div>
+                    $fileType = strtolower(pathinfo($uploadfile,PATHINFO_EXTENSION));
 
-                <div class="col-8">
-                        Enviamos um mail com o comprovativo e dados da sua compra.<br>
-                        Por questões de verificação e segurança, carregue aqui o comprovativo que lhe foi enviado
-                    </div>
+                    if($fileType == "pdf") {
+                        if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
 
-                <div class="col-2"></div>
-            </div>
+                    ?>
 
-            <div class="row">
-                <div class="col-2"></div>
+                            <div class="row">
+                                <div class="col-2"></div>
 
-                <div class="col-4">
-                    <form enctype="multipart/form-data" action="processform.php" method="POST">
-                        <label>Ficheiro: <input type="file" name="file"></label>
-                    </form>
-                </div>
+                                <div class="titulo col-8">
+                                    <h5>A sua compra foi realizada com sucesso!</h5>
+                                </div>
 
-                <div class="col-6"></div>
-            </div>
+                                <div class="col-2"></div>
+                            </div>
 
-            <div class="row">
-                <div class="col-2"></div>
+                            <div class="row">
+                                <div class="col-8"></div>
 
-                <div class="col-2">
-                    <form enctype="multipart/form-data" action="processform.php" method="POST">
-                        <input type="submit" class="botao">
-                    </form>
-                </div>
+                                <div class="col-4">
+                                    <a href="loja.php">
+                                        <button class="botao">
+                                            Continuar a Comprar
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
 
-                <div class="col-8"></div>
-            </div>
+                            <div class="row">
+                                <div class="col-8"></div>
 
-            <div class="row">
-                <div class="col-8"></div>
+                                <div class="col-4">
+                                    <a href="index.php">
+                                        <button class="botao">
+                                            HomePage
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                    <?php
 
-                <div class="col-4">
-                    <a href="loja.php">
-                        <button class="botao">
-                            Continuar a Comprar
-                        </button>
-                    </a>
-                </div>
-            </div>
+                        }
+                    } else {
+
+                    ?>
+
+                        <div class="row">
+                            <div class="col-2"></div>
+
+                            <div class="titulo col-8">
+                                <h5>Algo de errado não está certo!</h5>
+                            </div>
+
+                            <div class="col-2"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8"></div>
+
+                            <div class="col-4">
+                                <a href="dadospagamento.php">
+                                    <button class="botao">
+                                        Tentar Novamente
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8"></div>
+
+                            <div class="col-4">
+                                <a href="loja.php">
+                                    <button class="botao">
+                                        Continuar a Comprar
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8"></div>
+
+                            <div class="col-4">
+                                <a href="index.php">
+                                    <button class="botao">
+                                        HomePage
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    <?php
+
+                    }
+
+                    ?>
         </main>
     </div>
 
