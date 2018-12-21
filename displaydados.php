@@ -72,17 +72,17 @@
                 function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
 
-                    $message = "Saudacoes,
-Este mail serve de confirmacao de dados. Por favor, não responda a este mail. 
+                    $message = "Saudações,
+Este mail serve de confirmação de dados. Por favor, não responda a este mail. 
    
-Dados:
+Dados
 Nome: $nome
 Email: $mail
-Numero de Telemovel: $numero
+Numero de Telemóvel: $numero
 Morada: $morada
-Numero de cartao: $cartao
+Número de cartão: $cartao
 Validade: $validade
-Codigo de Seguranca: $codigo
+Codigo de Segurança: $codigo
 
 Clique no link para confirmar e carregar o comprovativo de compra:
 
