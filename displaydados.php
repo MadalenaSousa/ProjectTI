@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Loja | MMDesign</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,8 +28,8 @@
 
             <div class="col-8">
                 <?php
-                $filename = "data.txt";
 
+                $filename = "data.txt";
                 $nome = $_POST["name"];
                 $mail = $_POST["email"];
                 $numero	= $_POST["mobile"];
@@ -43,11 +44,13 @@
 
                 function htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
-                    echo '<div><h4>Nome:</h4>' . $name . '</div>';
-                    echo '<div><h4>Email:</h4>' . $email . '</div>';
-                    echo '<div><h4>Número de Telemóvel:</h4>' . $tlmvl . '</div>';
+                    echo '<div><h4>Nome:</h4>' . $nome . '</div>';
+                    echo '<div><h4>Email:</h4>' . $mail . '</div>';
+                    echo '<div><h4>Número de Telemóvel:</h4>' . $numero . '</div>';
                     echo '<div><h4>Morada:</h4>' . $morada . '</div>';
                     echo '<div><h4>Número do Cartão:</h4>' . $cartao . '</div>';
+                    echo '<div><h4>Validade:</h4>' . $validade . '</div>';
+                    echo '<div><h4>Código:</h4>' . $codigo . '</div>';
                 }
 
 
@@ -66,23 +69,22 @@
                     file_put_contents($filename, $line_to_write, FILE_APPEND);
                 }
 
-                mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
 
+                mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
 
                 function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
                 {
-
-                    $message = "Saudações,
-Este mail serve de confirmação de dados. Por favor, não responda a este mail. 
+                    $message = "Saudacoes,
+Este mail serve de confirmacao de dados. Por favor, nao responda a este mail. 
    
 Dados
 Nome: $nome
 Email: $mail
-Numero de Telemóvel: $numero
+Numero de Telemovel: $numero
 Morada: $morada
-Número de cartão: $cartao
+Numero de cartao: $cartao
 Validade: $validade
-Codigo de Segurança: $codigo
+Codigo de Seguranca: $codigo
 
 Clique no link para confirmar e carregar o comprovativo de compra:
 
