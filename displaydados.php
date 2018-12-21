@@ -70,7 +70,7 @@
             <div class="col-2"></div>
         </div>
 
-        <form enctype="multipart/form-data" action="carregarcomprovativo.php" method="POST">
+        <form enctype="multipart/form-data" action="enviomail.php" method="POST">
             <div class="row">
                 <div class="col-8"></div>
 

@@ -26,31 +26,12 @@
             <div class="col-2"></div>
 
             <div class="col-8">
-                Por questões de verificação e segurança, carregue aqui o comprovativo da compra:
+                Enviamos um mail com os dados da sua compra.<br>
+                Aceda ao link que lhe enviámos e siga as instruções.
             </div>
 
             <div class="col-2"></div>
         </div>
-
-        <form enctype="multipart/form-data" action="comprafinalizada.php" method="POST">
-            <div class="row">
-                <div class="col-2"></div>
-
-                <div class="col-8">
-                    <label><input type="file" name="file"></label>
-                </div>
-
-                <div class="col-2"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-8"></div>
-
-                <div class="col-4">
-                    <input class="botao" type="submit">
-                </div>
-            </div>
-        </form>
     </main>
 </div>
 
