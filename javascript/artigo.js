@@ -1,9 +1,9 @@
 let id = window.location.search;
 id = id.substring(id.indexOf("id=")+3);
 
-artigoDetail();
+pageArticleDetail();
 
-function artigoDetail() {
+function pageArticleDetail() {
     fetch("https://jsonplaceholder.typicode.com/photos/" + id)
         .then(function(response) {
             return response.json();
@@ -11,12 +11,12 @@ function artigoDetail() {
         .then(function(json) {
             console.log(json);
 
-            document.querySelector(".artigo .row .col-4").appendChild(article(json));
-            document.querySelector(".artigo .row .col-3").appendChild(infoArticle(json));
+            document.querySelector(".artigo .row .col-4").appendChild(pageArticle(json));
+            document.querySelector(".artigo .row .col-3").appendChild(pageArticleInfo(json));
         });
 }
 
-function article(json) {
+function pageArticle(json) {
     let container = document.createElement("div");
 
     let imagem = document.createElement("img");
@@ -31,7 +31,7 @@ function article(json) {
     return container;
 }
 
-function infoArticle(json) {
+function pageArticleInfo(json) {
     let container = document.createElement("div");
 
     let idItem = document.createElement("div");

@@ -32,7 +32,7 @@
 
                         <iframe src="cartitems.php" width="100%" height="<?php
 
-                        echo 100 + count($_SESSION['articles']) * 300;
+                        echo 100 + count($_SESSION['articles']) * 250;
 
                         ?>px" style="border: none"></iframe>
 

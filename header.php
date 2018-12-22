@@ -46,16 +46,20 @@
                 <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
             </div>
             <div class="list-itens">
+
                 <?php
 
-                    if(isset($_SESSION['articles'])){
-                        foreach ($_SESSION['articles'] as $itemDetails){
-                            echo '<div class="col-1">';
-                            echo $itemDetails['id'] . ' x' . $itemDetails['quantity'];
-                            echo '</div>';
+                if(isset($_SESSION['articles'])){
+                    foreach ($_SESSION['articles'] as $itemDetails){
+                        echo '<div class="id" style="display: none">';
+                        echo $itemDetails['id'];
+                        echo '</div>';
+                        echo '<div class="quant" style="display: none">';
+                        echo $itemDetails['quantity'];
+                        echo '</div>';
 
-                        }
                     }
+                }
 
                 ?>
 
@@ -64,4 +68,6 @@
             </div>
         </div>
     </div>
+
+    <!--script src="javascript/cartmenu.js"></script-->
 </nav>
