@@ -27,95 +27,64 @@
             <div class="col-2"></div>
 
             <div class="col-8">
+
                 <?php
 
-                $filename = "data.txt";
-                $nome = $_POST["name"];
-                $mail = $_POST["email"];
-                $numero	= $_POST["mobile"];
-                $morada	= $_POST["adress"];
-                $cartao = $_POST["cartao"];
-                $validade = $_POST["validade"];
-                $codigo	= $_POST["codigo"];
+                session_start();
 
-                htmlOutputForm($nome, $mail, $numero, $morada, $cartao);
+                unset($_SESSION['articles']);
 
-                fileOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $filename);
+                include('php/readfile.php');
 
-                function htmlOutputForm($nome, $mail, $numero, $morada, $cartao)
-                {
-                    echo '<div><h4>Nome:</h4>' . $nome . '</div>';
-                    echo '<div><h4>Email:</h4>' . $mail . '</div>';
-                    echo '<div><h4>Número de Telemóvel:</h4>' . $numero . '</div>';
-                    echo '<div><h4>Morada:</h4>' . $morada . '</div>';
-                    echo '<div><h4>Número do Cartão:</h4>' . $cartao . '</div>';
-                }
+                $encomedas = lerFicheiro('php/data.txt');
 
-
-                function fileOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $filename)
-                {
-                    $line_to_write = $nome . ', ';
-                    $line_to_write = $line_to_write . $mail . ',';
-
-                    $line_to_write = $line_to_write . $numero . ',';
-                    $line_to_write = $line_to_write . $morada;
-                    $line_to_write = $line_to_write . $cartao;
-                    $line_to_write = $line_to_write . $validade;
-                    $line_to_write = $line_to_write . $codigo;
-                    $line_to_write = $line_to_write . "\n";
-
-                    file_put_contents($filename, $line_to_write, FILE_APPEND);
-                }
-
-
-                mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
-
-                function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
-                {
-                    $message = "Saudacoes,
-Este mail serve de confirmacao de dados. Por favor, nao responda a este mail. 
-   
-Dados
-Nome: $nome
-Email: $mail
-Numero de Telemovel: $numero
-Morada: $morada
-Numero de cartao: $cartao
-Validade: $validade
-Codigo de Seguranca: $codigo
-
-Clique no link para confirmar e carregar o comprovativo de compra:
-
-https://student.dei.uc.pt/~msousa/ProjectTI/carregarcomprovativo.php
-https://student.dei.uc.pt/~mspereira/ProjectTI/carregarcomprovativo.php
- 
-Cumprimentos,
-MMDesign
-    ";
-
-                    mail($mail,
-                        'Form submitted',
-                        $message,
-                        'From: mmdesign@example.com');
-                }
-                
                 ?>
+
+                <h4>Nome:</h4>
+
+                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['nome']; ?>
+
+                <h4>Email:</h4>
+
+                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['email']; ?>
+
+                <h4>Número de Telemóvel:</h4>
+
+                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['tlmvl']; ?>
+
+                <h4>Morada:</h4>
+
+                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['morada']; ?>
+
+                <h4>Número do Cartão:</h4>
+
+                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['nCartao']; ?>
+
+                <h4>Artigo(s):</h4>
+
+                <?php
+
+                for($i=0; $i<count($encomedas[$_GET['idEncomenda']]['items']); $i++){
+                    echo ' ' . $encomedas[$_GET['idEncomenda']]['items'][$i]['id'] . ' ' . 'x' . $encomedas[$_GET['idEncomenda']]['items'][$i]['quantity'] . '<br>';
+                }
+
+                ?>
+
             </div>
 
             <div class="col-2"></div>
         </div>
 
-        <form enctype="multipart/form-data" action="enviomail.php" method="POST">
-            <div class="row">
-                <div class="col-8"></div>
+        <div class="row">
+            <div class="col-8"></div>
 
-                <div class="col-4">
-                    <form method="post" action="enviomail.php">
-                        <input class="botao" type="submit" value="Confirmar">
-                    </form>
-                </div>
+            <div class="col-4">
+                <form method="post" action="php/sendmail.php">
+                    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                    <input class="botao" type="submit" value="Confirmar">
+                </form>
             </div>
-        </form>
+        </div>
     </main>
 </div>
 

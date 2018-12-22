@@ -21,45 +21,23 @@
     </header>
 
     <main class="grid-main carrinho">
+        <div class="row">
+            <div class="col-1"></div>
 
-        <?php
+            <div class="col-10">
 
-        session_start();
+                <iframe src="cartitems.php" width="100%" height="<?php
 
-        if(isset($_SESSION['articles'])){
-            foreach ($_SESSION['articles'] as $itemDetails){
-                echo '<div class="item" style="display: none">';
+                session_start();
 
-                echo '<div class="id">';
-                echo $itemDetails['id'];
-                echo '</div>';
+                echo 100 + count($_SESSION['articles']) * 300;
 
-                echo '<div class="quantity">';
-                echo $itemDetails['quantity'];
-                echo '</div>';
+                ?>px" style="border: none"></iframe>
 
-                echo '</div>';
-            }
-        }
+            </div>
 
-        ?>
-
-        <div class="col-1"></div>
-
-        <?php
-
-        if(isset($_SESSION['articles'])){
-            echo '<table class="col-10"></table>';
-        } else {
-            echo '<table class="col-10" style="display: none"></table>';
-            echo '<div class="id" id="noItemsMessage">';
-            echo 'Ainda não adicionou artigos ao seu carrinho.';
-            echo '</div>';
-        }
-
-        ?>
-
-        <div class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
 
         <div class="row">
             <div class="col-8"></div>
@@ -104,7 +82,7 @@
 </footer>
 <script src="javascript/javascript.js"></script>
 <script src="javascript/slideshow.js"></script>
-<script src="javascript/cart.js"></script>
+<!--script src="javascript/cart.js"></script-->
 <!--script src="javascript/removeitens.js"></script-->
 </body>
 </html>
