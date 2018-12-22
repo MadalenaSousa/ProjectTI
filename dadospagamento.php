@@ -21,8 +21,26 @@
             </div>
         </header>
 
-        <main class="grid-main">
-            <form method="post" action="displaydados.php">
+        <main class="grid-main dadospagamento">
+            <form method="post" action="php/writeFile.php">
+                <div class="row">
+                    <div class="col-1"></div>
+
+                    <div class="col-10">
+
+                        <iframe src="cartitems.php" width="100%" height="<?php
+
+                        session_start();
+
+                        echo 100 + count($_SESSION['articles']) * 300;
+
+                        ?>px" style="border: none"></iframe>
+
+                    </div>
+
+                    <div class="col-1"></div>
+                </div>
+
                 <div class="row">
                     <div class="col-1"></div>
 
@@ -71,10 +89,10 @@
                     <div class="col-8 empty"></div>
 
                     <div class="col-4">
-                        <input type="submit" class="botao">
+                        <input type="submit" class="botao" value="Submeter">
                     </div>
                 </div>
-        </form>
+            </form>
         </main>
 
     <footer class="grid-footer">
@@ -84,5 +102,6 @@
     </footer>
     <script src="javascript/javascript.js"></script>
     <script src="javascript/slideshow.js"></script>
+    <script src="javascript/cart.js"></script>
 </body>
 </html>

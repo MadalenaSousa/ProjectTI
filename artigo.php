@@ -28,14 +28,15 @@
 
                     <form method="post" action="php/addToCart.php">
                         <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                        <input type="hidden" name="compraImediata" value="0">
                         <input type="submit" class="botao" value="Adicionar ao Carrinho">
                     </form>
 
-                    <a href="dadospagamento.php">
-                        <button class="botao" name="compraImediata">
-                            Proceder à Compra Imediata
-                        </button>
-                    </a>
+                    <form method="post" action="php/addToCart.php">
+                        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                        <input type="hidden" name="compraImediata" value="1">
+                        <input class="botao" type="submit" value="Proceder à Compra Imediata">
+                    </form>
                 </div>
 
                 <div class="col-1"></div>

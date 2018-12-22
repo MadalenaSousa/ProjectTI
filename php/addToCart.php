@@ -30,6 +30,10 @@ if(isset($_SESSION['articles'])){
     array_push($_SESSION['articles'], $array);
 }
 
-header('Location: ../carrinho.php');
+if($_POST['compraImediata'] == 0){
+    header('Location: ../carrinho.php');
+} else {
+    header('Location: ../dadospagamento.php');
+}
 
 ?>

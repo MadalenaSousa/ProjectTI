@@ -1,7 +1,7 @@
 let artigo = document.getElementsByClassName("id");
 let artigoQuantity = document.getElementsByClassName("quantity");
 
-let tabela = document.querySelector(".carrinho table");
+let tabela = document.querySelector("table");
 let theader = document.createElement("thead");
 let tbody = document.createElement("tbody");
 

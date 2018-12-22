@@ -9,4 +9,4 @@ for($i=0; $i<count($_SESSION['articles']); $i++) {
     }
 }
 
-header('Location: ../carrinho.php');
+header('Location: ../cartitems.php');

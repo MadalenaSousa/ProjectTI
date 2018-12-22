@@ -412,21 +412,21 @@ footer div:last-child {
     border: 3px solid black;
 }
 
-.carrinho table td {
+.carrinho table td, .dadospagamento table td {
     margin: 5px;
     background-color: lavender;
     padding: 10px;
     text-align: center;
 }
 
-.carrinho table th {
+.carrinho table th, .dadospagamento table th {
     text-align: left;
     background-color: #330033;
     color: white;
     padding: 10px;
 }
 
-.carrinho .remover {
+.carrinho .remover, .dadospagamento .remover {
     border: 0;
     background-color: #990099;
     color: white;
