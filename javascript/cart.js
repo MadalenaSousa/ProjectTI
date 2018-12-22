@@ -1,4 +1,5 @@
 let artigo = document.getElementsByClassName("id");
+console.log(artigo);
 
 let tabela = document.querySelector(".carrinho table");
 let theader = document.createElement("thead");
@@ -7,33 +8,26 @@ let tbody = document.createElement("tbody");
 theader.appendChild(cabecalho());
 tabela.appendChild(theader);
 
-artigoDetail();
+artigoDetail(0);
 
 tabela.appendChild(tbody);
 
-function artigoDetail() {
-    for(let i=0; i<artigo.length; i++) {
-        fetch("https://jsonplaceholder.typicode.com/photos/" + artigo[i].innerText)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (json) {
-                console.log(json);
-
-                tbody.appendChild(article(json));
-
-                let botaoQuantidade = document.getElementsByClassName("quantidade");
-                let precoArtigo = document.getElementsByClassName("precoArticle");
-
-                botaoQuantidade[i].addEventListener("click", function () {
-                    precoArtigo[i].innerText = (json.id * botaoQuantidade[i].value) + "€";
-                });
-
-                botaoQuantidade[i].addEventListener("keyup", function () {
-                    precoArtigo[i].innerText = (json.id * botaoQuantidade[i].value) + "€";
-                });
-            });
+function artigoDetail(index) {
+    if (index >= artigo.length) {
+        return;
     }
+
+    fetch("https://jsonplaceholder.typicode.com/photos/" + artigo[index].innerText)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json);
+
+            tbody.appendChild(article(json));
+
+            artigoDetail(index+1);
+        });
 }
 
 function cabecalho() {

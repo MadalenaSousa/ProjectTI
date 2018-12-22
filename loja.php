@@ -61,14 +61,13 @@
                                         <label for="portachaves">Porta-Chaves</label>
                                     </li>
                                 </ul>
-                            </ul>
                         </div>
 
                         <div>
                             <h3>Preço</h3>
                             <div class="pRelative">
                                 0€
-                                <input id="price" type="range" min="0" max="5000">
+                                <label><input id="price" type="range" min="0" max="5000"></label>
                                 50€
                             </div>
                         </div>
@@ -94,7 +93,6 @@
 
                 <div class="col-6 grid-loja">
                     <div class="row">
-
 
                     </div>
                 </div>

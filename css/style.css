@@ -435,6 +435,11 @@ footer div:last-child {
     cursor: pointer;
 }
 
+#noItemsMessage {
+    font-size: 18pt;
+    font-family: "OCR A Std", Helvetica, serif;
+}
+
 /*Contactos e Localização*/
   
 .contactoselocalizacao h2 {
