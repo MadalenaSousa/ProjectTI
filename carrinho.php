@@ -28,13 +28,16 @@
 
         if(isset($_SESSION['articles'])){
             foreach ($_SESSION['articles'] as $itemDetails){
-                echo '<div class="item">';
+                echo '<div class="item" style="display: none">';
+
                 echo '<div class="id">';
                 echo $itemDetails['id'];
                 echo '</div>';
+
                 echo '<div class="quantity">';
                 echo $itemDetails['quantity'];
                 echo '</div>';
+
                 echo '</div>';
             }
         }
@@ -62,9 +65,11 @@
             <div class="col-8"></div>
 
             <div class="col-4">
-                <form method="post" action="php/clearcart.php">
-                    <input class="botao" type="submit" value="Esvaziar Carrinho">
-                </form>
+                <a href="loja.php">
+                    <button class="botao">
+                        Continuar a Comprar
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -72,11 +77,9 @@
             <div class="col-8"></div>
 
             <div class="col-4">
-                <a href="loja.php">
-                    <button class="botao">
-                        Continuar a Comprar
-                    </button>
-                </a>
+                <form method="post" action="php/clearcart.php">
+                    <input class="botao" type="submit" value="Esvaziar Carrinho">
+                </form>
             </div>
         </div>
 
