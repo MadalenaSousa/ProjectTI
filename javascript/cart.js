@@ -1,42 +1,33 @@
 let artigo = document.getElementsByClassName("id");
+console.log(artigo);
 
 let tabela = document.querySelector(".carrinho table");
-tabela.appendChild(cabecalho());
+let theader = document.createElement("thead");
+let tbody = document.createElement("tbody");
 
-artigoDetail();
+theader.appendChild(cabecalho());
+tabela.appendChild(theader);
 
-let botaoRemover = document.getElementsByClassName("remover");
-let botaoQuantidade = document.getElementsByClassName("quantidade");
-let rowCarrinho = document.getElementsByClassName("rowCart");
-let precoArtigo = document.getElementsByClassName("precoArticle");
+artigoDetail(0);
 
-function artigoDetail() {
-    for(let i=0; i<artigo.length; i++) {
-        if(artigo[i].innerText !== 'Ainda não adicionou artigos ao seu carrinho.') {
-            fetch("https://jsonplaceholder.typicode.com/photos/" + artigo[i].innerText)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (json) {
-                    console.log(json);
+tabela.appendChild(tbody);
 
-                    tabela.appendChild(article(json));
-
-
-                    botaoRemover[i].addEventListener("click", function () {
-                        tabela.removeChild(rowCarrinho[i]);
-                    });
-
-                    botaoQuantidade[i].addEventListener("click", function () {
-                        precoArtigo[i].innerText = (json.id * botaoQuantidade[i].value) + "€";
-                    });
-
-                    botaoQuantidade[i].addEventListener("keyup", function () {
-                        precoArtigo[i].innerText = (json.id * botaoQuantidade[i].value) + "€";
-                    });
-                });
-        }
+function artigoDetail(index) {
+    if (index >= artigo.length) {
+        return;
     }
+
+    fetch("https://jsonplaceholder.typicode.com/photos/" + artigo[index].innerText)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json);
+
+            tbody.appendChild(article(json));
+
+            artigoDetail(index+1);
+        });
 }
 
 function cabecalho() {
@@ -98,12 +89,18 @@ function article(json) {
 
     let remover = document.createElement("td");
 
+    let form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "removeitens.php");
+
     let botao = document.createElement("input");
     botao.setAttribute("value", "x");
     botao.setAttribute("type", "submit");
     botao.classList.add("remover");
 
-    remover.appendChild(botao);
+    form.appendChild(botao);
+
+    remover.appendChild(form);
 
 
     row.appendChild(produto);

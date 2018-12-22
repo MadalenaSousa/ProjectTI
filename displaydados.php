@@ -38,19 +38,17 @@
                 $validade = $_POST["validade"];
                 $codigo	= $_POST["codigo"];
 
-                htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo);
+                htmlOutputForm($nome, $mail, $numero, $morada, $cartao);
 
                 fileOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $filename);
 
-                function htmlOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo)
+                function htmlOutputForm($nome, $mail, $numero, $morada, $cartao)
                 {
                     echo '<div><h4>Nome:</h4>' . $nome . '</div>';
                     echo '<div><h4>Email:</h4>' . $mail . '</div>';
                     echo '<div><h4>Número de Telemóvel:</h4>' . $numero . '</div>';
                     echo '<div><h4>Morada:</h4>' . $morada . '</div>';
                     echo '<div><h4>Número do Cartão:</h4>' . $cartao . '</div>';
-                    echo '<div><h4>Validade:</h4>' . $validade . '</div>';
-                    echo '<div><h4>Código:</h4>' . $codigo . '</div>';
                 }
 
 
@@ -112,7 +110,9 @@ MMDesign
                 <div class="col-8"></div>
 
                 <div class="col-4">
-                    <input class="botao" type="submit" value="Confirmar">
+                    <form method="post" action="enviomail.php">
+                        <input class="botao" type="submit" value="Confirmar">
+                    </form>
                 </div>
             </div>
         </form>
@@ -126,5 +126,4 @@ MMDesign
 </footer>
 <script src="javascript/javascript.js"></script>
 <script src="javascript/slideshow.js"></script>
-<script src="javascript/artigo.js"></script>
 </body>

@@ -21,20 +21,35 @@
     </header>
 
     <main class="grid-main carrinho">
+
         <?php
 
         session_start();
 
-        $_SESSION['articles'][] = $_GET['id'];
-
-        if($_SESSION['articles'] != null){
-            foreach ($_SESSION['articles'] as $val){
+        if(isset($_SESSION['articles'])){
+            foreach ($_SESSION['articles'] as $itemDetails){
+                echo '<div class="item">';
                 echo '<div class="id">';
-                echo $val;
+                echo $itemDetails['id'];
+                echo '</div>';
+                echo '<div class="quantity">';
+                echo $itemDetails['quantity'];
+                echo '</div>';
                 echo '</div>';
             }
+        }
+
+        ?>
+
+        <div class="col-1"></div>
+
+        <?php
+
+        if(isset($_SESSION['articles'])){
+            echo '<table class="col-10"></table>';
         } else {
-            echo '<div class="id">';
+            echo '<table class="col-10" style="display: none"></table>';
+            echo '<div class="id" id="noItemsMessage">';
             echo 'Ainda não adicionou artigos ao seu carrinho.';
             echo '</div>';
         }
@@ -43,17 +58,11 @@
 
         <div class="col-1"></div>
 
-        <table class="col-10">
-
-        </table>
-
-        <div class="col-1"></div>
-
         <div class="row">
             <div class="col-8"></div>
 
             <div class="col-4">
-                <form method="post" action="clearcart.php">
+                <form method="post" action="php/clearcart.php">
                     <input class="botao" type="submit" value="Esvaziar Carrinho">
                 </form>
             </div>
@@ -93,5 +102,6 @@
 <script src="javascript/javascript.js"></script>
 <script src="javascript/slideshow.js"></script>
 <script src="javascript/cart.js"></script>
+<!--script src="javascript/removeitens.js"></script-->
 </body>
 </html>

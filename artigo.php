@@ -26,11 +26,10 @@
 
                 <div class="col-3">
 
-                    <a href="carrinho.php?id=<?php echo $_GET['id']; ?>">
-                        <button class="botao" name="addCart">
-                            Adicionar ao Carrinho
-                        </button>
-                    </a>
+                    <form method="post" action="php/addToCart.php">
+                        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                        <input type="submit" class="botao" value="Adicionar ao Carrinho">
+                    </form>
 
                     <a href="dadospagamento.php">
                         <button class="botao" name="compraImediata">

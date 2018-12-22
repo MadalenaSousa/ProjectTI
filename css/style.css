@@ -215,7 +215,7 @@ footer div:last-child {
 
 .botao {
     color: white;
-    background-color:orange;
+    background-color: orange;
     font-family: "OCR A Std", Helvetica, serif;
     font-size: 16pt;
 
@@ -424,6 +424,20 @@ footer div:last-child {
     background-color: #330033;
     color: white;
     padding: 10px;
+}
+
+.carrinho .remover {
+    border: 0;
+    background-color: #990099;
+    color: white;
+    padding: 5px 10px;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+#noItemsMessage {
+    font-size: 18pt;
+    font-family: "OCR A Std", Helvetica, serif;
 }
 
 /*Contactos e Localização*/
