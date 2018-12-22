@@ -128,7 +128,6 @@ nav [class*='col-'].empty img {
 }
 
 [class*='list-'] div {
-    height: 2em;
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -588,6 +587,14 @@ footer div:last-child {
 
     [class*='col-'] {
         font-size: 12pt;
+    }
+
+    .list-pages {
+        left: calc((100% / 12) * 7);
+    }
+
+    .list-itens {
+        left: calc((100% / 12) * 11);
     }
 
     /*Logotipo*/
