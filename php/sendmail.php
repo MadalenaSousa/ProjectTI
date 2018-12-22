@@ -7,9 +7,9 @@ $encomedas = lerFicheiro('data.txt');
 
 mailOutputForm($encomedas[$_POST['idEncomenda']]['nome'], $encomedas[$_POST['idEncomenda']]['email'], $encomedas[$_POST['idEncomenda']]['tlmvl'],
     $encomedas[$_POST['idEncomenda']]['morada'], $encomedas[$_POST['idEncomenda']]['nCartao'], $encomedas[$_POST['idEncomenda']]['validade'],
-    $encomedas[$_POST['idEncomenda']]['codigo'], $encomedas[$_POST['idEncomenda']]['items']);
+    $encomedas[$_POST['idEncomenda']]['codigo'], $encomedas[$_POST['idEncomenda']]['items'], $_POST['idEncomenda']);
 
-function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $items)
+function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $items, $idEncomenda)
 {
 
     $artigos = "";
@@ -35,6 +35,11 @@ Artigo(s):
 
 " . $artigos .
 "
+
+Se quiser rever a sua encomenda siga estes links:
+
+https://student.dei.uc.pt/~msousa/ProjectTI/displaydados.php?idEncomenda=$idEncomenda
+https://student.dei.uc.pt/~mspereira/ProjectTI/displaydados.php?idEncomenda=$idEncomenda
 
 Clique no link para confirmar e carregar o comprovativo de compra:
 

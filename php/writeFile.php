@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $filename = "data.txt";
 
 $idEncomenda = rand();
@@ -11,8 +13,6 @@ $morada	= $_POST["adress"];
 $cartao = $_POST["cartao"];
 $validade = $_POST["validade"];
 $codigo	= $_POST["codigo"];
-
-session_start();
 
 fileOutputForm($idEncomenda, $nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $filename, $_SESSION['articles']);
 

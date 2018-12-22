@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +20,7 @@
         <div class="fullscreen-conteudo">
             <header class="grid-header">
 
-                <?php include('header.html'); ?>
+                <?php include('header.php'); ?>
 
             </header>
 

@@ -46,9 +46,19 @@
                 <img class="icon" src="imagens/carrinho.png" alt="Carrinho de Compras">
             </div>
             <div class="list-itens">
-                <a href=""><div class="col-1">Item 1</div></a>
-                <a href=""><div class="col-1">Item 2</div></a>
-                <a href=""><div class="col-1">Item 3</div></a>
+                <?php
+
+                    if(isset($_SESSION['articles'])){
+                        foreach ($_SESSION['articles'] as $itemDetails){
+                            echo '<div class="col-1">';
+                            echo $itemDetails['id'] . ' x' . $itemDetails['quantity'];
+                            echo '</div>';
+
+                        }
+                    }
+
+                ?>
+
                 <a href="carrinho.php"><div class="col-1">Ver Carrinho</div></a>
                 <a href="dadospagamento.php"><div class="col-1">Checkout</div></a>
             </div>

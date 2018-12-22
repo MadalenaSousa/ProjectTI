@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
 <div class="contentor">
     <header class="grid-header">
 
-        <?php include('header.html'); ?>
+        <?php include('header.php'); ?>
 
         <div class="row">
             <div class="col-12 img-video carousel">
@@ -29,8 +31,6 @@
             <div class="col-8">
 
                 <?php
-
-                session_start();
 
                 unset($_SESSION['articles']);
 
@@ -80,7 +80,7 @@
 
             <div class="col-4">
                 <form method="post" action="php/sendmail.php">
-                    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                    <input type="hidden" name="idEncomenda" value="<?php echo $_GET['idEncomenda']; ?>">
                     <input class="botao" type="submit" value="Confirmar">
                 </form>
             </div>

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="imagens/icon-separador.png">
 </head>
+
 <body>
 <main class="grid-main carrinho">
 
         <?php
-
-        session_start();
 
         if(isset($_SESSION['articles'])){
             foreach ($_SESSION['articles'] as $itemDetails){

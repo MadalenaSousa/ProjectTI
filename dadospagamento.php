@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
     <div class="contentor">
         <header class="grid-header">
 
-            <?php include('header.html'); ?>
+            <?php include('header.php'); ?>
 
             <div class="row">
                 <div class="col-12 img-video carousel">
@@ -29,8 +31,6 @@
                     <div class="col-10">
 
                         <iframe src="cartitems.php" width="100%" height="<?php
-
-                        session_start();
 
                         echo 100 + count($_SESSION['articles']) * 300;
 
