@@ -1,5 +1,5 @@
 let artigo = document.getElementsByClassName("id");
-console.log(artigo);
+let artigoQuantity = document.getElementsByClassName("quantity");
 
 let tabela = document.querySelector(".carrinho table");
 let theader = document.createElement("thead");
@@ -11,6 +11,9 @@ tabela.appendChild(theader);
 artigoDetail(0);
 
 tabela.appendChild(tbody);
+
+let botaoQuantidade = document.getElementsByClassName("quantidade");
+let precoArtigo = document.getElementsByClassName("precoArticle");
 
 function artigoDetail(index) {
     if (index >= artigo.length) {
@@ -24,9 +27,17 @@ function artigoDetail(index) {
         .then(function (json) {
             console.log(json);
 
-            tbody.appendChild(article(json));
+            tbody.appendChild(article(json, artigoQuantity[index].innerText));
 
             artigoDetail(index+1);
+
+            botaoQuantidade[index].addEventListener("click", function () {
+                precoArtigo[index].innerText = (json.id * botaoQuantidade[index].value) + "€";
+            });
+
+            botaoQuantidade[index].addEventListener("keyup", function () {
+                precoArtigo[index].innerText = (json.id * botaoQuantidade[index].value) + "€";
+            });
         });
 }
 
@@ -53,7 +64,7 @@ function cabecalho() {
     return row;
 }
 
-function article(json) {
+function article(json, quant) {
     let row = document.createElement("tr");
     row.classList.add("rowCart");
 
@@ -72,14 +83,27 @@ function article(json) {
 
     let quantidade = document.createElement("td");
 
+    let formQuantity = document.createElement("form");
+    formQuantity.setAttribute("method", "post");
+    formQuantity.setAttribute("action", "php/changeQuantity.php");
+
+    let hiddenQuantityId = document.createElement("input");
+    hiddenQuantityId.setAttribute("type", "hidden");
+    hiddenQuantityId.setAttribute("value", json.id);
+    hiddenQuantityId.setAttribute("name", "id");
+
     let input = document.createElement("input");
     input.setAttribute("type", "number");
     input.setAttribute("name", "quantity");
     input.setAttribute("min", "1");
-    input.setAttribute("value", "1");
+    input.setAttribute("value", quant);
+    input.setAttribute("required", "true");
     input.classList.add("quantidade");
 
-    quantidade.appendChild(input);
+    formQuantity.appendChild(hiddenQuantityId);
+    formQuantity.appendChild(input);
+
+    quantidade.appendChild(formQuantity);
 
 
     let preco = document.createElement("td");
@@ -91,13 +115,19 @@ function article(json) {
 
     let form = document.createElement("form");
     form.setAttribute("method", "post");
-    form.setAttribute("action", "removeitens.php");
+    form.setAttribute("action", "php/removeitens.php");
 
     let botao = document.createElement("input");
     botao.setAttribute("value", "x");
     botao.setAttribute("type", "submit");
     botao.classList.add("remover");
 
+    let hiddenId = document.createElement("input");
+    hiddenId.setAttribute("type", "hidden");
+    hiddenId.setAttribute("value", json.id);
+    hiddenId.setAttribute("name", "id");
+
+    form.appendChild(hiddenId);
     form.appendChild(botao);
 
     remover.appendChild(form);

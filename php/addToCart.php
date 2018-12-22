@@ -2,8 +2,6 @@
 
 session_start();
 
-$_SESSION['articles'][] = $_POST['id'];
-
 if(isset($_SESSION['articles'])){
     $i = 0;
 
