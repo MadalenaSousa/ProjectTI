@@ -42,30 +42,36 @@
 
                 <h4>Nome:</h4>
 
-                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['nome']; ?>
+                <?php echo '<div>' . ' ' . $encomedas[$_GET['idEncomenda']]['nome'] . ' ' . '</div>'; ?>
 
                 <h4>Email:</h4>
 
-                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['email']; ?>
+                <?php echo '<div>' . ' ' . $encomedas[$_GET['idEncomenda']]['email'] . ' ' . '</div>'; ?>
 
                 <h4>Número de Telemóvel:</h4>
 
-                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['tlmvl']; ?>
+                <?php echo '<div>' . ' ' . $encomedas[$_GET['idEncomenda']]['tlmvl'] . ' ' . '</div>'; ?>
 
                 <h4>Morada:</h4>
 
-                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['morada']; ?>
+                <?php echo '<div>' . ' ' . $encomedas[$_GET['idEncomenda']]['morada'] . ' ' . '</div>'; ?>
 
                 <h4>Número do Cartão:</h4>
 
-                <?php echo ' ' . $encomedas[$_GET['idEncomenda']]['nCartao']; ?>
+                <?php echo '<div>' . ' ' . $encomedas[$_GET['idEncomenda']]['nCartao'] . ' ' . '</div>'; ?>
 
                 <h4>Artigo(s):</h4>
 
                 <?php
 
                 for($i=0; $i<count($encomedas[$_GET['idEncomenda']]['items']); $i++){
-                    echo ' ' . $encomedas[$_GET['idEncomenda']]['items'][$i]['id'] . ' ' . 'x' . $encomedas[$_GET['idEncomenda']]['items'][$i]['quantity'] . '<br>';
+                    echo '<div style="display: inline-block; margin-right: 50px; float: left">';
+                    echo '<div class="img-descricao-article" style="max-width: 250px"></div>';
+                    echo '<div><h5>Preço:</h5>' . ' ';
+                    echo '<span class="idDisplay">' . $encomedas[$_GET['idEncomenda']]['items'][$i]['id'] . '</span>';
+                    echo '€' . '</div>';
+                    echo '<div><h5>' . 'Quantidade: </h5>' . $encomedas[$_GET['idEncomenda']]['items'][$i]['quantity'] . ' ' . '</div>';
+                    echo '</div>';
                 }
 
                 ?>
@@ -95,4 +101,5 @@
 </footer>
 <script src="javascript/javascript.js"></script>
 <script src="javascript/slideshow.js"></script>
+<script src="javascript/displaydadosarticle.js"></script>
 </body>
