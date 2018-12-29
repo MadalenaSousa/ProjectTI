@@ -12,10 +12,10 @@ mailOutputForm($encomedas[$_POST['idEncomenda']]['nome'], $encomedas[$_POST['idE
 function mailOutputForm($nome, $mail, $numero, $morada, $cartao, $validade, $codigo, $items, $idEncomenda)
 {
 
-    $artigos = "";
+    $artigos = 'ID da Encomenda: ' . $idEncomenda . "\n\n" ;
 
     for($i=0; $i<count($items); $i++) {
-        $artigos = $items[$i]['id'] . ' ' . 'x' . ' ' . $items[$i]['quantity'] . "\n";
+        $artigos = $artigos . 'ID do Artigo: ' . $items[$i]['id'] . "\n" . 'Preco: ' . $items[$i]['id'] . 'euros' . "\n" . 'Quantidade: ' . $items[$i]['quantity'] . "\n\n";
     }
 
     $message = "Saudacoes,
